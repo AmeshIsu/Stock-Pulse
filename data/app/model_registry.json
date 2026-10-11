@@ -1,0 +1,1483 @@
+{
+  "momentum_126": {
+    "model_id": "momentum_126",
+    "admin_display_name": "126-Day Momentum",
+    "family": "Baseline",
+    "short_description": "Cross-sectional 6-month price momentum benchmark.",
+    "servable": true,
+    "servable_reason": null,
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0356,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.031,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "8/12",
+        "fold_t_stat": 1.5574,
+        "top_tier_hit_rate": 51.48,
+        "top_tier_hit_rate_90_ci": [
+          48.73,
+          53.79
+        ],
+        "top_5_precision": 0.5234,
+        "top_5_median_excess": 0.6,
+        "net_excess_under_actual_turnover": -0.22,
+        "average_share_of_names_replaced": 30.5,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0381,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.0658,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": true,
+        "raw_p_value": 0.01,
+        "holm_adjusted_p_value": 0.69,
+        "folds_positive_count": 9,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "9/12",
+        "fold_t_stat": 1.7396,
+        "top_tier_hit_rate": 47.97,
+        "top_tier_hit_rate_90_ci": [
+          40.0,
+          55.72
+        ],
+        "top_5_precision": 0.517,
+        "top_5_median_excess": 1.6,
+        "net_excess_under_actual_turnover": 0.3,
+        "average_share_of_names_replaced": 46.2,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1135,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": true
+      },
+      "long": {
+        "dev_mean_ic": 0.0682,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.121,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 7,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "7/10",
+        "fold_t_stat": 1.3217,
+        "top_tier_hit_rate": 54.9,
+        "top_tier_hit_rate_90_ci": [
+          46.08,
+          64.13
+        ],
+        "top_5_precision": 0.554,
+        "top_5_median_excess": 4.83,
+        "net_excess_under_actual_turnover": -6.43,
+        "average_share_of_names_replaced": 75.6,
+        "evidence_level": "RED",
+        "holdout_ic": -0.0127,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "ridge_core": {
+    "model_id": "ridge_core",
+    "admin_display_name": "Ridge Regression (L2)",
+    "family": "Linear",
+    "short_description": "L2-regularized linear ranking model using core features.",
+    "servable": true,
+    "servable_reason": null,
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0006,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.493,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": 0.0275,
+        "top_tier_hit_rate": 51.48,
+        "top_tier_hit_rate_90_ci": [
+          48.73,
+          53.79
+        ],
+        "top_5_precision": 0.504,
+        "top_5_median_excess": 0.22,
+        "net_excess_under_actual_turnover": -1.15,
+        "average_share_of_names_replaced": 50.2,
+        "evidence_level": "RED",
+        "holdout_ic": 0.2693,
+        "holdout_n_eff": 10,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.009,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.363,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": 0.389,
+        "top_tier_hit_rate": 47.97,
+        "top_tier_hit_rate_90_ci": [
+          40.0,
+          55.72
+        ],
+        "top_5_precision": 0.4964,
+        "top_5_median_excess": 0.84,
+        "net_excess_under_actual_turnover": -0.5,
+        "average_share_of_names_replaced": 57.8,
+        "evidence_level": "RED",
+        "holdout_ic": 0.4995,
+        "holdout_n_eff": 3,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0429,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.231,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "5/10",
+        "fold_t_stat": 0.8143,
+        "top_tier_hit_rate": 54.9,
+        "top_tier_hit_rate_90_ci": [
+          46.08,
+          64.13
+        ],
+        "top_5_precision": 0.5136,
+        "top_5_median_excess": 3.62,
+        "net_excess_under_actual_turnover": 6.66,
+        "average_share_of_names_replaced": 66.7,
+        "evidence_level": "RED",
+        "holdout_ic": 0.478,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "rf_reg_core": {
+    "model_id": "rf_reg_core",
+    "admin_display_name": "Random Forest Regressor",
+    "family": "Bagging",
+    "short_description": "Non-linear bootstrap ensemble using core price/volume features.",
+    "servable": true,
+    "servable_reason": null,
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0009,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.53,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -0.0519,
+        "top_tier_hit_rate": 51.48,
+        "top_tier_hit_rate_90_ci": [
+          48.73,
+          53.79
+        ],
+        "top_5_precision": 0.4983,
+        "top_5_median_excess": 0.15,
+        "net_excess_under_actual_turnover": -1.26,
+        "average_share_of_names_replaced": 48.5,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0503,
+        "holdout_n_eff": 10,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.0034,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.559,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -0.1398,
+        "top_tier_hit_rate": 47.97,
+        "top_tier_hit_rate_90_ci": [
+          40.0,
+          55.72
+        ],
+        "top_5_precision": 0.4972,
+        "top_5_median_excess": 1.04,
+        "net_excess_under_actual_turnover": -1.65,
+        "average_share_of_names_replaced": 56.9,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1349,
+        "holdout_n_eff": 3,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0129,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.401,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "5/10",
+        "fold_t_stat": 0.2483,
+        "top_tier_hit_rate": 54.9,
+        "top_tier_hit_rate_90_ci": [
+          46.08,
+          64.13
+        ],
+        "top_5_precision": 0.5127,
+        "top_5_median_excess": 3.46,
+        "net_excess_under_actual_turnover": 6.53,
+        "average_share_of_names_replaced": 60.0,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3754,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "lgbm_reg_core": {
+    "model_id": "lgbm_reg_core",
+    "admin_display_name": "LightGBM Regressor",
+    "family": "Boosting",
+    "short_description": "Gradient-boosted decision tree predicting forward excess returns.",
+    "servable": true,
+    "servable_reason": null,
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0048,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.609,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": -0.2765,
+        "top_tier_hit_rate": 51.48,
+        "top_tier_hit_rate_90_ci": [
+          48.73,
+          53.79
+        ],
+        "top_5_precision": 0.4944,
+        "top_5_median_excess": 0.2,
+        "net_excess_under_actual_turnover": -1.31,
+        "average_share_of_names_replaced": 50.8,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1494,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.023,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.814,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 4,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "4/12",
+        "fold_t_stat": -0.9658,
+        "top_tier_hit_rate": 47.97,
+        "top_tier_hit_rate_90_ci": [
+          40.0,
+          55.72
+        ],
+        "top_5_precision": 0.4865,
+        "top_5_median_excess": 0.46,
+        "net_excess_under_actual_turnover": -1.65,
+        "average_share_of_names_replaced": 60.9,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1121,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0114,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.412,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "6/10",
+        "fold_t_stat": 0.4867,
+        "top_tier_hit_rate": 54.9,
+        "top_tier_hit_rate_90_ci": [
+          46.08,
+          64.13
+        ],
+        "top_5_precision": 0.5208,
+        "top_5_median_excess": 3.4,
+        "net_excess_under_actual_turnover": -16.09,
+        "average_share_of_names_replaced": 64.4,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3766,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "ens_rank4": {
+    "model_id": "ens_rank4",
+    "admin_display_name": "4-Model Rank Ensemble",
+    "family": "Ensemble",
+    "short_description": "Equal-weighted combination of Ridge, Random Forest, LightGBM, and 126d Momentum.",
+    "servable": true,
+    "servable_reason": null,
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0315,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.049,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 10,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "10/12",
+        "fold_t_stat": 1.7194,
+        "top_tier_hit_rate": 51.48,
+        "top_tier_hit_rate_90_ci": [
+          48.73,
+          53.79
+        ],
+        "top_5_precision": 0.5148,
+        "top_5_median_excess": 0.33,
+        "net_excess_under_actual_turnover": -0.9,
+        "average_share_of_names_replaced": 47.2,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1966,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": true
+      },
+      "mid": {
+        "dev_mean_ic": 0.0429,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.064,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "8/12",
+        "fold_t_stat": 1.4135,
+        "top_tier_hit_rate": 47.97,
+        "top_tier_hit_rate_90_ci": [
+          40.0,
+          55.72
+        ],
+        "top_5_precision": 0.5114,
+        "top_5_median_excess": 1.49,
+        "net_excess_under_actual_turnover": -0.62,
+        "average_share_of_names_replaced": 51.1,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3176,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.1143,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.032,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 9,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "9/10",
+        "fold_t_stat": 2.7914,
+        "top_tier_hit_rate": 54.9,
+        "top_tier_hit_rate_90_ci": [
+          46.08,
+          64.13
+        ],
+        "top_5_precision": 0.5615,
+        "top_5_median_excess": 6.76,
+        "net_excess_under_actual_turnover": 5.88,
+        "average_share_of_names_replaced": 68.9,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3939,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": true
+      }
+    }
+  },
+  "logit_core": {
+    "model_id": "logit_core",
+    "admin_display_name": "Logistic Classifier",
+    "family": "Linear",
+    "short_description": "L2-regularized logistic classification model predicting binary outperformance.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0001,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.505,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -0.0137,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5041,
+        "top_5_median_excess": 0.2,
+        "net_excess_under_actual_turnover": -1.17,
+        "average_share_of_names_replaced": 49.6,
+        "evidence_level": "RED",
+        "holdout_ic": 0.2264,
+        "holdout_n_eff": 10,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.0093,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.656,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 3,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "3/12",
+        "fold_t_stat": -0.4021,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4829,
+        "top_5_median_excess": 0.43,
+        "net_excess_under_actual_turnover": -0.63,
+        "average_share_of_names_replaced": 58.7,
+        "evidence_level": "RED",
+        "holdout_ic": 0.453,
+        "holdout_n_eff": 3,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0294,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.311,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "5/10",
+        "fold_t_stat": 0.5442,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.513,
+        "top_5_median_excess": 3.01,
+        "net_excess_under_actual_turnover": 6.13,
+        "average_share_of_names_replaced": 62.2,
+        "evidence_level": "RED",
+        "holdout_ic": 0.4565,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "rf_clf_core": {
+    "model_id": "rf_clf_core",
+    "admin_display_name": "Random Forest Classifier",
+    "family": "Bagging",
+    "short_description": "Bagged tree ensemble predicting binary upside outperformance probability.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0046,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.602,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": -0.212,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4927,
+        "top_5_median_excess": 0.08,
+        "net_excess_under_actual_turnover": -1.3,
+        "average_share_of_names_replaced": 50.2,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1462,
+        "holdout_n_eff": 10,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.0114,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.694,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 4,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "4/12",
+        "fold_t_stat": -0.4852,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4879,
+        "top_5_median_excess": 0.76,
+        "net_excess_under_actual_turnover": -1.53,
+        "average_share_of_names_replaced": 55.6,
+        "evidence_level": "RED",
+        "holdout_ic": 0.321,
+        "holdout_n_eff": 3,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0145,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.392,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "6/10",
+        "fold_t_stat": 0.2723,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5246,
+        "top_5_median_excess": 4.3,
+        "net_excess_under_actual_turnover": 5.35,
+        "average_share_of_names_replaced": 60.0,
+        "evidence_level": "RED",
+        "holdout_ic": 0.274,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "lgbm_clf_core": {
+    "model_id": "lgbm_clf_core",
+    "admin_display_name": "LightGBM Classifier",
+    "family": "Boosting",
+    "short_description": "Gradient-boosted classification trees predicting binary upside probability.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0034,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.424,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": 0.1717,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5055,
+        "top_5_median_excess": 0.23,
+        "net_excess_under_actual_turnover": -1.34,
+        "average_share_of_names_replaced": 54.6,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0576,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.0043,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.58,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": -0.1797,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5057,
+        "top_5_median_excess": 0.64,
+        "net_excess_under_actual_turnover": -1.71,
+        "average_share_of_names_replaced": 64.4,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1638,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0291,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.312,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "8/10",
+        "fold_t_stat": 1.1464,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5091,
+        "top_5_median_excess": 2.12,
+        "net_excess_under_actual_turnover": -13.91,
+        "average_share_of_names_replaced": 77.8,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3448,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "lstm_reg_core": {
+    "model_id": "lstm_reg_core",
+    "admin_display_name": "Deep LSTM Network",
+    "family": "Deep Learning",
+    "short_description": "Recurrent neural network with 21-day sequential temporal lookback.",
+    "servable": false,
+    "servable_reason": "heavy to retrain",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0455,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": true,
+        "raw_p_value": 0.006,
+        "holm_adjusted_p_value": 0.414,
+        "folds_positive_count": 10,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "10/12",
+        "fold_t_stat": 3.649,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5212,
+        "top_5_median_excess": 0.41,
+        "net_excess_under_actual_turnover": -1.34,
+        "average_share_of_names_replaced": 63.4,
+        "evidence_level": "AMBER",
+        "holdout_ic": 0.0167,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.0217,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.21,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 7,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "7/12",
+        "fold_t_stat": 1.3855,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5071,
+        "top_5_median_excess": 0.72,
+        "net_excess_under_actual_turnover": -1.47,
+        "average_share_of_names_replaced": 66.2,
+        "evidence_level": "RED",
+        "holdout_ic": -0.0905,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": -0.0177,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.588,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 3,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "3/10",
+        "fold_t_stat": -0.7053,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4931,
+        "top_5_median_excess": 1.7,
+        "net_excess_under_actual_turnover": 10.03,
+        "average_share_of_names_replaced": 75.6,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3085,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "tabpfn_reg_core": {
+    "model_id": "tabpfn_reg_core",
+    "admin_display_name": "TabPFN Regressor",
+    "family": "Foundation",
+    "short_description": "Prior-Data Fitted Network foundation model for tabular regression.",
+    "servable": false,
+    "servable_reason": "heavy to retrain",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0075,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.339,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 7,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "7/12",
+        "fold_t_stat": 0.3698,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.499,
+        "top_5_median_excess": 0.26,
+        "net_excess_under_actual_turnover": -0.83,
+        "average_share_of_names_replaced": 48.8,
+        "evidence_level": "RED",
+        "holdout_ic": -0.0184,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.0052,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.428,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": 0.2626,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4939,
+        "top_5_median_excess": 0.58,
+        "net_excess_under_actual_turnover": -0.71,
+        "average_share_of_names_replaced": 61.8,
+        "evidence_level": "RED",
+        "holdout_ic": 0.198,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0403,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.246,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "6/10",
+        "fold_t_stat": 1.4468,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5232,
+        "top_5_median_excess": 4.48,
+        "net_excess_under_actual_turnover": 12.32,
+        "average_share_of_names_replaced": 68.9,
+        "evidence_level": "RED",
+        "holdout_ic": 0.4371,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "tabpfn_clf_core": {
+    "model_id": "tabpfn_clf_core",
+    "admin_display_name": "TabPFN Classifier",
+    "family": "Foundation",
+    "short_description": "Prior-Data Fitted Network foundation model for tabular classification.",
+    "servable": false,
+    "servable_reason": "heavy to retrain",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.026,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.086,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 7,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "7/12",
+        "fold_t_stat": 1.6228,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5179,
+        "top_5_median_excess": 0.4,
+        "net_excess_under_actual_turnover": -0.46,
+        "average_share_of_names_replaced": 52.1,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0395,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.025,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.184,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "8/12",
+        "fold_t_stat": 0.7841,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5075,
+        "top_5_median_excess": 1.05,
+        "net_excess_under_actual_turnover": -0.28,
+        "average_share_of_names_replaced": 64.4,
+        "evidence_level": "RED",
+        "holdout_ic": 0.201,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0094,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.429,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "6/10",
+        "fold_t_stat": 0.2094,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5097,
+        "top_5_median_excess": 3.84,
+        "net_excess_under_actual_turnover": -11.0,
+        "average_share_of_names_replaced": 64.4,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3851,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "reversal_21": {
+    "model_id": "reversal_21",
+    "admin_display_name": "21-Day Reversal",
+    "family": "Baseline",
+    "short_description": "1-month short-term contrarian reversal baseline.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0042,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.592,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -0.2701,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4981,
+        "top_5_median_excess": 0.3,
+        "net_excess_under_actual_turnover": -1.22,
+        "average_share_of_names_replaced": 69.3,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0126,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.0348,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.914,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -1.6873,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4934,
+        "top_5_median_excess": 0.56,
+        "net_excess_under_actual_turnover": -1.39,
+        "average_share_of_names_replaced": 70.7,
+        "evidence_level": "RED",
+        "holdout_ic": -0.0378,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": -0.0541,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.781,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 2,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "2/10",
+        "fold_t_stat": -2.5981,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4859,
+        "top_5_median_excess": 2.04,
+        "net_excess_under_actual_turnover": 2.16,
+        "average_share_of_names_replaced": 80.0,
+        "evidence_level": "RED",
+        "holdout_ic": -0.1007,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "momentum_63": {
+    "model_id": "momentum_63",
+    "admin_display_name": "63-Day Momentum",
+    "family": "Baseline",
+    "short_description": "3-month quarterly price momentum benchmark.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0186,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.166,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": 0.8302,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5037,
+        "top_5_median_excess": 0.28,
+        "net_excess_under_actual_turnover": -0.52,
+        "average_share_of_names_replaced": 40.7,
+        "evidence_level": "RED",
+        "holdout_ic": -0.025,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.0494,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.044,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "8/12",
+        "fold_t_stat": 1.331,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5094,
+        "top_5_median_excess": 1.29,
+        "net_excess_under_actual_turnover": -0.74,
+        "average_share_of_names_replaced": 64.0,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0839,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": 0.0764,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.095,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "8/10",
+        "fold_t_stat": 1.8738,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5392,
+        "top_5_median_excess": 4.24,
+        "net_excess_under_actual_turnover": -3.6,
+        "average_share_of_names_replaced": 80.0,
+        "evidence_level": "RED",
+        "holdout_ic": 0.1297,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "low_vol": {
+    "model_id": "low_vol",
+    "admin_display_name": "Low Volatility",
+    "family": "Baseline",
+    "short_description": "Low-risk anomaly benchmark buying lowest realized volatility stocks.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0246,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.91,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -1.1002,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4941,
+        "top_5_median_excess": -0.01,
+        "net_excess_under_actual_turnover": -1.05,
+        "average_share_of_names_replaced": 28.6,
+        "evidence_level": "RED",
+        "holdout_ic": -0.058,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": -0.0371,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.926,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -1.4204,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4917,
+        "top_5_median_excess": 0.01,
+        "net_excess_under_actual_turnover": -2.45,
+        "average_share_of_names_replaced": 52.0,
+        "evidence_level": "RED",
+        "holdout_ic": -0.1358,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": -0.0786,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.873,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 2,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "2/10",
+        "fold_t_stat": -2.1978,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4835,
+        "top_5_median_excess": -0.89,
+        "net_excess_under_actual_turnover": -13.86,
+        "average_share_of_names_replaced": 62.2,
+        "evidence_level": "RED",
+        "holdout_ic": -0.1304,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "past_winner": {
+    "model_id": "past_winner",
+    "admin_display_name": "Past Long-Term Winner",
+    "family": "Baseline",
+    "short_description": "Historical expanding-window multi-year winner baseline.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0099,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.302,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": 0.3549,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4944,
+        "top_5_median_excess": 0.27,
+        "net_excess_under_actual_turnover": 0.06,
+        "average_share_of_names_replaced": 13.4,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0528,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.0227,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.201,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 6,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "6/12",
+        "fold_t_stat": 0.4261,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5038,
+        "top_5_median_excess": 0.93,
+        "net_excess_under_actual_turnover": 1.24,
+        "average_share_of_names_replaced": 15.6,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0984,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": -0.045,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.737,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 4,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "4/10",
+        "fold_t_stat": -0.5952,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5029,
+        "top_5_median_excess": 4.27,
+        "net_excess_under_actual_turnover": 16.68,
+        "average_share_of_names_replaced": 28.9,
+        "evidence_level": "RED",
+        "holdout_ic": 0.108,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "random": {
+    "model_id": "random",
+    "admin_display_name": "Random Walk Scorer",
+    "family": "Baseline",
+    "short_description": "Zero-intelligence uniform random linear scorer null reference.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0032,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.435,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 7,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "7/12",
+        "fold_t_stat": 0.7726,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5035,
+        "top_5_median_excess": 0.33,
+        "net_excess_under_actual_turnover": -1.46,
+        "average_share_of_names_replaced": 70.1,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0137,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": 0.0024,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.461,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "8/12",
+        "fold_t_stat": 0.692,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.5061,
+        "top_5_median_excess": 0.91,
+        "net_excess_under_actual_turnover": -1.89,
+        "average_share_of_names_replaced": 68.0,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0072,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": -0.0014,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.488,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "5/10",
+        "fold_t_stat": -0.356,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": 0.4994,
+        "top_5_median_excess": 2.46,
+        "net_excess_under_actual_turnover": -8.26,
+        "average_share_of_names_replaced": 77.8,
+        "evidence_level": "RED",
+        "holdout_ic": 0.0041,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  },
+  "equal_weight_universe": {
+    "model_id": "equal_weight_universe",
+    "admin_display_name": "Equal Weight Universe",
+    "family": "Baseline",
+    "short_description": "Passive equal-weighted ranking benchmark across all universe constituents.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": null,
+        "null_band": null,
+        "outside_null_band": false,
+        "raw_p_value": null,
+        "holm_adjusted_p_value": null,
+        "folds_positive_count": 0,
+        "folds_total_count": 0,
+        "folds_positive_ratio": "0/0",
+        "fold_t_stat": null,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": null,
+        "top_5_median_excess": null,
+        "net_excess_under_actual_turnover": null,
+        "average_share_of_names_replaced": null,
+        "evidence_level": "RED",
+        "holdout_ic": null,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "mid": {
+        "dev_mean_ic": null,
+        "null_band": null,
+        "outside_null_band": false,
+        "raw_p_value": null,
+        "holm_adjusted_p_value": null,
+        "folds_positive_count": 0,
+        "folds_total_count": 0,
+        "folds_positive_ratio": "0/0",
+        "fold_t_stat": null,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": null,
+        "top_5_median_excess": null,
+        "net_excess_under_actual_turnover": null,
+        "average_share_of_names_replaced": null,
+        "evidence_level": "RED",
+        "holdout_ic": null,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false
+      },
+      "long": {
+        "dev_mean_ic": null,
+        "null_band": null,
+        "outside_null_band": false,
+        "raw_p_value": null,
+        "holm_adjusted_p_value": null,
+        "folds_positive_count": 0,
+        "folds_total_count": 0,
+        "folds_positive_ratio": "0/0",
+        "fold_t_stat": null,
+        "top_tier_hit_rate": null,
+        "top_tier_hit_rate_90_ci": null,
+        "top_5_precision": null,
+        "top_5_median_excess": null,
+        "net_excess_under_actual_turnover": null,
+        "average_share_of_names_replaced": null,
+        "evidence_level": "RED",
+        "holdout_ic": null,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false
+      }
+    }
+  }
+}

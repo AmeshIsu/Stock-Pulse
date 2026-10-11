@@ -1,0 +1,13 @@
+series_id,CompanyCode,MainType,SplitDate,SplitType,CanonicalRatio,ObservedRatio,PrevCloseRaw,CloseRaw,RowsAdjusted,Applied
+HHL.N,HHL,N,2025-05-07,forward,5.0,4.9694,121.75,24.5,4321,True
+SUN.N,SUN,N,2025-02-19,forward,4.0,3.9911,89.8,22.5,2829,True
+JKH.N,JKH,N,2024-11-06,forward,10.0,10.0236,212.5,21.2,4682,True
+COMB.R,COMB,R,2024-08-05,forward,2.0,1.9118,6.5,3.4,20,True
+SINS.N,SINS,N,2021-03-10,forward,3.0,2.9226,49.1,16.8,3916,True
+NDB.R,NDB,R,2018-09-28,forward,4.0,4.0,0.4,0.1,2,True
+LFIN.N,LFIN,N,2011-03-07,forward,2.0,2.0068,36.9,18.3875,1422,True
+LOLC.N,LOLC,N,2010-11-22,forward,10.0,10.0309,1300.0,129.6,1778,True
+DFCC.N,DFCC,N,2010-11-02,forward,2.0,2.0165,463.4,229.8,1982,True
+COMB.X,COMB,X,2005-06-01,forward,2.0,2.023,77.125,38.125,195,True
+COMB.N,COMB,N,2005-05-31,forward,2.0,1.9643,130.625,66.5,589,True
+LFIN.W,LFIN,W,2004-11-10,reverse,0.5,0.5057,1.375,2.7188,9,True

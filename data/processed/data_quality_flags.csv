@@ -1,0 +1,59 @@
+series_id,CompanyCode,Date,Close_raw,prev_Close_raw,RawReturn_Pct,AdjustedReturn_Pct,MainType,gap_days,segment_id,FlagReason
+AEL.N,AEL,2022-01-03,34.0,22.1,53.85,,N,278.0,AEL.N_seg_2,Return across hard macro break (>60d)
+COMB.N,COMB,2024-01-03,95.9,62.7,52.95,,N,643.0,COMB.N_seg_3,Return across hard macro break (>60d)
+COMB.R,COMB,2024-07-30,7.5,20.1,-62.69,,R,2610.0,COMB.R_seg_5,Return across hard macro break (>60d)
+COMB.X,COMB,2010-04-29,107.0,70.0,52.86,,X,50.0,COMB.X_seg_12,Non-voting/rights/warrant tick
+COMB.X,COMB,2024-12-26,110.0,72.1,52.57,,X,122.0,COMB.X_seg_48,Return across hard macro break (>60d)
+DFCC.N,DFCC,2024-01-02,79.5,48.0,65.62,,N,642.0,DFCC.N_seg_3,Return across hard macro break (>60d)
+DFCC.R,DFCC,2019-04-10,0.1,8.75,-98.86,,R,4338.0,DFCC.R_seg_2,Return across hard macro break (>60d)
+HAYL.N,HAYL,2022-01-03,129.25,60.8,112.58,,N,278.0,HAYL.N_seg_2,Return across hard macro break (>60d)
+HHL.N,HHL,2010-07-08,36.0,195.25,-81.56,-81.56,N,6.0,HHL.N_seg_1,Extreme price move (|ret| > 50%)
+HNB.N,HNB,2024-01-02,170.0,109.25,55.61,,N,642.0,HNB.N_seg_9,Return across hard macro break (>60d)
+HNB.R,HNB,2011-07-19,8.0,1.5,433.33,433.33,R,1.0,HNB.R_seg_1,Non-voting/rights/warrant tick
+HNB.R,HNB,2011-07-20,3.6,8.0,-55.0,-55.0,R,1.0,HNB.R_seg_1,Non-voting/rights/warrant tick
+HNB.R,HNB,2011-07-21,0.6,3.6,-83.33,-83.33,R,1.0,HNB.R_seg_1,Non-voting/rights/warrant tick
+HNB.R,HNB,2011-07-22,0.2,0.6,-66.67,-66.67,R,1.0,HNB.R_seg_1,Non-voting/rights/warrant tick
+HNB.R,HNB,2017-07-18,3.0,0.2,1400.0,,R,2188.0,HNB.R_seg_2,Return across hard macro break (>60d)
+HNB.R,HNB,2017-07-20,9.9,3.0,230.0,230.0,R,2.0,HNB.R_seg_2,Non-voting/rights/warrant tick
+HNB.R,HNB,2017-07-21,3.0,9.9,-69.7,-69.7,R,1.0,HNB.R_seg_2,Non-voting/rights/warrant tick
+HNB.R,HNB,2017-07-24,0.4,3.0,-86.67,-86.67,R,3.0,HNB.R_seg_2,Non-voting/rights/warrant tick
+HNB.R,HNB,2017-07-25,1.1,0.4,175.0,175.0,R,1.0,HNB.R_seg_2,Non-voting/rights/warrant tick
+HNB.X,HNB,2007-03-30,31.8333,67.0,-52.49,-52.49,X,1.0,HNB.X_seg_2,Non-voting/rights/warrant tick
+JKH.R,JKH,2013-10-15,49.6125,24.5478,102.11,,R,2430.0,JKH.R_seg_3,Return across hard macro break (>60d)
+JKH.R,JKH,2024-09-26,10.1,51.3734,-80.34,,R,3990.0,JKH.R_seg_4,Return across hard macro break (>60d)
+JKH.W,JKH,2015-05-26,30.625,18.375,66.67,66.67,W,4.0,JKH.W_seg_4,Non-voting/rights/warrant tick
+JKH.W,JKH,2015-06-18,29.1703,15.7719,84.95,84.95,W,13.0,JKH.W_seg_4,Non-voting/rights/warrant tick
+JKH.W,JKH,2015-10-14,28.875,6.2125,364.79,364.79,W,16.0,JKH.W_seg_4,Non-voting/rights/warrant tick
+JKH.W,JKH,2016-04-08,11.2875,30.45,-62.93,,W,137.0,JKH.W_seg_5,Return across hard macro break (>60d)
+JKH.W,JKH,2016-07-05,3.2,13.65,-76.56,,W,55.0,JKH.W_seg_7,Non-voting/rights/warrant tick
+JKH.W,JKH,2016-07-13,5.7,3.2,78.12,78.12,W,8.0,JKH.W_seg_7,Non-voting/rights/warrant tick
+LFIN.N,LFIN,2004-10-12,3.7812,2.2188,70.42,70.42,N,4.0,LFIN.N_seg_1,Extreme price move (|ret| > 50%)
+LFIN.N,LFIN,2004-11-15,6.0,3.8438,56.1,56.1,N,11.0,LFIN.N_seg_1,Extreme price move (|ret| > 50%)
+LFIN.R,LFIN,2008-08-11,0.2625,0.1375,90.91,,R,238.0,LFIN.R_seg_2,Return across hard macro break (>60d)
+LFIN.W,LFIN,2004-10-11,1.7812,0.625,184.99,,W,166.0,LFIN.W_seg_2,Return across hard macro break (>60d)
+LFIN.W,LFIN,2006-08-11,0.475,1.125,-57.78,-57.78,W,1.0,LFIN.W_seg_2,Non-voting/rights/warrant tick
+LFIN.W,LFIN,2006-08-14,0.2,0.475,-57.89,-57.89,W,3.0,LFIN.W_seg_2,Non-voting/rights/warrant tick
+LIOC.N,LIOC,2022-01-03,73.7,19.0,287.89,,N,278.0,LIOC.N_seg_2,Return across hard macro break (>60d)
+LIOC.N,LIOC,2024-01-02,101.75,30.8,230.36,,N,642.0,LIOC.N_seg_3,Return across hard macro break (>60d)
+LOLC.N,LOLC,2022-02-22,999.0,292.0,242.12,,N,328.0,LOLC.N_seg_2,Return across hard macro break (>60d)
+MELS.N,MELS,2024-01-02,85.9,41.1,109.0,,N,642.0,MELS.N_seg_3,Return across hard macro break (>60d)
+NDB.R,NDB,2018-09-27,0.4,2.1,-80.95,-80.95,R,1.0,NDB.R_seg_1,Non-voting/rights/warrant tick
+NTB.N,NTB,2024-01-02,106.75,45.1,136.7,,N,642.0,NTB.N_seg_4,Return across hard macro break (>60d)
+NTB.R,NTB,2018-01-22,0.1,3.1,-96.77,,R,3637.0,NTB.R_seg_2,Return across hard macro break (>60d)
+NTB.W,NTB,2008-03-07,7.0,3.2,118.75,118.75,W,2.0,NTB.W_seg_1,Non-voting/rights/warrant tick
+NTB.W,NTB,2010-06-03,13.0,8.25,57.58,,W,35.0,NTB.W_seg_3,Non-voting/rights/warrant tick
+NTB.W,NTB,2010-12-17,53.3,33.0,61.52,,W,140.0,NTB.W_seg_4,Return across hard macro break (>60d)
+SAMP.D,SAMP,2004-07-09,33.3333,366.6667,-90.91,,D,417.0,SAMP.D_seg_4,Return across hard macro break (>60d)
+SAMP.N,SAMP,2010-10-12,81.0333,173.8333,-53.38,-53.38,N,6.0,SAMP.N_seg_1,Extreme price move (|ret| > 50%)
+SAMP.N,SAMP,2024-01-02,70.7,45.8,54.37,,N,642.0,SAMP.N_seg_3,Return across hard macro break (>60d)
+SAMP.R,SAMP,2017-11-08,30.3333,0.2667,11273.57,,R,4682.0,SAMP.R_seg_2,Return across hard macro break (>60d)
+SAMP.R,SAMP,2019-05-29,0.5,14.3333,-96.51,,R,429.0,SAMP.R_seg_4,Return across hard macro break (>60d)
+SAMP.R,SAMP,2019-06-03,0.1667,0.3667,-54.54,-54.54,R,3.0,SAMP.R_seg_4,Non-voting/rights/warrant tick
+SAMP.R,SAMP,2019-06-06,0.0333,0.1,-66.7,-66.7,R,2.0,SAMP.R_seg_4,Non-voting/rights/warrant tick
+SEYB.R,SEYB,2011-05-25,2.3,0.1,2200.0,,R,1828.0,SEYB.R_seg_2,Return across hard macro break (>60d)
+SEYB.R,SEYB,2011-06-01,0.6,2.0,-70.0,-70.0,R,1.0,SEYB.R_seg_2,Non-voting/rights/warrant tick
+SEYB.R,SEYB,2019-11-21,4.6,0.6,666.67,,R,3095.0,SEYB.R_seg_3,Return across hard macro break (>60d)
+SEYB.R,SEYB,2019-11-26,3.5,2.1,66.67,66.67,R,1.0,SEYB.R_seg_3,Non-voting/rights/warrant tick
+SUN.N,SUN,2010-02-09,108.5,58.8333,84.42,84.42,N,1.0,SUN.N_seg_23,Extreme price move (|ret| > 50%)
+SUN.N,SUN,2010-04-05,10.9167,108.3333,-89.92,-89.92,N,12.0,SUN.N_seg_23,Extreme price move (|ret| > 50%)
+SUN.N,SUN,2022-01-03,49.0,26.5,84.91,,N,278.0,SUN.N_seg_25,Return across hard macro break (>60d)

@@ -1,0 +1,23 @@
+{
+  "short": {
+    "chosen_model": "ens_rank4",
+    "ens_rank4_t_stat": 1.719,
+    "momentum_126_t_stat": 1.557,
+    "t_stat_difference": -0.162,
+    "reason": "ens_rank4 achieved higher dev fold t-statistic (+1.72 vs momentum_126 +1.56, diff = +0.16 > 0.10)."
+  },
+  "mid": {
+    "chosen_model": "momentum_126",
+    "ens_rank4_t_stat": 1.414,
+    "momentum_126_t_stat": 1.74,
+    "t_stat_difference": 0.326,
+    "reason": "momentum_126 achieved higher dev fold t-statistic (+1.74 vs ens_rank4 +1.41, diff = +0.33 > 0.10)."
+  },
+  "long": {
+    "chosen_model": "ens_rank4",
+    "ens_rank4_t_stat": 2.791,
+    "momentum_126_t_stat": 1.322,
+    "t_stat_difference": -1.47,
+    "reason": "ens_rank4 achieved higher dev fold t-statistic (+2.79 vs momentum_126 +1.32, diff = +1.47 > 0.10)."
+  }
+}

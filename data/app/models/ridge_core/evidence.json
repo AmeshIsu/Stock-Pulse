@@ -1,0 +1,106 @@
+{
+  "short": {
+    "rule_version": "v2_tightened_post_hoc",
+    "post_hoc": true,
+    "model_id": "ridge_core",
+    "horizon": "short",
+    "evidence_level": "RED",
+    "evidence_level_tightened": "RED",
+    "evidence_level_original": "AMBER",
+    "evidence_points": 1,
+    "confidence_label": "Very low confidence",
+    "raw_p_value": 0.493,
+    "holm_adjusted_p_value": 1.0,
+    "criterion_1_outside_null_band": {
+      "passed": false,
+      "dev_mean_ic": 0.0006,
+      "null_band": [
+        -0.0374,
+        0.0368
+      ]
+    },
+    "criterion_2_beats_naive_baseline": {
+      "passed": false,
+      "benchmark": "momentum_126",
+      "folds_beating_benchmark": "10/24",
+      "win_percentage": 41.7
+    },
+    "criterion_3_positive_neutralized_ic": {
+      "passed": true,
+      "neutralized_ic": 0.0408
+    },
+    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.493), Criterion 2 (beats naive baseline) failed (10/24 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0408).",
+    "horizon_weight": 0.3333
+  },
+  "mid": {
+    "rule_version": "v2_tightened_post_hoc",
+    "post_hoc": true,
+    "model_id": "ridge_core",
+    "horizon": "mid",
+    "evidence_level": "RED",
+    "evidence_level_tightened": "RED",
+    "evidence_level_original": "AMBER",
+    "evidence_points": 1,
+    "confidence_label": "Very low confidence",
+    "raw_p_value": 0.363,
+    "holm_adjusted_p_value": 1.0,
+    "criterion_1_outside_null_band": {
+      "passed": false,
+      "dev_mean_ic": 0.009,
+      "null_band": [
+        -0.0532,
+        0.0558
+      ]
+    },
+    "criterion_2_beats_naive_baseline": {
+      "passed": false,
+      "benchmark": "momentum_126",
+      "folds_beating_benchmark": "6/24",
+      "win_percentage": 25.0
+    },
+    "criterion_3_positive_neutralized_ic": {
+      "passed": true,
+      "neutralized_ic": 0.0438
+    },
+    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.363), Criterion 2 (beats naive baseline) failed (6/24 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0438).",
+    "horizon_weight": 0.3333
+  },
+  "long": {
+    "rule_version": "v2_tightened_post_hoc",
+    "post_hoc": true,
+    "model_id": "ridge_core",
+    "horizon": "long",
+    "evidence_level": "RED",
+    "evidence_level_tightened": "RED",
+    "evidence_level_original": "AMBER",
+    "evidence_points": 1,
+    "confidence_label": "Very low confidence",
+    "raw_p_value": 0.231,
+    "holm_adjusted_p_value": 1.0,
+    "criterion_1_outside_null_band": {
+      "passed": false,
+      "dev_mean_ic": 0.0429,
+      "null_band": [
+        -0.1252,
+        0.1231
+      ]
+    },
+    "criterion_2_beats_naive_baseline": {
+      "passed": false,
+      "benchmark": "momentum_126",
+      "folds_beating_benchmark": "12/20",
+      "win_percentage": 60.0
+    },
+    "criterion_3_positive_neutralized_ic": {
+      "passed": true,
+      "neutralized_ic": 0.0895
+    },
+    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.231), Criterion 2 (beats naive baseline) failed (12/20 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0895).",
+    "horizon_weight": 0.3333
+  },
+  "default_horizon_weights": {
+    "short": 0.3333,
+    "mid": 0.3333,
+    "long": 0.3333
+  }
+}

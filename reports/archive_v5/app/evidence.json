@@ -1,0 +1,86 @@
+{
+  "short": {
+    "served_model": "ens_rank4",
+    "evidence_level": "RED",
+    "evidence_label": "No reliable evidence",
+    "evidence_points": 1,
+    "criterion_1_null_band": {
+      "passed": false,
+      "dev_mean_ic": 0.0315,
+      "null_band": [
+        -0.0374,
+        0.0368
+      ],
+      "raw_p_value": 0.049,
+      "holm_adjusted_p_value": 1.0,
+      "significance_label": "inside null band"
+    },
+    "criterion_2_naive_baseline": {
+      "passed": false,
+      "benchmark": "momentum_126",
+      "folds_beating_benchmark": "7/12",
+      "win_percentage": 58.3
+    },
+    "criterion_3_neutralized_alpha": {
+      "passed": true,
+      "neutralized_ic": 0.0344
+    },
+    "explanation": "No reliable evidence: Criterion 1 failed (raw p=0.049, Holm-adj p=1.000), Criterion 2 failed (7/12 folds beat momentum_126), Criterion 3 passed (neutralized IC = +0.0344)."
+  },
+  "mid": {
+    "served_model": "momentum_126",
+    "evidence_level": "AMBER",
+    "evidence_label": "Weak evidence",
+    "evidence_points": 2,
+    "criterion_1_null_band": {
+      "passed": true,
+      "dev_mean_ic": 0.0658,
+      "null_band": [
+        -0.0532,
+        0.0558
+      ],
+      "raw_p_value": 0.01,
+      "holm_adjusted_p_value": 0.68,
+      "significance_label": "suggestive, not confirmed"
+    },
+    "criterion_2_naive_baseline": {
+      "passed": false,
+      "benchmark": "momentum_63",
+      "folds_beating_benchmark": "7/12",
+      "win_percentage": 58.3
+    },
+    "criterion_3_neutralized_alpha": {
+      "passed": true,
+      "neutralized_ic": 0.0561
+    },
+    "explanation": "Weak evidence: Criterion 1 passed (raw p=0.010, Holm-adj p=0.680), Criterion 2 failed (7/12 folds beat momentum_63), Criterion 3 passed (neutralized IC = +0.0561)."
+  },
+  "long": {
+    "served_model": "ens_rank4",
+    "evidence_level": "RED",
+    "evidence_label": "No reliable evidence",
+    "evidence_points": 1,
+    "criterion_1_null_band": {
+      "passed": false,
+      "dev_mean_ic": 0.1143,
+      "null_band": [
+        -0.1252,
+        0.1231
+      ],
+      "raw_p_value": 0.032,
+      "holm_adjusted_p_value": 1.0,
+      "significance_label": "inside null band"
+    },
+    "criterion_2_naive_baseline": {
+      "passed": false,
+      "benchmark": "momentum_126",
+      "folds_beating_benchmark": "6/10",
+      "win_percentage": 60.0
+    },
+    "criterion_3_neutralized_alpha": {
+      "passed": true,
+      "neutralized_ic": 0.0747
+    },
+    "explanation": "No reliable evidence: Criterion 1 failed (raw p=0.032, Holm-adj p=1.000), Criterion 2 failed (6/10 folds beat momentum_126), Criterion 3 passed (neutralized IC = +0.0747)."
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "short": {
+    "chosen_fraction": 0.3,
+    "status": "empirical",
+    "reason": "Selected largest qualifying top-tier fraction (30%) with positive lift in >= 2/3 dev years.",
+    "candidates": [
+      {
+        "fraction": 0.1,
+        "fraction_pct": "10%",
+        "pos_years": "7/12",
+        "pos_years_pct": 58.3,
+        "pooled_lift_pct": 1.98,
+        "ci_90": [
+          -2.14,
+          7.55
+        ],
+        "qualifies": false,
+        "yearly_lifts": {
+          "dev_2008": 2.33,
+          "dev_2009": -13.92,
+          "dev_2010": 29.35,
+          "dev_2011": 2.61,
+          "dev_2012": -7.45,
+          "dev_2013": -6.54,
+          "dev_2014": -0.1,
+          "dev_2015": 4.72,
+          "dev_2016": -3.46,
+          "dev_2017": 4.37,
+          "dev_2018": 9.06,
+          "dev_2019": 8.61
+        }
+      },
+      {
+        "fraction": 0.2,
+        "fraction_pct": "20%",
+        "pos_years": "7/12",
+        "pos_years_pct": 58.3,
+        "pooled_lift_pct": 2.34,
+        "ci_90": [
+          -0.19,
+          4.83
+        ],
+        "qualifies": false,
+        "yearly_lifts": {
+          "dev_2008": 3.16,
+          "dev_2009": -2.69,
+          "dev_2010": 9.59,
+          "dev_2011": 7.58,
+          "dev_2012": -6.36,
+          "dev_2013": -4.99,
+          "dev_2014": -0.62,
+          "dev_2015": 2.79,
+          "dev_2016": 2.88,
+          "dev_2017": -0.83,
+          "dev_2018": 11.76,
+          "dev_2019": 5.76
+        }
+      },
+      {
+        "fraction": 0.25,
+        "fraction_pct": "25%",
+        "pos_years": "8/12",
+        "pos_years_pct": 66.7,
+        "pooled_lift_pct": 2.4,
+        "ci_90": [
+          0.02,
+          4.74
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2008": 3.9,
+          "dev_2009": -0.69,
+          "dev_2010": 7.52,
+          "dev_2011": 7.74,
+          "dev_2012": -8.38,
+          "dev_2013": -3.43,
+          "dev_2014": 0.13,
+          "dev_2015": 1.05,
+          "dev_2016": 5.88,
+          "dev_2017": -0.13,
+          "dev_2018": 8.57,
+          "dev_2019": 7.3
+        }
+      },
+      {
+        "fraction": 0.3,
+        "fraction_pct": "30%",
+        "pos_years": "8/12",
+        "pos_years_pct": 66.7,
+        "pooled_lift_pct": 2.41,
+        "ci_90": [
+          0.17,
+          4.54
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2008": 4.5,
+          "dev_2009": 0.0,
+          "dev_2010": 6.57,
+          "dev_2011": 6.95,
+          "dev_2012": -7.81,
+          "dev_2013": -3.15,
+          "dev_2014": 0.82,
+          "dev_2015": 0.89,
+          "dev_2016": 6.09,
+          "dev_2017": -0.35,
+          "dev_2018": 6.84,
+          "dev_2019": 8.17
+        }
+      }
+    ]
+  },
+  "mid": {
+    "chosen_fraction": 0.3,
+    "status": "empirical",
+    "reason": "Selected largest qualifying top-tier fraction (30%) with positive lift in >= 2/3 dev years.",
+    "candidates": [
+      {
+        "fraction": 0.1,
+        "fraction_pct": "10%",
+        "pos_years": "6/12",
+        "pos_years_pct": 50.0,
+        "pooled_lift_pct": 1.69,
+        "ci_90": [
+          -3.07,
+          7.83
+        ],
+        "qualifies": false,
+        "yearly_lifts": {
+          "dev_2008": -2.4,
+          "dev_2009": -2.75,
+          "dev_2010": 28.15,
+          "dev_2011": -4.78,
+          "dev_2012": -21.49,
+          "dev_2013": -2.07,
+          "dev_2014": 4.15,
+          "dev_2015": 5.77,
+          "dev_2016": 7.02,
+          "dev_2017": -8.75,
+          "dev_2018": 14.27,
+          "dev_2019": 9.85
+        }
+      },
+      {
+        "fraction": 0.2,
+        "fraction_pct": "20%",
+        "pos_years": "8/12",
+        "pos_years_pct": 66.7,
+        "pooled_lift_pct": 2.04,
+        "ci_90": [
+          -2.72,
+          6.14
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2008": 0.08,
+          "dev_2009": -3.24,
+          "dev_2010": 10.97,
+          "dev_2011": 6.92,
+          "dev_2012": -19.08,
+          "dev_2013": -6.41,
+          "dev_2014": 7.16,
+          "dev_2015": 5.18,
+          "dev_2016": 11.06,
+          "dev_2017": -10.79,
+          "dev_2018": 11.81,
+          "dev_2019": 8.84
+        }
+      },
+      {
+        "fraction": 0.25,
+        "fraction_pct": "25%",
+        "pos_years": "8/12",
+        "pos_years_pct": 66.7,
+        "pooled_lift_pct": 1.99,
+        "ci_90": [
+          -2.35,
+          6.0
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2008": 0.13,
+          "dev_2009": -0.19,
+          "dev_2010": 7.98,
+          "dev_2011": 9.22,
+          "dev_2012": -18.85,
+          "dev_2013": -6.95,
+          "dev_2014": 6.02,
+          "dev_2015": 5.74,
+          "dev_2016": 12.12,
+          "dev_2017": -9.63,
+          "dev_2018": 8.7,
+          "dev_2019": 9.46
+        }
+      },
+      {
+        "fraction": 0.3,
+        "fraction_pct": "30%",
+        "pos_years": "9/12",
+        "pos_years_pct": 75.0,
+        "pooled_lift_pct": 1.66,
+        "ci_90": [
+          -2.55,
+          5.53
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2008": 0.6,
+          "dev_2009": 1.6,
+          "dev_2010": 4.09,
+          "dev_2011": 7.38,
+          "dev_2012": -18.39,
+          "dev_2013": -8.03,
+          "dev_2014": 4.34,
+          "dev_2015": 5.31,
+          "dev_2016": 11.73,
+          "dev_2017": -8.19,
+          "dev_2018": 8.5,
+          "dev_2019": 10.74
+        }
+      }
+    ]
+  },
+  "long": {
+    "chosen_fraction": 0.3,
+    "status": "empirical",
+    "reason": "Selected largest qualifying top-tier fraction (30%) with positive lift in >= 2/3 dev years.",
+    "candidates": [
+      {
+        "fraction": 0.1,
+        "fraction_pct": "10%",
+        "pos_years": "6/10",
+        "pos_years_pct": 60.0,
+        "pooled_lift_pct": 3.6,
+        "ci_90": [
+          -6.71,
+          11.12
+        ],
+        "qualifies": false,
+        "yearly_lifts": {
+          "dev_2010": -7.35,
+          "dev_2011": -23.04,
+          "dev_2012": -13.93,
+          "dev_2013": 17.12,
+          "dev_2014": 4.36,
+          "dev_2015": 15.3,
+          "dev_2016": 17.51,
+          "dev_2017": -19.27,
+          "dev_2018": 1.35,
+          "dev_2019": 30.54
+        }
+      },
+      {
+        "fraction": 0.2,
+        "fraction_pct": "20%",
+        "pos_years": "7/10",
+        "pos_years_pct": 70.0,
+        "pooled_lift_pct": 4.94,
+        "ci_90": [
+          -1.43,
+          10.56
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2010": 6.49,
+          "dev_2011": -1.31,
+          "dev_2012": -15.39,
+          "dev_2013": 10.88,
+          "dev_2014": 10.68,
+          "dev_2015": 11.06,
+          "dev_2016": 16.53,
+          "dev_2017": -13.93,
+          "dev_2018": 1.82,
+          "dev_2019": 21.15
+        }
+      },
+      {
+        "fraction": 0.25,
+        "fraction_pct": "25%",
+        "pos_years": "8/10",
+        "pos_years_pct": 80.0,
+        "pooled_lift_pct": 5.42,
+        "ci_90": [
+          -0.11,
+          10.23
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2010": 6.53,
+          "dev_2011": 4.84,
+          "dev_2012": -12.96,
+          "dev_2013": 6.54,
+          "dev_2014": 10.17,
+          "dev_2015": 11.89,
+          "dev_2016": 17.36,
+          "dev_2017": -10.71,
+          "dev_2018": 3.28,
+          "dev_2019": 16.92
+        }
+      },
+      {
+        "fraction": 0.3,
+        "fraction_pct": "30%",
+        "pos_years": "8/10",
+        "pos_years_pct": 80.0,
+        "pooled_lift_pct": 5.38,
+        "ci_90": [
+          0.66,
+          9.75
+        ],
+        "qualifies": true,
+        "yearly_lifts": {
+          "dev_2010": 6.37,
+          "dev_2011": 7.05,
+          "dev_2012": -9.91,
+          "dev_2013": 4.25,
+          "dev_2014": 9.58,
+          "dev_2015": 10.83,
+          "dev_2016": 17.9,
+          "dev_2017": -9.34,
+          "dev_2018": 4.1,
+          "dev_2019": 13.78
+        }
+      }
+    ]
+  }
+}

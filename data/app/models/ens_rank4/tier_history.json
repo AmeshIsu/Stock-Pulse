@@ -1,0 +1,272 @@
+{
+  "short": {
+    "dev": {
+      "High": {
+        "num_periods": 138,
+        "n_periods": 138,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 51.48,
+        "hit_rate_90_ci": [
+          48.73,
+          53.79
+        ],
+        "median_excess_pct": 0.0,
+        "median_excess_90_ci": [
+          0.0,
+          0.24
+        ],
+        "evaluation_flag": "evaluated"
+      },
+      "Neutral": {
+        "num_periods": 138,
+        "n_periods": 138,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 50.85,
+        "hit_rate_90_ci": [
+          49.43,
+          52.28
+        ],
+        "median_excess_pct": 0.0,
+        "median_excess_90_ci": [
+          0.0,
+          0.05
+        ],
+        "evaluation_flag": "evaluated"
+      },
+      "Low": {
+        "num_periods": 138,
+        "n_periods": 138,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 46.99,
+        "hit_rate_90_ci": [
+          43.13,
+          50.74
+        ],
+        "median_excess_pct": -0.05,
+        "median_excess_90_ci": [
+          -0.71,
+          0.0
+        ],
+        "evaluation_flag": "evaluated"
+      }
+    },
+    "holdout": {
+      "High": {
+        "num_periods": 16,
+        "n_periods": 16,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 57.69,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": 1.59,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "indicative"
+      },
+      "Neutral": {
+        "num_periods": 16,
+        "n_periods": 16,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 52.33,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": 0.28,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "indicative"
+      },
+      "Low": {
+        "num_periods": 16,
+        "n_periods": 16,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 37.5,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": -1.24,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "indicative"
+      }
+    }
+  },
+  "mid": {
+    "dev": {
+      "High": {
+        "num_periods": 46,
+        "n_periods": 46,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 47.97,
+        "hit_rate_90_ci": [
+          40.0,
+          55.72
+        ],
+        "median_excess_pct": -0.33,
+        "median_excess_90_ci": [
+          -1.37,
+          1.12
+        ],
+        "evaluation_flag": "evaluated"
+      },
+      "Neutral": {
+        "num_periods": 46,
+        "n_periods": 46,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 50.83,
+        "hit_rate_90_ci": [
+          49.45,
+          52.2
+        ],
+        "median_excess_pct": 0.0,
+        "median_excess_90_ci": [
+          0.0,
+          0.22
+        ],
+        "evaluation_flag": "evaluated"
+      },
+      "Low": {
+        "num_periods": 46,
+        "n_periods": 46,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 45.27,
+        "hit_rate_90_ci": [
+          35.24,
+          54.37
+        ],
+        "median_excess_pct": -0.39,
+        "median_excess_90_ci": [
+          -3.89,
+          0.78
+        ],
+        "evaluation_flag": "evaluated"
+      }
+    },
+    "holdout": {
+      "High": {
+        "num_periods": 5,
+        "n_periods": 5,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 60.0,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": 0.87,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "indicative"
+      },
+      "Neutral": {
+        "num_periods": 5,
+        "n_periods": 5,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 47.89,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": -0.85,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "indicative"
+      },
+      "Low": {
+        "num_periods": 5,
+        "n_periods": 5,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 55.0,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": 0.09,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "indicative"
+      }
+    }
+  },
+  "long": {
+    "dev": {
+      "High": {
+        "num_periods": 10,
+        "n_periods": 10,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 54.9,
+        "hit_rate_90_ci": [
+          46.08,
+          64.13
+        ],
+        "median_excess_pct": 0.58,
+        "median_excess_90_ci": [
+          -0.83,
+          6.7
+        ],
+        "evaluation_flag": "evaluated"
+      },
+      "Neutral": {
+        "num_periods": 10,
+        "n_periods": 10,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 54.62,
+        "hit_rate_90_ci": [
+          46.48,
+          63.43
+        ],
+        "median_excess_pct": 0.74,
+        "median_excess_90_ci": [
+          -3.43,
+          9.81
+        ],
+        "evaluation_flag": "evaluated"
+      },
+      "Low": {
+        "num_periods": 10,
+        "n_periods": 10,
+        "selected_on_dev": true,
+        "optimism_warning": "the cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic",
+        "hit_rate_pct": 38.78,
+        "hit_rate_90_ci": [
+          28.72,
+          48.04
+        ],
+        "median_excess_pct": -1.82,
+        "median_excess_90_ci": [
+          -7.55,
+          0.0
+        ],
+        "evaluation_flag": "evaluated"
+      }
+    },
+    "holdout": {
+      "High": {
+        "num_periods": 1,
+        "n_periods": 1,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 60.0,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": 0.51,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "not evaluable (n_eff < 5)"
+      },
+      "Neutral": {
+        "num_periods": 1,
+        "n_periods": 1,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 50.0,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": 5.17,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "not evaluable (n_eff < 5)"
+      },
+      "Low": {
+        "num_periods": 1,
+        "n_periods": 1,
+        "selected_on_dev": false,
+        "optimism_warning": "out-of-sample holdout; cutoffs were frozen prior to evaluation",
+        "hit_rate_pct": 40.0,
+        "hit_rate_90_ci": "indicative / small n",
+        "median_excess_pct": -5.3,
+        "median_excess_90_ci": "indicative / small n",
+        "evaluation_flag": "not evaluable (n_eff < 5)"
+      }
+    }
+  }
+}

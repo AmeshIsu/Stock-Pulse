@@ -1,0 +1,201 @@
+project_name: "Stock Pulse"
+random_seed: 42
+
+universe_main_types: ["N"]
+universe_selection: "most_rows_among_N_X"
+min_valid_feature_rows_for_scoring: 750
+include_nonvoting_series: false
+
+horizons:
+  short: 21
+  mid: 63
+  long: 252
+
+cleaning:
+  gap_days_threshold: 30
+  bridge_max_gap_days: 60
+  shared_gap_fraction: 0.8
+  hard_break_gap_days: 60
+  auto_adjust_splits: true
+  split_detection:
+    tolerance: 0.05
+    common_ratios: [2.0, 3.0, 4.0, 5.0, 10.0]
+  extreme_moves:
+    threshold_20: 0.20
+    threshold_50: 0.50
+
+feature_sets:
+  core:
+    - log_ret_5
+    - log_ret_10
+    - log_ret_21
+    - log_ret_63
+    - log_ret_126
+    - vol_21d
+    - vol_63d
+    - downside_vol_63d
+    - parkinson_vol_21d
+    - atr14_norm
+    - max_drawdown_63d
+    - dist_high_126d
+    - dist_low_126d
+    - close_to_sma20
+    - close_to_sma50
+    - rsi_14
+    - macd_hist_norm
+    - bollinger_pct_b_20
+    - log_trade_vol_21d
+    - vol_ratio_21_126
+    - log_turnover_21d
+    - amihud_illiq_63d
+    - zero_trade_share_63d
+    - rel_ret_21d
+    - rel_ret_63d
+    - index_ret_63d
+    - index_vol_63d
+    - cs_rank_mom_63d
+    - cs_rank_vol_63d
+    - cs_rank_vol_21d
+  full:
+    - log_ret_5
+    - log_ret_10
+    - log_ret_21
+    - log_ret_63
+    - log_ret_126
+    - vol_21d
+    - vol_63d
+    - downside_vol_63d
+    - parkinson_vol_21d
+    - atr14_norm
+    - max_drawdown_63d
+    - dist_high_126d
+    - dist_low_126d
+    - close_to_sma20
+    - close_to_sma50
+    - rsi_14
+    - macd_hist_norm
+    - bollinger_pct_b_20
+    - log_trade_vol_21d
+    - vol_ratio_21_126
+    - log_turnover_21d
+    - amihud_illiq_63d
+    - zero_trade_share_63d
+    - rel_ret_21d
+    - rel_ret_63d
+    - index_ret_63d
+    - index_vol_63d
+    - cs_rank_mom_63d
+    - cs_rank_vol_63d
+    - cs_rank_vol_21d
+    - log_ret_252
+    - mom_12_1
+    - max_drawdown_252d
+    - dist_high_252d
+    - dist_low_252d
+    - close_to_sma200
+    - sma50_to_sma200
+    - beta_252d
+  core_rel:
+    - log_ret_5
+    - log_ret_10
+    - log_ret_21
+    - log_ret_63
+    - log_ret_126
+    - vol_21d_ownz
+    - vol_63d_ownz
+    - downside_vol_63d
+    - parkinson_vol_21d
+    - atr14_norm
+    - max_drawdown_63d
+    - dist_high_126d
+    - dist_low_126d
+    - close_to_sma20
+    - close_to_sma50
+    - rsi_14
+    - macd_hist_norm
+    - bollinger_pct_b_20
+    - log_trade_vol_21d_ownz
+    - vol_ratio_21_126
+    - log_turnover_21d_ownz
+    - amihud_illiq_63d_ownz
+    - zero_trade_share_63d
+    - rel_ret_21d
+    - rel_ret_63d
+    - index_ret_63d
+    - index_vol_63d
+    - cs_rank_mom_63d
+    - cs_rank_vol_63d
+    - cs_rank_vol_21d
+
+validation:
+  first_test_year:
+    short: 2008
+    mid: 2008
+    long: 2010
+  last_dev_year: 2019
+  stress_year: 2020
+  holdout_years: [2024, 2025]
+  top_k: 5
+  min_cross_section: 8
+  embargo_trading_days: 5
+  bootstrap_draws: 2000
+  transaction_cost_per_side_bps: 100
+  random_baseline_draws: 200
+  min_train_rows: 200
+  market_calendar_min_series: 10
+  stretched_horizon_ratio: 1.5
+
+servable_models:
+  - momentum_126
+  - ridge_core
+  - rf_reg_core
+  - lgbm_reg_core
+  - ens_rank4
+
+research_models:
+  logit_core: "not part of the live score"
+  logit_full: "not part of the live score"
+  rf_clf_core: "not part of the live score"
+  rf_clf_full: "not part of the live score"
+  lgbm_clf_core: "not part of the live score"
+  lgbm_clf_core_rel: "not part of the live score"
+  lgbm_reg_full: "not part of the live score"
+  lgbm_reg_core_rel: "not part of the live score"
+  ridge_full: "not part of the live score"
+  rf_reg_full: "not part of the live score"
+  lstm_reg_core: "heavy to retrain"
+  tabpfn_reg_core: "heavy to retrain"
+  tabpfn_clf_core: "heavy to retrain"
+  reversal_21: "not part of the live score"
+  low_vol: "not part of the live score"
+  past_winner: "not part of the live score"
+  momentum_63: "not part of the live score"
+  random: "not part of the live score"
+  equal_weight_universe: "not part of the live score"
+
+paths:
+  raw_data: "data/raw/SP20_CSE_Dataset_2001_2025_Adjusted (1).xlsx"
+  raw_sheet: "Full_Dataset_2001_2025"
+  clean_prices: "data/processed/prices_clean.parquet"
+  adjustments_log: "data/processed/adjustments_log.csv"
+  data_quality_flags: "data/processed/data_quality_flags.csv"
+  thresholds_file: "thresholds.json"
+  audit_report: "reports/01_data_audit.md"
+  audit_figures_dir: "reports/figures"
+  usability_table_csv: "reports/usability_table.csv"
+  audit_summary_json: "reports/audit_summary.json"
+  share_class_fix_md: "reports/02_share_class_fix.md"
+  features_targets: "data/processed/features_targets.parquet"
+  feature_availability_csv: "data/processed/feature_availability.csv"
+  latest_features: "data/processed/latest_features.parquet"
+  feature_dictionary_md: "reports/02_feature_dictionary.md"
+  folds_table_csv: "reports/folds.csv"
+  results_long_csv: "reports/results_long.csv"
+  oos_predictions_dir: "reports/oos_predictions"
+  validation_design_md: "reports/03_validation_design.md"
+  baseline_results_md: "reports/03_baseline_results.md"
+  linear_hyperparams_csv: "reports/04_linear_hyperparams.csv"
+  linear_coefficients_csv: "reports/04_linear_coefficients.csv"
+  linear_model_report_md: "reports/04_model1_linear.md"
+  rankable_mask: "data/processed/rankable_mask.parquet"
+

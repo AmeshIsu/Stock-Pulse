@@ -1,0 +1,165 @@
+{
+  "gap_days_threshold": {
+    "value": 30,
+    "unit": "calendar_days",
+    "description": "Standard maximum calendar day gap between consecutive trading dates for an individual stock. Gaps exceeding 30 calendar days trigger a hard segment break unless qualifying as a market-wide closure."
+  },
+  "bridge_max_gap_days": {
+    "value": 60,
+    "unit": "calendar_days",
+    "description": "Maximum calendar day duration for a market-wide trading suspension to be bridged as a continuous trading regime. Accommodates systemic halts (such as the 52-day nationwide CSE lockdown from 2020-03-20 to 2020-05-11 during COVID-19) where prices resume orderly trading immediately upon exchange reopening."
+  },
+  "shared_gap_fraction": {
+    "value": 0.8,
+    "unit": "fraction",
+    "description": "Minimum proportion of active universe constituents (80%) that must synchronously share an identical calendar gap for it to be classified as an exchange-wide closure rather than a company-specific suspension or illiquidity halt."
+  },
+  "hard_break_gap_days": {
+    "value": 60,
+    "unit": "calendar_days",
+    "description": "Upper bound beyond which no gap may be bridged under any condition. All voids exceeding 60 days (including the 278-day 2021 void and 642-day 2022-2024 void) are unconditionally treated as hard breaks across macroeconomic regimes."
+  },
+  "split_ratio_tolerance": {
+    "value": 0.05,
+    "unit": "relative_ratio",
+    "description": "Allowed relative deviation (5%) between observed price ratio (Close_{t-1} / Close_t or inverse) and canonical stock split ratios (2.0, 3.0, 4.0, 5.0, 10.0 and their inverses). Accommodates normal single-day market drift on the effective ex-date while isolating mechanical corporate actions."
+  },
+  "extreme_move_20pct": {
+    "value": 0.2,
+    "unit": "percentage",
+    "description": "Daily absolute close-to-close return threshold of 20% used for general excess-volatility auditing and market outlier monitoring."
+  },
+  "extreme_move_50pct": {
+    "value": 0.5,
+    "unit": "percentage",
+    "description": "Daily absolute close-to-close return threshold of 50% used for identifying suspect moves, unadjusted corporate actions, capital restructuring, and data anomalies."
+  },
+  "min_universe_constituents": {
+    "value": 8,
+    "unit": "series_count",
+    "description": "Minimum cross-sectional active voting series count required on date t to construct the equal-weighted market index and calculate cross-sectional median excess returns and percentile ranks."
+  },
+  "top_k": {
+    "value": 5,
+    "unit": "stocks",
+    "description": "Top-K portfolio size representing the top quintile (25%) of the 20-stock S&P SL20 universe for concentrated portfolio evaluation."
+  },
+  "embargo_trading_days": {
+    "value": 5,
+    "unit": "trading_days",
+    "description": "Post-training embargo buffer (1 calendar week / 5 trading days) separating the purged training window from the test block start to prevent auto-correlated boundary leakage."
+  },
+  "transaction_cost_per_side_bps": {
+    "value": 100,
+    "unit": "basis_points",
+    "description": "ASSUMPTION: Realistic Colombo Stock Exchange trading friction of 1.0% (100 bps) per side (200 bps round-trip). Accounts for brokerage commission (~0.64%), CSE/SEC statutory levies (~0.28%), Share Transaction Levy (STL), and execution market impact in frontier equity markets."
+  },
+  "bootstrap_draws": {
+    "value": 2000,
+    "unit": "draws",
+    "description": "Number of resamples for moving-block bootstrap (block length equal to horizon h) to construct empirical 95% confidence intervals for cross-sectional Rank IC without relying on invalid asymptotic t-distribution assumptions under overlapping return windows."
+  },
+  "random_baseline_draws": {
+    "value": 200,
+    "unit": "draws",
+    "description": "Monte Carlo repetitions for the zero-intelligence random benchmark to obtain a smooth, unbiased null expectation."
+  },
+  "horizons": {
+    "short": {
+      "value": 21,
+      "unit": "trading_days",
+      "description": "Short-term tactical horizon representing approximately one calendar month of trading."
+    },
+    "mid": {
+      "value": 63,
+      "unit": "trading_days",
+      "description": "Medium-term quarterly horizon representing approximately three calendar months (one financial quarter) of trading."
+    },
+    "long": {
+      "value": 252,
+      "unit": "trading_days",
+      "description": "Long-term strategic horizon representing approximately one calendar year (252 trading days) of trading."
+    }
+  },
+  "tier_cutoff_short": {
+    "id": "tier_cutoff_short",
+    "value": 0.25,
+    "unit": "fraction",
+    "method": "Evaluated candidate fractions [0.10, 0.20, 0.25, 0.30] of rankable stocks. No candidate achieved positive lift over median in >= 2/3 dev years (all achieved 6/12 = 50.0%). Standard quartile convention 25% applied.",
+    "data_used": "Dev OOS predictions (2008-2019, 12 folds)",
+    "derivation_date": "2026-10-11",
+    "status": "convention - no evidence-based cutoff"
+  },
+  "tier_cutoff_mid": {
+    "id": "tier_cutoff_mid",
+    "value": 0.3,
+    "unit": "fraction",
+    "method": "Evaluated candidate fractions [0.10, 0.20, 0.25, 0.30]. Selected largest qualifying fraction (30%) with positive lift in 9 of 12 dev years (75.0%, pooled lift +1.66%).",
+    "data_used": "Dev OOS predictions (2008-2019, 12 folds)",
+    "derivation_date": "2026-10-11",
+    "status": "empirical"
+  },
+  "tier_cutoff_long": {
+    "id": "tier_cutoff_long",
+    "value": 0.3,
+    "unit": "fraction",
+    "method": "Evaluated candidate fractions [0.10, 0.20, 0.25, 0.30]. Selected largest qualifying fraction (30%) with positive lift in 8 of 10 dev years (80.0%, pooled lift +5.98%).",
+    "data_used": "Dev OOS predictions (2010-2019, 10 folds)",
+    "derivation_date": "2026-10-11",
+    "status": "empirical"
+  },
+  "risk_category_low_cutoff": {
+    "id": "risk_category_low_cutoff",
+    "value": 21.76,
+    "unit": "annualized_percent",
+    "method": "33.3rd percentile of trailing annualized 63-day volatility (vol_63d) pooled across dev rankable rows.",
+    "data_used": "Dev period clean rankable rows (2002-2019, 59,102 rows)",
+    "derivation_date": "2026-10-11",
+    "status": "empirical"
+  },
+  "risk_category_high_cutoff": {
+    "id": "risk_category_high_cutoff",
+    "value": 32.98,
+    "unit": "annualized_percent",
+    "method": "66.7th percentile of trailing annualized 63-day volatility (vol_63d) pooled across dev rankable rows.",
+    "data_used": "Dev period clean rankable rows (2002-2019, 59,102 rows)",
+    "derivation_date": "2026-10-11",
+    "status": "empirical"
+  },
+  "liquidity_warning_cutoff": {
+    "id": "liquidity_warning_cutoff",
+    "value": 0.0,
+    "unit": "percent_days",
+    "method": "80th percentile of zero_trade_share_63d pooled over dev rankable rows (0.00% in trade-day filtered records). Warning activates if trailing zero trade share is strictly positive and meets or exceeds threshold.",
+    "data_used": "Dev period clean rankable rows (2002-2019, 59,102 rows)",
+    "derivation_date": "2026-10-11",
+    "status": "empirical"
+  },
+  "overall_weight_short": {
+    "id": "overall_weight_short",
+    "value": 0.25,
+    "unit": "weight",
+    "method": "Normalized weight proportional to evidence points (Short RED = 1 pt out of 4 total points).",
+    "data_used": "Dev OOS evaluations across 3 horizons",
+    "derivation_date": "2026-10-11",
+    "status": "derived_from_evidence"
+  },
+  "overall_weight_mid": {
+    "id": "overall_weight_mid",
+    "value": 0.5,
+    "unit": "weight",
+    "method": "Normalized weight proportional to evidence points (Mid AMBER = 2 pts out of 4 total points).",
+    "data_used": "Dev OOS evaluations across 3 horizons",
+    "derivation_date": "2026-10-11",
+    "status": "derived_from_evidence"
+  },
+  "overall_weight_long": {
+    "id": "overall_weight_long",
+    "value": 0.25,
+    "unit": "weight",
+    "method": "Normalized weight proportional to evidence points (Long RED = 1 pt out of 4 total points).",
+    "data_used": "Dev OOS evaluations across 3 horizons",
+    "derivation_date": "2026-10-11",
+    "status": "derived_from_evidence"
+  }
+}
