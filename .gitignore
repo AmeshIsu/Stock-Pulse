@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .gemini/
+.env
+*.db
+*.sqlite
+scratch/
+test-results/
+playwright-report/
+app/frontend/dist/
+app/frontend/node_modules/
+app/frontend/test-results/
+app/frontend/playwright-report/

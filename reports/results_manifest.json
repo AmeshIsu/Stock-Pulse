@@ -1,12 +1,15 @@
 {
-  "created_at": "2026-10-11T21:37:32.449110",
+  "created_at": "2026-10-13T06:13:51.973769",
   "description": "Cryptographic SHA-256 results freeze manifest for Stock Pulse",
   "files": {
-    "reports/results_long.csv": "62d3c854065c30cf6a810149a940489905e821d0b74c006cf223ea1ba73f298d",
-    "config.yaml": "a11f991d277a37a8a26753ea2711e6235844e70816b683eb07f7a6306e6e5804",
-    "reports/oos_predictions/ens_rank4_long_core.parquet": "56a8d7674d92f5ebf8fd7c7508d4c686104c2ae7f252613ea040493b673d0190",
-    "reports/oos_predictions/ens_rank4_mid_core.parquet": "30957a0e1a5012a884590141b88d447233a91cc7bd5c32cb1a410847ba5c7b70",
-    "reports/oos_predictions/ens_rank4_short_core.parquet": "bc9e2c48119f64f870b6d00408a3f372f9e93c069f4e2c40c8b9d55a911e5b28",
+    "config.yaml": "f9e92eec712825861ad5ce35ca74467c74667145cd0b7539ae57c5c7c9a9fd24",
+    "reports/08_provenance.csv": "ab81025103eb4112893397006e71cd73e1d6a2a532790fe89774fc52e5fd0bdc",
+    "reports/oos_predictions/ens_rank4_bestlgbm_long_core.parquet": "c15d3b8ef42d77a990721549f0170b29fba20703197e0bb40462979183aba86c",
+    "reports/oos_predictions/ens_rank4_bestlgbm_mid_core.parquet": "47de535e06a110ab7070b59fa6d75a6b7b23ae8000caf6ac90028fd9433e0d64",
+    "reports/oos_predictions/ens_rank4_bestlgbm_short_core.parquet": "67954b366dba5962d29a061312a05217b0bd246016d5d6d8b4ef893edad69586",
+    "reports/oos_predictions/ens_rank4_long_core.parquet": "86bbf26750d4f75cd7cd89ab2669ced3d65bc5549551ff2c23db68cb1629d26d",
+    "reports/oos_predictions/ens_rank4_mid_core.parquet": "47de535e06a110ab7070b59fa6d75a6b7b23ae8000caf6ac90028fd9433e0d64",
+    "reports/oos_predictions/ens_rank4_short_core.parquet": "e673babafd8ce563e65ad782d3f89e249f76f857507cd75d4f521544cb8e4011",
     "reports/oos_predictions/equal_weight_universe_long_core.parquet": "b20b8416e9b974365d7b6c3a2662a43103c2978e89ec372284f8a638788d6a72",
     "reports/oos_predictions/equal_weight_universe_mid_core.parquet": "e2e20136388ea0fa897bdf55445823b1a86d34342aa8559dfc6f85e42afc948f",
     "reports/oos_predictions/equal_weight_universe_short_core.parquet": "d84923c29556a448819ed52413eddfe8b49ba20b544f3326887f84e92388ff67",
@@ -75,6 +78,7 @@
     "reports/oos_predictions/tabpfn_clf_short_core.parquet": "9840e3cfbb2035d9ab116bdb2747c9eb31ddfd7c71c309e3d2bb205f12b7beb1",
     "reports/oos_predictions/tabpfn_reg_long_core.parquet": "68d414a36f61bf70d508cd0b03759de7d046a750b0a7250c00b883d68cfe2d4f",
     "reports/oos_predictions/tabpfn_reg_mid_core.parquet": "77aa4633756e0c5152ff341d925a77f48e61aeaf291635dd89db4c653466c2bd",
-    "reports/oos_predictions/tabpfn_reg_short_core.parquet": "09d8025129c465826d1f7c7c92f94cb9da4b48361eeaceef4e333ed09e14b6ac"
+    "reports/oos_predictions/tabpfn_reg_short_core.parquet": "09d8025129c465826d1f7c7c92f94cb9da4b48361eeaceef4e333ed09e14b6ac",
+    "reports/results_long.csv": "a82be5ca40fa92042381b4bd8a99d330437d3fa624f8da1fdc505adc831685da"
   }
 }

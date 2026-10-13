@@ -40,7 +40,7 @@
 | `vol_ratio_21_126` | Liquidity | `SMA_21(ShareVolume) / SMA_126(ShareVolume)` | Volume surge ratio identifying institutional accumulation or distribution. |
 | `log_turnover_21d` | Liquidity | `ln(1 + SMA_21(Turnover))` | Log-transformed 1-month average daily rupee trading turnover. |
 | `amihud_illiq_63d` | Liquidity | `mean( |daily_ret| / (Turnover / 1M) )` | Amihud price impact ratio measuring illiquidity cost per rupee traded. |
-| `zero_trade_share_63d` | Liquidity | `mean( I(TradeVolume == 0 or ShareVolume == 0) )` | **Uninformative (constant 0.0)**: Cleaned dataset only contains rows on days a stock traded, so this feature is constant zero across all historical observations. Replaced by market-calendar `trade_day_share_63m` for liquidity warnings; models are not retrained. |
+| `zero_trade_share_63d` | Liquidity | `mean( I(TradeVolume == 0 or ShareVolume == 0) )` | Fraction of zero-activity trading sessions in the trailing quarter. |
 | `log_turnover_21d_ownz` | Engineered | `log_turnover_21d_ownz` | Technical predictor. |
 | `log_trade_vol_21d_ownz` | Engineered | `log_trade_vol_21d_ownz` | Technical predictor. |
 | `amihud_illiq_63d_ownz` | Engineered | `amihud_illiq_63d_ownz` | Technical predictor. |

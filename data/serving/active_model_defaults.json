@@ -1,0 +1,38 @@
+{
+  "as_of": "2025-12-31",
+  "data_version": "v_20251231_6760d4ce",
+  "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066",
+  "active_models": {
+    "short": "ens_rank4",
+    "mid": "momentum_126",
+    "long": "ens_rank4"
+  },
+  "horizon_weights": {
+    "short": 0.25,
+    "mid": 0.5,
+    "long": 0.25
+  },
+  "rules": {
+    "short": {
+      "chosen_model": "ens_rank4",
+      "ens_rank4_t_stat": 1.719,
+      "momentum_126_t_stat": 1.557,
+      "t_stat_difference": -0.162,
+      "reason": "ens_rank4 achieved higher dev fold t-statistic (+1.72 vs momentum_126 +1.56, diff = +0.16 > 0.10)."
+    },
+    "mid": {
+      "chosen_model": "momentum_126",
+      "ens_rank4_t_stat": 1.414,
+      "momentum_126_t_stat": 1.74,
+      "t_stat_difference": 0.326,
+      "reason": "momentum_126 achieved higher dev fold t-statistic (+1.74 vs ens_rank4 +1.41, diff = +0.33 > 0.10)."
+    },
+    "long": {
+      "chosen_model": "ens_rank4",
+      "ens_rank4_t_stat": 2.791,
+      "momentum_126_t_stat": 1.322,
+      "t_stat_difference": -1.47,
+      "reason": "ens_rank4 achieved higher dev fold t-statistic (+2.79 vs momentum_126 +1.32, diff = +1.47 > 0.10)."
+    }
+  }
+}

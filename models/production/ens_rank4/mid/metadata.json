@@ -1,0 +1,21 @@
+{
+  "model_id": "ens_rank4",
+  "horizon": "mid",
+  "feature_set": "core",
+  "active_features": [
+    "ridge_core",
+    "rf_reg_core",
+    "lgbm_reg_core",
+    "momentum_126"
+  ],
+  "training_window": {
+    "start": "2003-01-21",
+    "end": "2025-09-26"
+  },
+  "row_count": 67935,
+  "hyperparameters": {},
+  "random_seed": 42,
+  "git_commit": "49bfaa4e098025d3fda4c41b2d6b50b07e7196a1",
+  "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066",
+  "created_at": "2026-10-12T13:12:25.577617"
+}

@@ -4,7 +4,29 @@ random_seed: 42
 universe_main_types: ["N"]
 universe_selection: "most_rows_among_N_X"
 min_valid_feature_rows_for_scoring: 750
+stale_max_market_days: 10
 include_nonvoting_series: false
+universe_series:
+  - "AEL.N"
+  - "CFIN.N"
+  - "COMB.N"
+  - "DFCC.N"
+  - "DIAL.N"
+  - "HAYL.N"
+  - "HHL.N"
+  - "HNB.N"
+  - "JKH.N"
+  - "LFIN.N"
+  - "LIOC.N"
+  - "LOLC.N"
+  - "MELS.N"
+  - "NDB.N"
+  - "NTB.N"
+  - "PLC.N"
+  - "SAMP.N"
+  - "SEYB.X"
+  - "SINS.N"
+  - "SUN.N"
 
 horizons:
   short: 21
@@ -151,6 +173,12 @@ servable_models:
   - rf_reg_core
   - lgbm_reg_core
   - ens_rank4
+
+ens_components:
+  - ridge_core
+  - rf_reg_core
+  - lgbm_reg_core
+  - momentum_126
 
 research_models:
   logit_core: "not part of the live score"

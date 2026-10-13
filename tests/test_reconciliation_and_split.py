@@ -64,11 +64,8 @@ def test_results_manifest_and_changelog_gate():
 
 
 def test_evidence_labels_tightened_and_original_stored():
-    """Verify evidence labels follow tightened rule and original level is stored."""
+    """Verify evidence labels follow v3 tightened post-hoc rule, v2, and original levels are stored."""
     models_dir = base_dir / "data/app/models"
-    with open(base_dir / "config.yaml", "r") as f:
-        config = json.load(f) if base_dir.joinpath("config.json").exists() else {}
-        
     servable = ["momentum_126", "ridge_core", "rf_reg_core", "lgbm_reg_core", "ens_rank4"]
     
     for m in servable:
@@ -77,8 +74,8 @@ def test_evidence_labels_tightened_and_original_stored():
         with open(ev_path, "r") as f:
             ev = json.load(f)
             
-        assert (ev.get("rule_version") == "v2_tightened_post_hoc" or ev.get("short", {}).get("rule_version") == "v2_tightened_post_hoc")
-        assert (ev.get("post_hoc") is True or ev.get("short", {}).get("post_hoc") is True)
+        assert ev.get("short", {}).get("rule_version") in ["v2_tightened_post_hoc", "v3_post_hoc"]
+        assert ev.get("short", {}).get("post_hoc") is True
         
         for h in ["short", "mid", "long"]:
             h_data = ev[h]
@@ -86,23 +83,39 @@ def test_evidence_labels_tightened_and_original_stored():
             c2 = h_data["criterion_2_beats_naive_baseline"]["passed"]
             c3 = h_data["criterion_3_positive_neutralized_ic"]["passed"]
             
-            lvl_tight = h_data["evidence_level_tightened"]
+            lvl_v3 = h_data.get("evidence_level_v3", h_data.get("evidence_level"))
+            lvl_v2 = h_data.get("evidence_level_v2", h_data.get("evidence_level_tightened"))
             lvl_orig = h_data["evidence_level_original"]
+            holm_p = h_data.get("holm_adjusted_p_value", 1.0)
             
-            # Verify tightened rule logic:
-            # RED if Criterion 1 fails;
-            # AMBER if Criterion 1 passes and at least one other passes;
-            # GREEN if all three pass.
+            # Verify Rule v2 logic:
             if not c1:
-                assert lvl_tight == "RED", f"{m} {h} should be RED because C1 failed"
+                assert lvl_v2 == "RED", f"{m} {h} v2 should be RED because C1 failed"
             elif c1 and (c2 or c3):
                 if c2 and c3:
-                    assert lvl_tight == "GREEN", f"{m} {h} should be GREEN because all 3 passed"
+                    assert lvl_v2 == "GREEN", f"{m} {h} v2 should be GREEN because all 3 passed"
                 else:
-                    assert lvl_tight == "AMBER", f"{m} {h} should be AMBER because C1 passed and 1 other passed"
+                    assert lvl_v2 == "AMBER", f"{m} {h} v2 should be AMBER"
             else:
-                assert lvl_tight == "RED"
+                assert lvl_v2 == "RED"
                 
+            # Verify Rule v3 logic:
+            # RED if C1 fails;
+            # AMBER if C1 passes and at least one other passes, OR if all 3 pass but Holm-adjusted p >= 0.05;
+            # GREEN only if all 3 pass AND Holm-adjusted p < 0.05.
+            if not c1:
+                assert lvl_v3 == "RED", f"{m} {h} v3 should be RED because C1 failed"
+            else:
+                if c2 and c3:
+                    if holm_p is not None and pd.notnull(holm_p) and holm_p < 0.05:
+                        assert lvl_v3 == "GREEN"
+                    else:
+                        assert lvl_v3 == "AMBER", f"{m} {h} v3 should be AMBER because Holm p ({holm_p}) >= 0.05"
+                elif c2 or c3:
+                    assert lvl_v3 == "AMBER"
+                else:
+                    assert lvl_v3 == "RED"
+                    
             # Verify original definition logic:
             passed_count = int(c1) + int(c2) + int(c3)
             if passed_count == 3:
@@ -111,6 +124,97 @@ def test_evidence_labels_tightened_and_original_stored():
                 assert lvl_orig == "AMBER"
             else:
                 assert lvl_orig == "RED"
+
+
+def test_evidence_rule_v3_logic():
+    """Unit test for Evidence Rule v3 logic across all branches, specifically Holm p=0.68 -> AMBER."""
+    def eval_v3(c1, c2, c3, holm_p):
+        if not c1:
+            return "RED"
+        if c2 and c3:
+            if holm_p is not None and pd.notnull(holm_p) and holm_p < 0.05:
+                return "GREEN"
+            return "AMBER"
+        if c2 or c3:
+            return "AMBER"
+        return "RED"
+
+    # Branch 1: C1 fails -> RED regardless of C2, C3, or Holm p
+    assert eval_v3(False, True, True, 0.01) == "RED"
+    assert eval_v3(False, False, False, 0.001) == "RED"
+    
+    # Branch 2: C1 passes, but none of C2/C3 pass -> RED
+    assert eval_v3(True, False, False, 0.01) == "RED"
+    
+    # Branch 3: C1 passes, exactly one of C2/C3 passes -> AMBER
+    assert eval_v3(True, True, False, 0.01) == "AMBER"
+    assert eval_v3(True, False, True, 0.01) == "AMBER"
+    
+    # Branch 4: All 3 pass, but Holm p >= 0.05 (specifically Holm p = 0.68) -> AMBER
+    assert eval_v3(True, True, True, 0.68) == "AMBER"
+    assert eval_v3(True, True, True, 0.05) == "AMBER"
+    
+    # Branch 5: All 3 pass AND Holm p < 0.05 -> GREEN
+    assert eval_v3(True, True, True, 0.049) == "GREEN"
+    assert eval_v3(True, True, True, 0.001) == "GREEN"
+
+
+def test_ens_rank4_uniform_recomputes_from_frozen_components():
+    """Verify ens_rank4 recomputes identically from frozen components across all horizons."""
+    oos_dir = base_dir / "reports" / "oos_predictions"
+    components = ["ridge", "rf_reg", "lgbm_reg", "momentum_126"]
+    
+    for h in ["short", "mid", "long"]:
+        comp_dfs = {}
+        for c in components:
+            p_file = oos_dir / f"{c}_{h}_core.parquet"
+            assert p_file.exists(), f"Missing component {p_file}"
+            df_c = pd.read_parquet(p_file)
+            comp_dfs[c] = df_c.set_index(["Date", "series_id"])["pred_score"]
+            
+        m_df = pd.DataFrame(comp_dfs).dropna()
+        m_df = m_df.reset_index()
+        
+        # Cross-sectional percentile rank for each component
+        for c in components:
+            m_df[f"{c}_pct"] = m_df.groupby("Date")[c].rank(pct=True)
+            
+        # Equal-weight average of ranks
+        m_df["expected_ens_score"] = m_df[[f"{c}_pct" for c in components]].mean(axis=1)
+        
+        # Load actual ens_rank4 parquet
+        ens_actual = pd.read_parquet(oos_dir / f"ens_rank4_{h}_core.parquet")
+        
+        merged = pd.merge(m_df[["Date", "series_id", "expected_ens_score"]],
+                          ens_actual[["Date", "series_id", "pred_score"]],
+                          on=["Date", "series_id"], how="inner")
+        
+        diff = np.abs(merged["expected_ens_score"] - merged["pred_score"]).max()
+        assert diff < 1e-6, f"Horizon {h}: ens_rank4 recomputation diverged by {diff} > 1e-6"
+
+
+def test_provenance_covers_all_oos_predictions():
+    """Verify that reports/08_provenance.csv covers all OOS prediction files and hashes match exactly."""
+    prov_path = base_dir / "reports" / "08_provenance.csv"
+    oos_dir = base_dir / "reports" / "oos_predictions"
+    assert prov_path.exists(), "Missing reports/08_provenance.csv"
+    
+    df_prov = pd.read_csv(prov_path)
+    prov_files = set(df_prov["path"])
+    
+    actual_files = [f"reports/oos_predictions/{p.name}" for p in oos_dir.glob("*.parquet")]
+    assert len(actual_files) == 75, f"Expected 75 OOS prediction files, found {len(actual_files)}"
+    
+    for af in actual_files:
+        assert af in prov_files, f"{af} missing from reports/08_provenance.csv"
+        
+    # Verify sha256 matches
+    for _, row in df_prov.iterrows():
+        p = base_dir / row["path"]
+        assert p.exists(), f"File {p} does not exist"
+        actual_hash = hashlib.sha256(p.read_bytes()).hexdigest()
+        assert actual_hash == row["sha256"], f"Hash mismatch for {row['path']}: {actual_hash} != {row['sha256']}"
+
 
 
 def test_trade_day_share_truncation_no_future_information():

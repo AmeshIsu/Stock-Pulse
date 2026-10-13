@@ -1,0 +1,14 @@
+{
+  "file_path": "C:\\Users\\USER\\AppData\\Local\\Temp\\pytest-of-USER\\pytest-4\\test_round_trip_reproducibilit0\\append_data.parquet",
+  "file_size_bytes": 96677,
+  "total_rows": 1080,
+  "valid": true,
+  "warnings": [],
+  "errors": [],
+  "missing_columns": [],
+  "nat_dates_count": 0,
+  "duplicate_rows_count": 0,
+  "date_order_issues_series": 0,
+  "non_positive_price_rows": 0,
+  "high_below_low_rows": 0
+}

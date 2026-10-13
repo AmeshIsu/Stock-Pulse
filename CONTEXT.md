@@ -23,8 +23,8 @@ All candidate models will be evaluated with institutional rigor (leak-free cross
 3. **Partition Roles & Evaluation Governance**:
    - **Development Folds (Test Years 2008–2019)**: Used exclusively for feature selection, model exploration, hyperparameter tuning, and threshold derivation.
    - **Stress-Test Fold (Test Year 2020)**: Used exclusively as an out-of-sample shock test (COVID-19 pandemic regime; short and mid horizons only). Never used for parameter tuning.
-   - **Final Holdout Fold (Test Years 2024–2025)**: Strictly preserved as the final out-of-sample holdout. It is evaluated and reported for every model for transparency, but is **NEVER** accessed during model selection, feature engineering, tuning, or threshold derivation.
-   - **Universe & Ranking**: Ranking universe selects the dominant ordinary share class per company among MainType N and X (`universe_selection: most_rows_among_N_X`, ties go to N). SEYB uses `SEYB.X` (3,901 rows); all other companies use their `.N` series. Any series with fewer than `min_valid_feature_rows_for_scoring: 750` is excluded. All ranking is cross-sectional per date.
+   - **Final Holdout Fold (Test Years 2024–2025)**: Strictly preserved as the final out-of-sample holdout. Evaluated and reported for transparency, but NEVER accessed during model selection, feature engineering, tuning, or threshold derivation. Exact valid target dates: 2024-01-02 to 2025-11-28 (short targets), 2025-09-26 (mid targets), 2024-12-10 (long targets).
+   - **Universe & Ranking**: Ranking universe is exactly the 20 series defined in `config.yaml` (`universe_series`): AEL.N, CFIN.N, COMB.N, DFCC.N, DIAL.N, HAYL.N, HHL.N, HNB.N, JKH.N, LFIN.N, LIOC.N, LOLC.N, MELS.N, NDB.N, NTB.N, PLC.N, SAMP.N, SEYB.X, SINS.N, SUN.N. All ranking is cross-sectional per date.
    - **Survivorship Bias Warning**: The 20 stocks represent today's index constituents (S&P SL20). Historical long-horizon momentum and winner heuristics carry survivorship bias.
 4. **Honest Uncertainty & Evaluation Mechanics**:
    - **Random Baseline**: Uses independent RNG stream per (draw, date), shuffles series order, and averages draws to guarantee unbiased expectation (dev IC within +/-0.01, precision 48-52%).
@@ -38,6 +38,9 @@ All candidate models will be evaluated with institutional rigor (leak-free cross
    - Every experiment writes out-of-sample predictions to `reports/oos_predictions/{model}_{horizon}_{feature_set}.parquet`.
    - All evaluation metrics append to a common long-format table at `reports/results_long.csv` using the schema:
      `model, feature_set, horizon, fold, split_type, metric, value`.
+7. **Strict Summary Automation Rule (Zero Hand-Typed Metrics)**:
+   - No performance number, metric, t-statistic, threshold, or ticker list in any summary or report finish may be typed by hand.
+   - All summaries must be generated programmatically by `scripts/print_summary.py` directly querying `results_long.csv`, the frozen OOS parquets, `thresholds.json`, and `data/app/` JSON artifacts, and written to `reports/SUMMARY_LATEST.md`.
 
 ---
 

@@ -1,0 +1,35 @@
+{
+  "short": {
+    "horizon": "short",
+    "candidate_fraction": 0.05,
+    "high_threshold": 0.95,
+    "low_threshold": 0.05,
+    "neutral_range": [
+      0.05,
+      0.95
+    ],
+    "methodology": "Fixed top/bottom 5% percentile score cutoffs."
+  },
+  "mid": {
+    "horizon": "mid",
+    "candidate_fraction": 0.1,
+    "high_threshold": 0.9,
+    "low_threshold": 0.1,
+    "neutral_range": [
+      0.1,
+      0.9
+    ],
+    "methodology": "Fixed top/bottom 10% percentile score cutoffs."
+  },
+  "long": {
+    "horizon": "long",
+    "candidate_fraction": 0.2,
+    "high_threshold": 0.8,
+    "low_threshold": 0.2,
+    "neutral_range": [
+      0.2,
+      0.8
+    ],
+    "methodology": "Fixed top/bottom 20% percentile score cutoffs."
+  }
+}

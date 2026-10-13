@@ -1,15 +1,16 @@
 {
   "short": {
-    "rule_version": "v2_tightened_post_hoc",
+    "rule_version": "v3_post_hoc",
     "post_hoc": true,
     "model_id": "rf_reg_core",
     "horizon": "short",
     "evidence_level": "RED",
-    "evidence_level_tightened": "RED",
+    "evidence_level_v3": "RED",
+    "evidence_level_v2": "RED",
     "evidence_level_original": "AMBER",
     "evidence_points": 1,
     "confidence_label": "Very low confidence",
-    "raw_p_value": 0.53,
+    "raw_p_value": 0.35,
     "holm_adjusted_p_value": 1.0,
     "criterion_1_outside_null_band": {
       "passed": false,
@@ -29,20 +30,21 @@
       "passed": true,
       "neutralized_ic": 0.0127
     },
-    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.530), Criterion 2 (beats naive baseline) failed (10/24 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0127).",
+    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.350, Holm-adj p=1.000), Criterion 2 (beats naive baseline) failed (10/24 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0127).",
     "horizon_weight": 0.3333
   },
   "mid": {
-    "rule_version": "v2_tightened_post_hoc",
+    "rule_version": "v3_post_hoc",
     "post_hoc": true,
     "model_id": "rf_reg_core",
     "horizon": "mid",
     "evidence_level": "RED",
-    "evidence_level_tightened": "RED",
+    "evidence_level_v3": "RED",
+    "evidence_level_v2": "RED",
     "evidence_level_original": "AMBER",
     "evidence_points": 1,
     "confidence_label": "Very low confidence",
-    "raw_p_value": 0.559,
+    "raw_p_value": 0.184,
     "holm_adjusted_p_value": 1.0,
     "criterion_1_outside_null_band": {
       "passed": false,
@@ -62,20 +64,21 @@
       "passed": true,
       "neutralized_ic": 0.0224
     },
-    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.559), Criterion 2 (beats naive baseline) failed (11/24 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0224).",
+    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.184, Holm-adj p=1.000), Criterion 2 (beats naive baseline) failed (11/24 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0224).",
     "horizon_weight": 0.3333
   },
   "long": {
-    "rule_version": "v2_tightened_post_hoc",
+    "rule_version": "v3_post_hoc",
     "post_hoc": true,
     "model_id": "rf_reg_core",
     "horizon": "long",
     "evidence_level": "RED",
-    "evidence_level_tightened": "RED",
+    "evidence_level_v3": "RED",
+    "evidence_level_v2": "RED",
     "evidence_level_original": "AMBER",
     "evidence_points": 1,
     "confidence_label": "Very low confidence",
-    "raw_p_value": 0.401,
+    "raw_p_value": 0.157,
     "holm_adjusted_p_value": 1.0,
     "criterion_1_outside_null_band": {
       "passed": false,
@@ -95,9 +98,11 @@
       "passed": true,
       "neutralized_ic": 0.0279
     },
-    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.401), Criterion 2 (beats naive baseline) failed (12/20 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0279).",
+    "explanation": "Very low confidence: Criterion 1 (outside null band) failed (raw p=0.157, Holm-adj p=1.000), Criterion 2 (beats naive baseline) failed (12/20 folds beat momentum_126), Criterion 3 (style-neutralized IC > 0) passed (neutralized IC = +0.0279).",
     "horizon_weight": 0.3333
   },
+  "rule_version": "v3_post_hoc",
+  "post_hoc": true,
   "default_horizon_weights": {
     "short": 0.3333,
     "mid": 0.3333,

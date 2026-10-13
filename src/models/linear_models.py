@@ -469,7 +469,7 @@ The core qualitative and practical verdict remains unchanged:
 ### Short Horizon (`21 Trading Days` / ~1 Month)
 - **Verdict**: Neither `ridge` nor `logit` achieves a robust edge over naive baselines. Across the 12 development folds (2008–2019), `ridge_core` achieves positive Rank IC in only ~6 out of 12 folds (50% win rate), falling short of the two-thirds (67%) consistency hurdle.
 - **Core vs. Full**: `core` features are superior to `full` features on short horizon. Adding 252-day backward features introduces noise and reduces validation Rank IC.
-- **Holdout (2024–2025)**: On the holdout period, linear models fail to generate substantial net excess return after deducting the **ASSUMED** 200 bps round-trip friction.
+- **Holdout (2024–2025)**: On the holdout period, linear models fail to generate meaningful net excess return after deducting the **ASSUMED** 200 bps round-trip friction.
 
 ### Mid Horizon (`63 Trading Days` / ~1 Quarter)
 - **Verdict**: `ridge_core` and `logit_core` exhibit moderate correlation with forward returns, but do not consistently surpass standard momentum (`momentum_126`). On the 12 development folds, positive IC occurs in ~7 out of 12 folds (~58%), which does not meet the 67% threshold.

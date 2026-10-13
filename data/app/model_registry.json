@@ -6,6 +6,7 @@
     "short_description": "Cross-sectional 6-month price momentum benchmark.",
     "servable": true,
     "servable_reason": null,
+    "reason": null,
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0356,
@@ -20,11 +21,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "8/12",
         "fold_t_stat": 1.5574,
-        "top_tier_hit_rate": 51.48,
-        "top_tier_hit_rate_90_ci": [
-          48.73,
-          53.79
-        ],
+        "top_tier_hit_rate": 54.38,
         "top_5_precision": 0.5234,
         "top_5_median_excess": 0.6,
         "net_excess_under_actual_turnover": -0.22,
@@ -33,7 +30,44 @@
         "holdout_ic": 0.0381,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0359,
+          "fold_t_stat": 1.5574,
+          "folds_positive_count": 8,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "8/12",
+          "top_tier_hit_rate": 0.5234,
+          "holdout_ic": 0.0381,
+          "holdout_n_eff": 16,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0003,
+            "diff_fold_t_stat": 0.0,
+            "diff_folds_positive_count": 0,
+            "diff_top_tier_hit_rate": 0.0
+          }
+        },
+        "per_fold_ic": {
+          "dev_2008": 0.038,
+          "dev_2009": 0.0285,
+          "dev_2010": 0.1665,
+          "dev_2011": 0.1284,
+          "dev_2012": -0.1259,
+          "dev_2013": -0.049,
+          "dev_2014": -0.0038,
+          "dev_2015": -0.0119,
+          "dev_2016": 0.0811,
+          "dev_2017": 0.0167,
+          "dev_2018": 0.0627,
+          "dev_2019": 0.0991,
+          "holdout_2024_2025": 0.0381,
+          "stress_2020": 0.0925
+        },
+        "top_tier_hit_rate_90_ci": [
+          50.35,
+          57.95
+        ]
       },
       "mid": {
         "dev_mean_ic": 0.0658,
@@ -43,25 +77,58 @@
         ],
         "outside_null_band": true,
         "raw_p_value": 0.01,
-        "holm_adjusted_p_value": 0.69,
+        "holm_adjusted_p_value": 0.74,
         "folds_positive_count": 9,
         "folds_total_count": 12,
         "folds_positive_ratio": "9/12",
         "fold_t_stat": 1.7396,
-        "top_tier_hit_rate": 47.97,
-        "top_tier_hit_rate_90_ci": [
-          40.0,
-          55.72
-        ],
+        "top_tier_hit_rate": 50.89,
         "top_5_precision": 0.517,
         "top_5_median_excess": 1.6,
         "net_excess_under_actual_turnover": 0.3,
         "average_share_of_names_replaced": 46.2,
-        "evidence_level": "RED",
+        "evidence_level": "AMBER",
         "holdout_ic": 0.1135,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": true
+        "is_auto_default": true,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0662,
+          "fold_t_stat": 1.7396,
+          "folds_positive_count": 9,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "9/12",
+          "top_tier_hit_rate": 0.517,
+          "holdout_ic": 0.1135,
+          "holdout_n_eff": 5,
+          "holdout_status": "not evaluable (n_eff < 5)",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0004,
+            "diff_fold_t_stat": 0.0,
+            "diff_folds_positive_count": 0,
+            "diff_top_tier_hit_rate": 0.0
+          }
+        },
+        "per_fold_ic": {
+          "dev_2008": 0.0663,
+          "dev_2009": 0.1012,
+          "dev_2010": 0.2237,
+          "dev_2011": 0.1649,
+          "dev_2012": -0.2357,
+          "dev_2013": -0.0378,
+          "dev_2014": 0.008,
+          "dev_2015": 0.0491,
+          "dev_2016": 0.2137,
+          "dev_2017": -0.0466,
+          "dev_2018": 0.1037,
+          "dev_2019": 0.1842,
+          "holdout_2024_2025": 0.1135,
+          "stress_2020": 0.064
+        },
+        "top_tier_hit_rate_90_ci": [
+          45.33,
+          55.96
+        ]
       },
       "long": {
         "dev_mean_ic": 0.0682,
@@ -76,11 +143,7 @@
         "folds_total_count": 10,
         "folds_positive_ratio": "7/10",
         "fold_t_stat": 1.3217,
-        "top_tier_hit_rate": 54.9,
-        "top_tier_hit_rate_90_ci": [
-          46.08,
-          64.13
-        ],
+        "top_tier_hit_rate": 52.04,
         "top_5_precision": 0.554,
         "top_5_median_excess": 4.83,
         "net_excess_under_actual_turnover": -6.43,
@@ -89,7 +152,41 @@
         "holdout_ic": -0.0127,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0686,
+          "fold_t_stat": 1.3217,
+          "folds_positive_count": 7,
+          "folds_total_count": 10,
+          "folds_positive_ratio": "7/10",
+          "top_tier_hit_rate": 0.554,
+          "holdout_ic": -0.0127,
+          "holdout_n_eff": 0,
+          "holdout_status": "not evaluable (n_eff < 5)",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0004,
+            "diff_fold_t_stat": 0.0,
+            "diff_folds_positive_count": 0,
+            "diff_top_tier_hit_rate": -0.0
+          }
+        },
+        "per_fold_ic": {
+          "dev_2010": 0.2033,
+          "dev_2011": 0.0489,
+          "dev_2012": -0.2046,
+          "dev_2013": 0.1025,
+          "dev_2014": 0.1451,
+          "dev_2015": 0.1093,
+          "dev_2016": 0.3631,
+          "dev_2017": -0.1472,
+          "dev_2018": -0.0151,
+          "dev_2019": 0.0805,
+          "holdout_2024_2025": -0.0127
+        },
+        "top_tier_hit_rate_90_ci": [
+          43.33,
+          60.78
+        ]
       }
     }
   },
@@ -100,6 +197,7 @@
     "short_description": "L2-regularized linear ranking model using core features.",
     "servable": true,
     "servable_reason": null,
+    "reason": null,
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0006,
@@ -108,17 +206,13 @@
           0.0368
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.493,
+        "raw_p_value": 0.07,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": 0.0275,
-        "top_tier_hit_rate": 51.48,
-        "top_tier_hit_rate_90_ci": [
-          48.73,
-          53.79
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.504,
         "top_5_median_excess": 0.22,
         "net_excess_under_actual_turnover": -1.15,
@@ -127,7 +221,28 @@
         "holdout_ic": 0.2693,
         "holdout_n_eff": 10,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0227,
+          "fold_t_stat": 1.546,
+          "folds_positive_count": 8,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "8/12",
+          "top_tier_hit_rate": 51.88,
+          "top_tier_hit_rate_90_ci": [
+            48.25,
+            55.43
+          ],
+          "holdout_ic": 0.1676,
+          "holdout_n_eff": 16,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0221,
+            "diff_fold_t_stat": 1.5185,
+            "diff_folds_positive_count": 3,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       },
       "mid": {
         "dev_mean_ic": 0.009,
@@ -136,17 +251,13 @@
           0.0558
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.363,
+        "raw_p_value": 0.3,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 6,
         "folds_total_count": 12,
         "folds_positive_ratio": "6/12",
         "fold_t_stat": 0.389,
-        "top_tier_hit_rate": 47.97,
-        "top_tier_hit_rate_90_ci": [
-          40.0,
-          55.72
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.4964,
         "top_5_median_excess": 0.84,
         "net_excess_under_actual_turnover": -0.5,
@@ -155,7 +266,28 @@
         "holdout_ic": 0.4995,
         "holdout_n_eff": 3,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0261,
+          "fold_t_stat": 0.8966,
+          "folds_positive_count": 7,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "7/12",
+          "top_tier_hit_rate": 47.78,
+          "top_tier_hit_rate_90_ci": [
+            41.59,
+            53.81
+          ],
+          "holdout_ic": 0.3508,
+          "holdout_n_eff": 5,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0171,
+            "diff_fold_t_stat": 0.5076,
+            "diff_folds_positive_count": 1,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       },
       "long": {
         "dev_mean_ic": 0.0429,
@@ -164,17 +296,13 @@
           0.1231
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.231,
+        "raw_p_value": 0.113,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 10,
         "folds_positive_ratio": "5/10",
         "fold_t_stat": 0.8143,
-        "top_tier_hit_rate": 54.9,
-        "top_tier_hit_rate_90_ci": [
-          46.08,
-          64.13
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.5136,
         "top_5_median_excess": 3.62,
         "net_excess_under_actual_turnover": 6.66,
@@ -183,7 +311,28 @@
         "holdout_ic": 0.478,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0734,
+          "fold_t_stat": 1.4421,
+          "folds_positive_count": 7,
+          "folds_total_count": 10,
+          "folds_positive_ratio": "7/10",
+          "top_tier_hit_rate": 58.16,
+          "top_tier_hit_rate_90_ci": [
+            50.98,
+            65.91
+          ],
+          "holdout_ic": 0.4549,
+          "holdout_n_eff": 0,
+          "holdout_status": "not evaluable (n_eff < 5)",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0305,
+            "diff_fold_t_stat": 0.6278,
+            "diff_folds_positive_count": 2,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       }
     }
   },
@@ -194,6 +343,7 @@
     "short_description": "Non-linear bootstrap ensemble using core price/volume features.",
     "servable": true,
     "servable_reason": null,
+    "reason": null,
     "horizons": {
       "short": {
         "dev_mean_ic": -0.0009,
@@ -202,17 +352,13 @@
           0.0368
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.53,
+        "raw_p_value": 0.35,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": -0.0519,
-        "top_tier_hit_rate": 51.48,
-        "top_tier_hit_rate_90_ci": [
-          48.73,
-          53.79
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.4983,
         "top_5_median_excess": 0.15,
         "net_excess_under_actual_turnover": -1.26,
@@ -221,7 +367,28 @@
         "holdout_ic": 0.0503,
         "holdout_n_eff": 10,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0071,
+          "fold_t_stat": 0.4685,
+          "folds_positive_count": 7,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "7/12",
+          "top_tier_hit_rate": 50.89,
+          "top_tier_hit_rate_90_ci": [
+            47.91,
+            53.64
+          ],
+          "holdout_ic": 0.1907,
+          "holdout_n_eff": 16,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.008,
+            "diff_fold_t_stat": 0.5204,
+            "diff_folds_positive_count": 2,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       },
       "mid": {
         "dev_mean_ic": -0.0034,
@@ -230,17 +397,13 @@
           0.0558
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.559,
+        "raw_p_value": 0.184,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": -0.1398,
-        "top_tier_hit_rate": 47.97,
-        "top_tier_hit_rate_90_ci": [
-          40.0,
-          55.72
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.4972,
         "top_5_median_excess": 1.04,
         "net_excess_under_actual_turnover": -1.65,
@@ -249,7 +412,28 @@
         "holdout_ic": 0.1349,
         "holdout_n_eff": 3,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0248,
+          "fold_t_stat": 1.2456,
+          "folds_positive_count": 8,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "8/12",
+          "top_tier_hit_rate": 50.0,
+          "top_tier_hit_rate_90_ci": [
+            44.42,
+            56.43
+          ],
+          "holdout_ic": 0.2389,
+          "holdout_n_eff": 5,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0282,
+            "diff_fold_t_stat": 1.3854,
+            "diff_folds_positive_count": 3,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       },
       "long": {
         "dev_mean_ic": 0.0129,
@@ -258,17 +442,13 @@
           0.1231
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.401,
+        "raw_p_value": 0.157,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 10,
         "folds_positive_ratio": "5/10",
         "fold_t_stat": 0.2483,
-        "top_tier_hit_rate": 54.9,
-        "top_tier_hit_rate_90_ci": [
-          46.08,
-          64.13
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.5127,
         "top_5_median_excess": 3.46,
         "net_excess_under_actual_turnover": 6.53,
@@ -277,7 +457,28 @@
         "holdout_ic": 0.3754,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0628,
+          "fold_t_stat": 2.4592,
+          "folds_positive_count": 8,
+          "folds_total_count": 10,
+          "folds_positive_ratio": "8/10",
+          "top_tier_hit_rate": 53.06,
+          "top_tier_hit_rate_90_ci": [
+            40.82,
+            66.33
+          ],
+          "holdout_ic": 0.4025,
+          "holdout_n_eff": 0,
+          "holdout_status": "not evaluable (n_eff < 5)",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0499,
+            "diff_fold_t_stat": 2.2109,
+            "diff_folds_positive_count": 3,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       }
     }
   },
@@ -288,6 +489,7 @@
     "short_description": "Gradient-boosted decision tree predicting forward excess returns.",
     "servable": true,
     "servable_reason": null,
+    "reason": null,
     "horizons": {
       "short": {
         "dev_mean_ic": -0.0048,
@@ -302,11 +504,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "6/12",
         "fold_t_stat": -0.2765,
-        "top_tier_hit_rate": 51.48,
-        "top_tier_hit_rate_90_ci": [
-          48.73,
-          53.79
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.4944,
         "top_5_median_excess": 0.2,
         "net_excess_under_actual_turnover": -1.31,
@@ -315,7 +513,28 @@
         "holdout_ic": 0.1494,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": -0.0172,
+          "fold_t_stat": -1.0185,
+          "folds_positive_count": 5,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "5/12",
+          "top_tier_hit_rate": 49.73,
+          "top_tier_hit_rate_90_ci": [
+            47.39,
+            52.01
+          ],
+          "holdout_ic": 0.1504,
+          "holdout_n_eff": 16,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": -0.0124,
+            "diff_fold_t_stat": -0.742,
+            "diff_folds_positive_count": -1,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       },
       "mid": {
         "dev_mean_ic": -0.023,
@@ -324,17 +543,13 @@
           0.0558
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.814,
+        "raw_p_value": 0.249,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 4,
         "folds_total_count": 12,
         "folds_positive_ratio": "4/12",
         "fold_t_stat": -0.9658,
-        "top_tier_hit_rate": 47.97,
-        "top_tier_hit_rate_90_ci": [
-          40.0,
-          55.72
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.4865,
         "top_5_median_excess": 0.46,
         "net_excess_under_actual_turnover": -1.65,
@@ -343,7 +558,28 @@
         "holdout_ic": 0.1121,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.018,
+          "fold_t_stat": 0.777,
+          "folds_positive_count": 7,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "7/12",
+          "top_tier_hit_rate": 52.0,
+          "top_tier_hit_rate_90_ci": [
+            47.71,
+            56.71
+          ],
+          "holdout_ic": null,
+          "holdout_n_eff": 5,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.041,
+            "diff_fold_t_stat": 1.7428,
+            "diff_folds_positive_count": 3,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       },
       "long": {
         "dev_mean_ic": 0.0114,
@@ -352,17 +588,13 @@
           0.1231
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.412,
+        "raw_p_value": 0.224,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 6,
         "folds_total_count": 10,
         "folds_positive_ratio": "6/10",
         "fold_t_stat": 0.4867,
-        "top_tier_hit_rate": 54.9,
-        "top_tier_hit_rate_90_ci": [
-          46.08,
-          64.13
-        ],
+        "top_tier_hit_rate": null,
         "top_5_precision": 0.5208,
         "top_5_median_excess": 3.4,
         "net_excess_under_actual_turnover": -16.09,
@@ -371,9 +603,31 @@
         "holdout_ic": 0.3766,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": null,
+          "fold_t_stat": 0.0,
+          "folds_positive_count": 5,
+          "folds_total_count": 10,
+          "folds_positive_ratio": "5/10",
+          "top_tier_hit_rate": 53.06,
+          "top_tier_hit_rate_90_ci": [
+            46.74,
+            58.7
+          ],
+          "holdout_ic": 0.2156,
+          "holdout_n_eff": 0,
+          "holdout_status": "not evaluable (n_eff < 5)",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": null,
+            "diff_fold_t_stat": -0.4867,
+            "diff_folds_positive_count": -1,
+            "diff_top_tier_hit_rate": null
+          }
+        }
       }
-    }
+    },
+    "boosting_iterations_note": "Early stopping selected almost no rounds across dev folds (5 trees for Short, 3 trees for Mid, 1 tree for Long; production score std <= 0.003, with Long having only 4 unique values across 70,816 observations). The model carries little incremental information but is retained strictly to maintain the pre-specified 4-model ensemble definition."
   },
   "ens_rank4": {
     "model_id": "ens_rank4",
@@ -382,34 +636,72 @@
     "short_description": "Equal-weighted combination of Ridge, Random Forest, LightGBM, and 126d Momentum.",
     "servable": true,
     "servable_reason": null,
+    "reason": null,
     "horizons": {
       "short": {
-        "dev_mean_ic": 0.0315,
+        "dev_mean_ic": 0.0281,
         "null_band": [
           -0.0374,
           0.0368
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.049,
+        "raw_p_value": 0.07,
         "holm_adjusted_p_value": 1.0,
-        "folds_positive_count": 10,
+        "folds_positive_count": 9,
         "folds_total_count": 12,
-        "folds_positive_ratio": "10/12",
-        "fold_t_stat": 1.7194,
-        "top_tier_hit_rate": 51.48,
-        "top_tier_hit_rate_90_ci": [
-          48.73,
-          53.79
-        ],
-        "top_5_precision": 0.5148,
-        "top_5_median_excess": 0.33,
-        "net_excess_under_actual_turnover": -0.9,
-        "average_share_of_names_replaced": 47.2,
+        "folds_positive_ratio": "9/12",
+        "fold_t_stat": 1.6799,
+        "top_tier_hit_rate": 49.37,
+        "top_5_precision": 0.5151,
+        "top_5_median_excess": 0.39,
+        "net_excess_under_actual_turnover": -1.2,
+        "average_share_of_names_replaced": 50.4,
         "evidence_level": "RED",
-        "holdout_ic": 0.1966,
+        "holdout_ic": 0.2062,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": true
+        "is_auto_default": true,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0214,
+          "fold_t_stat": 1.363,
+          "folds_positive_count": 8,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "8/12",
+          "top_tier_hit_rate": 47.67,
+          "top_tier_hit_rate_90_ci": [
+            44.83,
+            50.53
+          ],
+          "holdout_ic": 0.1958,
+          "holdout_n_eff": 16,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": -0.0067,
+            "diff_fold_t_stat": -0.3169,
+            "diff_folds_positive_count": -1,
+            "diff_top_tier_hit_rate": -1.7
+          }
+        },
+        "per_fold_ic": {
+          "dev_2008": -0.0604,
+          "dev_2009": 0.0328,
+          "dev_2010": 0.0947,
+          "dev_2011": 0.0169,
+          "dev_2012": -0.0491,
+          "dev_2013": -0.0163,
+          "dev_2014": 0.0214,
+          "dev_2015": 0.0205,
+          "dev_2016": 0.0284,
+          "dev_2017": 0.014,
+          "dev_2018": 0.1025,
+          "dev_2019": 0.1328,
+          "holdout_2024_2025": 0.2062,
+          "stress_2020": 0.0
+        },
+        "top_tier_hit_rate_90_ci": [
+          47.02,
+          51.79
+        ]
       },
       "mid": {
         "dev_mean_ic": 0.0429,
@@ -424,11 +716,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "8/12",
         "fold_t_stat": 1.4135,
-        "top_tier_hit_rate": 47.97,
-        "top_tier_hit_rate_90_ci": [
-          40.0,
-          55.72
-        ],
+        "top_tier_hit_rate": 50.67,
         "top_5_precision": 0.5114,
         "top_5_median_excess": 1.49,
         "net_excess_under_actual_turnover": -0.62,
@@ -437,7 +725,209 @@
         "holdout_ic": 0.3176,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0507,
+          "fold_t_stat": 1.5495,
+          "folds_positive_count": 8,
+          "folds_total_count": 12,
+          "folds_positive_ratio": "8/12",
+          "top_tier_hit_rate": 50.0,
+          "top_tier_hit_rate_90_ci": [
+            43.81,
+            56.19
+          ],
+          "holdout_ic": 0.3264,
+          "holdout_n_eff": 5,
+          "holdout_status": "indicative",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0078,
+            "diff_fold_t_stat": 0.136,
+            "diff_folds_positive_count": 0,
+            "diff_top_tier_hit_rate": -0.67
+          }
+        },
+        "per_fold_ic": {
+          "dev_2008": 0.0698,
+          "dev_2009": 0.0976,
+          "dev_2010": 0.1055,
+          "dev_2011": 0.063,
+          "dev_2012": -0.1899,
+          "dev_2013": -0.065,
+          "dev_2014": -0.0719,
+          "dev_2015": 0.1154,
+          "dev_2016": 0.1224,
+          "dev_2017": -0.0192,
+          "dev_2018": 0.1504,
+          "dev_2019": 0.1409,
+          "holdout_2024_2025": 0.3176,
+          "stress_2020": 0.0984
+        },
+        "top_tier_hit_rate_90_ci": [
+          44.57,
+          56.84
+        ]
+      },
+      "long": {
+        "dev_mean_ic": 0.0957,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.054,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 9,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "9/10",
+        "fold_t_stat": 2.3624,
+        "top_tier_hit_rate": 60.2,
+        "top_5_precision": 0.5491,
+        "top_5_median_excess": 5.87,
+        "net_excess_under_actual_turnover": 9.24,
+        "average_share_of_names_replaced": 66.7,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3591,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": true,
+        "production_config_metrics": {
+          "dev_mean_ic": 0.0994,
+          "fold_t_stat": 2.4662,
+          "folds_positive_count": 8,
+          "folds_total_count": 10,
+          "folds_positive_ratio": "8/10",
+          "top_tier_hit_rate": 63.27,
+          "top_tier_hit_rate_90_ci": [
+            53.06,
+            73.96
+          ],
+          "holdout_ic": 0.3617,
+          "holdout_n_eff": 0,
+          "holdout_status": "not evaluable (n_eff < 5)",
+          "difference_vs_validated": {
+            "diff_dev_mean_ic": 0.0037,
+            "diff_fold_t_stat": 0.1038,
+            "diff_folds_positive_count": -1,
+            "diff_top_tier_hit_rate": 3.07
+          }
+        },
+        "per_fold_ic": {
+          "dev_2010": 0.1335,
+          "dev_2011": 0.0609,
+          "dev_2012": -0.1624,
+          "dev_2013": 0.0205,
+          "dev_2014": 0.2995,
+          "dev_2015": 0.0579,
+          "dev_2016": 0.2321,
+          "dev_2017": 0.0301,
+          "dev_2018": 0.1051,
+          "dev_2019": 0.1817,
+          "holdout_2024_2025": 0.3591
+        },
+        "top_tier_hit_rate_90_ci": [
+          50.94,
+          71.11
+        ]
+      }
+    }
+  },
+  "ens_rank4_bestlgbm": {
+    "model_id": "ens_rank4_bestlgbm",
+    "admin_display_name": "4-Model Rank Ensemble (Best LightGBM)",
+    "family": "Ensemble",
+    "short_description": "Sensitivity analysis: per-horizon best LightGBM variant chosen on dev IC. Non-servable.",
+    "servable": false,
+    "servable_reason": "sensitivity analysis, selected on development results",
+    "reason": "sensitivity analysis, selected on development results",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": 0.0281,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.07,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 9,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "9/12",
+        "fold_t_stat": 1.6799,
+        "top_tier_hit_rate": 51.79,
+        "top_5_precision": 0.5151,
+        "top_5_median_excess": 0.39,
+        "net_excess_under_actual_turnover": -1.2,
+        "average_share_of_names_replaced": 50.4,
+        "evidence_level": "RED",
+        "holdout_ic": 0.2062,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.0619,
+          "dev_2009": 0.0515,
+          "dev_2010": 0.0766,
+          "dev_2011": 0.0199,
+          "dev_2012": -0.0665,
+          "dev_2013": 0.0115,
+          "dev_2014": 0.0027,
+          "dev_2015": 0.0066,
+          "dev_2016": 0.0736,
+          "dev_2017": 0.0072,
+          "dev_2018": 0.113,
+          "dev_2019": 0.144,
+          "holdout_2024_2025": 0.1966,
+          "stress_2020": 0.0105
+        },
+        "top_tier_hit_rate_90_ci": [
+          49.25,
+          53.93
+        ]
+      },
+      "mid": {
+        "dev_mean_ic": 0.0429,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.064,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 8,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "8/12",
+        "fold_t_stat": 1.4135,
+        "top_tier_hit_rate": 50.67,
+        "top_5_precision": 0.5114,
+        "top_5_median_excess": 1.49,
+        "net_excess_under_actual_turnover": -0.62,
+        "average_share_of_names_replaced": 51.1,
+        "evidence_level": "RED",
+        "holdout_ic": 0.3176,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": 0.0698,
+          "dev_2009": 0.0976,
+          "dev_2010": 0.1055,
+          "dev_2011": 0.063,
+          "dev_2012": -0.1899,
+          "dev_2013": -0.065,
+          "dev_2014": -0.0719,
+          "dev_2015": 0.1154,
+          "dev_2016": 0.1224,
+          "dev_2017": -0.0192,
+          "dev_2018": 0.1504,
+          "dev_2019": 0.1409,
+          "holdout_2024_2025": 0.3176,
+          "stress_2020": 0.0984
+        },
+        "top_tier_hit_rate_90_ci": [
+          44.57,
+          56.84
+        ]
       },
       "long": {
         "dev_mean_ic": 0.1143,
@@ -452,11 +942,7 @@
         "folds_total_count": 10,
         "folds_positive_ratio": "9/10",
         "fold_t_stat": 2.7914,
-        "top_tier_hit_rate": 54.9,
-        "top_tier_hit_rate_90_ci": [
-          46.08,
-          64.13
-        ],
+        "top_tier_hit_rate": 56.12,
         "top_5_precision": 0.5615,
         "top_5_median_excess": 6.76,
         "net_excess_under_actual_turnover": 5.88,
@@ -465,7 +951,24 @@
         "holdout_ic": 0.3939,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": true
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2010": 0.1341,
+          "dev_2011": 0.1227,
+          "dev_2012": -0.1256,
+          "dev_2013": 0.011,
+          "dev_2014": 0.3306,
+          "dev_2015": 0.0736,
+          "dev_2016": 0.2371,
+          "dev_2017": 0.0254,
+          "dev_2018": 0.1153,
+          "dev_2019": 0.2212,
+          "holdout_2024_2025": 0.3939
+        },
+        "top_tier_hit_rate_90_ci": [
+          46.29,
+          65.96
+        ]
       }
     }
   },
@@ -476,6 +979,7 @@
     "short_description": "L2-regularized logistic classification model predicting binary outperformance.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": -0.0001,
@@ -484,14 +988,13 @@
           0.0368
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.505,
+        "raw_p_value": 0.11,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": -0.0137,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5041,
         "top_5_median_excess": 0.2,
         "net_excess_under_actual_turnover": -1.17,
@@ -509,14 +1012,13 @@
           0.0558
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.656,
+        "raw_p_value": 0.359,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 3,
         "folds_total_count": 12,
         "folds_positive_ratio": "3/12",
         "fold_t_stat": -0.4021,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.4829,
         "top_5_median_excess": 0.43,
         "net_excess_under_actual_turnover": -0.63,
@@ -534,14 +1036,13 @@
           0.1231
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.311,
+        "raw_p_value": 0.22,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 5,
         "folds_total_count": 10,
         "folds_positive_ratio": "5/10",
         "fold_t_stat": 0.5442,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.513,
         "top_5_median_excess": 3.01,
         "net_excess_under_actual_turnover": 6.13,
@@ -561,6 +1062,7 @@
     "short_description": "Bagged tree ensemble predicting binary upside outperformance probability.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": -0.0046,
@@ -569,14 +1071,13 @@
           0.0368
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.602,
+        "raw_p_value": 0.317,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 6,
         "folds_total_count": 12,
         "folds_positive_ratio": "6/12",
         "fold_t_stat": -0.212,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.4927,
         "top_5_median_excess": 0.08,
         "net_excess_under_actual_turnover": -1.3,
@@ -594,14 +1095,13 @@
           0.0558
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.694,
+        "raw_p_value": 0.602,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 4,
         "folds_total_count": 12,
         "folds_positive_ratio": "4/12",
         "fold_t_stat": -0.4852,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.4879,
         "top_5_median_excess": 0.76,
         "net_excess_under_actual_turnover": -1.53,
@@ -619,14 +1119,13 @@
           0.1231
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.392,
+        "raw_p_value": 0.273,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 6,
         "folds_total_count": 10,
         "folds_positive_ratio": "6/10",
         "fold_t_stat": 0.2723,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5246,
         "top_5_median_excess": 4.3,
         "net_excess_under_actual_turnover": 5.35,
@@ -646,6 +1145,7 @@
     "short_description": "Gradient-boosted classification trees predicting binary upside probability.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0034,
@@ -654,14 +1154,13 @@
           0.0368
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.424,
+        "raw_p_value": 0.401,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 6,
         "folds_total_count": 12,
         "folds_positive_ratio": "6/12",
         "fold_t_stat": 0.1717,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5055,
         "top_5_median_excess": 0.23,
         "net_excess_under_actual_turnover": -1.34,
@@ -679,14 +1178,13 @@
           0.0558
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.58,
+        "raw_p_value": 0.435,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 6,
         "folds_total_count": 12,
         "folds_positive_ratio": "6/12",
         "fold_t_stat": -0.1797,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5057,
         "top_5_median_excess": 0.64,
         "net_excess_under_actual_turnover": -1.71,
@@ -704,14 +1202,13 @@
           0.1231
         ],
         "outside_null_band": false,
-        "raw_p_value": 0.312,
+        "raw_p_value": 0.062,
         "holm_adjusted_p_value": 1.0,
         "folds_positive_count": 8,
         "folds_total_count": 10,
         "folds_positive_ratio": "8/10",
         "fold_t_stat": 1.1464,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5091,
         "top_5_median_excess": 2.12,
         "net_excess_under_actual_turnover": -13.91,
@@ -731,6 +1228,7 @@
     "short_description": "Recurrent neural network with 21-day sequential temporal lookback.",
     "servable": false,
     "servable_reason": "heavy to retrain",
+    "reason": "heavy to retrain",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0455,
@@ -740,13 +1238,12 @@
         ],
         "outside_null_band": true,
         "raw_p_value": 0.006,
-        "holm_adjusted_p_value": 0.414,
+        "holm_adjusted_p_value": 0.45,
         "folds_positive_count": 10,
         "folds_total_count": 12,
         "folds_positive_ratio": "10/12",
         "fold_t_stat": 3.649,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5212,
         "top_5_median_excess": 0.41,
         "net_excess_under_actual_turnover": -1.34,
@@ -771,7 +1268,6 @@
         "folds_positive_ratio": "7/12",
         "fold_t_stat": 1.3855,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5071,
         "top_5_median_excess": 0.72,
         "net_excess_under_actual_turnover": -1.47,
@@ -796,7 +1292,6 @@
         "folds_positive_ratio": "3/10",
         "fold_t_stat": -0.7053,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.4931,
         "top_5_median_excess": 1.7,
         "net_excess_under_actual_turnover": 10.03,
@@ -816,6 +1311,7 @@
     "short_description": "Prior-Data Fitted Network foundation model for tabular regression.",
     "servable": false,
     "servable_reason": "heavy to retrain",
+    "reason": "heavy to retrain",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0075,
@@ -831,7 +1327,6 @@
         "folds_positive_ratio": "7/12",
         "fold_t_stat": 0.3698,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.499,
         "top_5_median_excess": 0.26,
         "net_excess_under_actual_turnover": -0.83,
@@ -856,7 +1351,6 @@
         "folds_positive_ratio": "6/12",
         "fold_t_stat": 0.2626,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.4939,
         "top_5_median_excess": 0.58,
         "net_excess_under_actual_turnover": -0.71,
@@ -881,7 +1375,6 @@
         "folds_positive_ratio": "6/10",
         "fold_t_stat": 1.4468,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5232,
         "top_5_median_excess": 4.48,
         "net_excess_under_actual_turnover": 12.32,
@@ -901,6 +1394,7 @@
     "short_description": "Prior-Data Fitted Network foundation model for tabular classification.",
     "servable": false,
     "servable_reason": "heavy to retrain",
+    "reason": "heavy to retrain",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.026,
@@ -916,7 +1410,6 @@
         "folds_positive_ratio": "7/12",
         "fold_t_stat": 1.6228,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5179,
         "top_5_median_excess": 0.4,
         "net_excess_under_actual_turnover": -0.46,
@@ -941,7 +1434,6 @@
         "folds_positive_ratio": "8/12",
         "fold_t_stat": 0.7841,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5075,
         "top_5_median_excess": 1.05,
         "net_excess_under_actual_turnover": -0.28,
@@ -966,7 +1458,6 @@
         "folds_positive_ratio": "6/10",
         "fold_t_stat": 0.2094,
         "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
         "top_5_precision": 0.5097,
         "top_5_median_excess": 3.84,
         "net_excess_under_actual_turnover": -11.0,
@@ -986,6 +1477,7 @@
     "short_description": "1-month short-term contrarian reversal baseline.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": -0.0042,
@@ -1000,8 +1492,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": -0.2701,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 50.36,
         "top_5_precision": 0.4981,
         "top_5_median_excess": 0.3,
         "net_excess_under_actual_turnover": -1.22,
@@ -1010,7 +1501,27 @@
         "holdout_ic": 0.0126,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.0259,
+          "dev_2009": 0.05,
+          "dev_2010": -0.0757,
+          "dev_2011": -0.0016,
+          "dev_2012": -0.0382,
+          "dev_2013": 0.0007,
+          "dev_2014": 0.0983,
+          "dev_2015": -0.0199,
+          "dev_2016": 0.0617,
+          "dev_2017": -0.0292,
+          "dev_2018": -0.0862,
+          "dev_2019": 0.0152,
+          "holdout_2024_2025": 0.0126,
+          "stress_2020": -0.0026
+        },
+        "top_tier_hit_rate_90_ci": [
+          48.18,
+          52.6
+        ]
       },
       "mid": {
         "dev_mean_ic": -0.0348,
@@ -1025,8 +1536,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": -1.6873,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 50.44,
         "top_5_precision": 0.4934,
         "top_5_median_excess": 0.56,
         "net_excess_under_actual_turnover": -1.39,
@@ -1035,7 +1545,27 @@
         "holdout_ic": -0.0378,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": 0.0379,
+          "dev_2009": 0.0168,
+          "dev_2010": -0.1179,
+          "dev_2011": -0.2016,
+          "dev_2012": -0.0032,
+          "dev_2013": -0.0457,
+          "dev_2014": 0.0231,
+          "dev_2015": -0.0388,
+          "dev_2016": 0.0209,
+          "dev_2017": 0.0127,
+          "dev_2018": -0.0965,
+          "dev_2019": -0.0264,
+          "holdout_2024_2025": -0.0378,
+          "stress_2020": -0.0254
+        },
+        "top_tier_hit_rate_90_ci": [
+          44.97,
+          55.56
+        ]
       },
       "long": {
         "dev_mean_ic": -0.0541,
@@ -1050,8 +1580,7 @@
         "folds_total_count": 10,
         "folds_positive_ratio": "2/10",
         "fold_t_stat": -2.5981,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 56.12,
         "top_5_precision": 0.4859,
         "top_5_median_excess": 2.04,
         "net_excess_under_actual_turnover": 2.16,
@@ -1060,7 +1589,24 @@
         "holdout_ic": -0.1007,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2010": -0.1342,
+          "dev_2011": -0.1007,
+          "dev_2012": 0.0664,
+          "dev_2013": -0.0167,
+          "dev_2014": -0.0803,
+          "dev_2015": -0.0962,
+          "dev_2016": -0.1016,
+          "dev_2017": 0.0431,
+          "dev_2018": -0.0448,
+          "dev_2019": -0.0785,
+          "holdout_2024_2025": -0.1007
+        },
+        "top_tier_hit_rate_90_ci": [
+          41.67,
+          69.0
+        ]
       }
     }
   },
@@ -1068,9 +1614,10 @@
     "model_id": "momentum_63",
     "admin_display_name": "63-Day Momentum",
     "family": "Baseline",
-    "short_description": "3-month quarterly price momentum benchmark.",
+    "short_description": "3-month intermediate price momentum baseline.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0186,
@@ -1085,8 +1632,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": 0.8302,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 51.52,
         "top_5_precision": 0.5037,
         "top_5_median_excess": 0.28,
         "net_excess_under_actual_turnover": -0.52,
@@ -1095,7 +1641,27 @@
         "holdout_ic": -0.025,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.0018,
+          "dev_2009": -0.0743,
+          "dev_2010": 0.0873,
+          "dev_2011": 0.1953,
+          "dev_2012": -0.0639,
+          "dev_2013": -0.0171,
+          "dev_2014": -0.0016,
+          "dev_2015": -0.0,
+          "dev_2016": -0.0554,
+          "dev_2017": 0.0113,
+          "dev_2018": 0.1043,
+          "dev_2019": 0.0407,
+          "holdout_2024_2025": -0.025,
+          "stress_2020": 0.0177
+        },
+        "top_tier_hit_rate_90_ci": [
+          47.1,
+          55.87
+        ]
       },
       "mid": {
         "dev_mean_ic": 0.0494,
@@ -1110,8 +1676,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "8/12",
         "fold_t_stat": 1.331,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 52.44,
         "top_5_precision": 0.5094,
         "top_5_median_excess": 1.29,
         "net_excess_under_actual_turnover": -0.74,
@@ -1120,7 +1685,27 @@
         "holdout_ic": 0.0839,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.098,
+          "dev_2009": 0.1362,
+          "dev_2010": 0.1343,
+          "dev_2011": 0.3515,
+          "dev_2012": -0.1087,
+          "dev_2013": 0.0442,
+          "dev_2014": -0.0092,
+          "dev_2015": 0.0296,
+          "dev_2016": 0.0417,
+          "dev_2017": -0.0999,
+          "dev_2018": 0.1151,
+          "dev_2019": 0.0584,
+          "holdout_2024_2025": 0.0839,
+          "stress_2020": 0.0473
+        },
+        "top_tier_hit_rate_90_ci": [
+          46.17,
+          58.37
+        ]
       },
       "long": {
         "dev_mean_ic": 0.0764,
@@ -1135,8 +1720,7 @@
         "folds_total_count": 10,
         "folds_positive_ratio": "8/10",
         "fold_t_stat": 1.8738,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 52.04,
         "top_5_precision": 0.5392,
         "top_5_median_excess": 4.24,
         "net_excess_under_actual_turnover": -3.6,
@@ -1145,102 +1729,35 @@
         "holdout_ic": 0.1297,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
-      }
-    }
-  },
-  "low_vol": {
-    "model_id": "low_vol",
-    "admin_display_name": "Low Volatility",
-    "family": "Baseline",
-    "short_description": "Low-risk anomaly benchmark buying lowest realized volatility stocks.",
-    "servable": false,
-    "servable_reason": "not part of the live score",
-    "horizons": {
-      "short": {
-        "dev_mean_ic": -0.0246,
-        "null_band": [
-          -0.0374,
-          0.0368
-        ],
-        "outside_null_band": false,
-        "raw_p_value": 0.91,
-        "holm_adjusted_p_value": 1.0,
-        "folds_positive_count": 5,
-        "folds_total_count": 12,
-        "folds_positive_ratio": "5/12",
-        "fold_t_stat": -1.1002,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
-        "top_5_precision": 0.4941,
-        "top_5_median_excess": -0.01,
-        "net_excess_under_actual_turnover": -1.05,
-        "average_share_of_names_replaced": 28.6,
-        "evidence_level": "RED",
-        "holdout_ic": -0.058,
-        "holdout_n_eff": 16,
-        "holdout_status": "indicative",
-        "is_auto_default": false
-      },
-      "mid": {
-        "dev_mean_ic": -0.0371,
-        "null_band": [
-          -0.0532,
-          0.0558
-        ],
-        "outside_null_band": false,
-        "raw_p_value": 0.926,
-        "holm_adjusted_p_value": 1.0,
-        "folds_positive_count": 5,
-        "folds_total_count": 12,
-        "folds_positive_ratio": "5/12",
-        "fold_t_stat": -1.4204,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
-        "top_5_precision": 0.4917,
-        "top_5_median_excess": 0.01,
-        "net_excess_under_actual_turnover": -2.45,
-        "average_share_of_names_replaced": 52.0,
-        "evidence_level": "RED",
-        "holdout_ic": -0.1358,
-        "holdout_n_eff": 5,
-        "holdout_status": "indicative",
-        "is_auto_default": false
-      },
-      "long": {
-        "dev_mean_ic": -0.0786,
-        "null_band": [
-          -0.1252,
-          0.1231
-        ],
-        "outside_null_band": false,
-        "raw_p_value": 0.873,
-        "holm_adjusted_p_value": 1.0,
-        "folds_positive_count": 2,
-        "folds_total_count": 10,
-        "folds_positive_ratio": "2/10",
-        "fold_t_stat": -2.1978,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
-        "top_5_precision": 0.4835,
-        "top_5_median_excess": -0.89,
-        "net_excess_under_actual_turnover": -13.86,
-        "average_share_of_names_replaced": 62.2,
-        "evidence_level": "RED",
-        "holdout_ic": -0.1304,
-        "holdout_n_eff": 1,
-        "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2010": 0.1467,
+          "dev_2011": 0.1887,
+          "dev_2012": -0.1587,
+          "dev_2013": 0.0702,
+          "dev_2014": 0.1767,
+          "dev_2015": 0.1093,
+          "dev_2016": 0.2287,
+          "dev_2017": -0.1324,
+          "dev_2018": 0.0743,
+          "dev_2019": 0.064,
+          "holdout_2024_2025": 0.1297
+        },
+        "top_tier_hit_rate_90_ci": [
+          41.67,
+          63.27
+        ]
       }
     }
   },
   "past_winner": {
     "model_id": "past_winner",
-    "admin_display_name": "Past Long-Term Winner",
+    "admin_display_name": "Historical Winner",
     "family": "Baseline",
-    "short_description": "Historical expanding-window multi-year winner baseline.",
+    "short_description": "Static historical mean rank heuristic.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0099,
@@ -1255,8 +1772,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "5/12",
         "fold_t_stat": 0.3549,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 51.79,
         "top_5_precision": 0.4944,
         "top_5_median_excess": 0.27,
         "net_excess_under_actual_turnover": 0.06,
@@ -1265,7 +1781,27 @@
         "holdout_ic": 0.0528,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.0346,
+          "dev_2009": 0.1499,
+          "dev_2010": 0.1945,
+          "dev_2011": 0.0235,
+          "dev_2012": -0.0286,
+          "dev_2013": -0.1597,
+          "dev_2014": -0.1089,
+          "dev_2015": -0.0003,
+          "dev_2016": 0.0885,
+          "dev_2017": 0.0298,
+          "dev_2018": -0.0026,
+          "dev_2019": -0.0294,
+          "holdout_2024_2025": 0.0528,
+          "stress_2020": -0.0446
+        },
+        "top_tier_hit_rate_90_ci": [
+          47.4,
+          56.02
+        ]
       },
       "mid": {
         "dev_mean_ic": 0.0227,
@@ -1280,8 +1816,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "6/12",
         "fold_t_stat": 0.4261,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 50.67,
         "top_5_precision": 0.5038,
         "top_5_median_excess": 0.93,
         "net_excess_under_actual_turnover": 1.24,
@@ -1290,7 +1825,27 @@
         "holdout_ic": 0.0984,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.0661,
+          "dev_2009": 0.2667,
+          "dev_2010": 0.401,
+          "dev_2011": -0.0166,
+          "dev_2012": -0.0911,
+          "dev_2013": -0.3126,
+          "dev_2014": -0.1846,
+          "dev_2015": 0.0894,
+          "dev_2016": 0.1039,
+          "dev_2017": 0.0592,
+          "dev_2018": 0.0302,
+          "dev_2019": -0.0003,
+          "holdout_2024_2025": 0.0984,
+          "stress_2020": -0.1244
+        },
+        "top_tier_hit_rate_90_ci": [
+          44.74,
+          57.24
+        ]
       },
       "long": {
         "dev_mean_ic": -0.045,
@@ -1305,8 +1860,7 @@
         "folds_total_count": 10,
         "folds_positive_ratio": "4/10",
         "fold_t_stat": -0.5952,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 52.04,
         "top_5_precision": 0.5029,
         "top_5_median_excess": 4.27,
         "net_excess_under_actual_turnover": 16.68,
@@ -1315,17 +1869,175 @@
         "holdout_ic": 0.108,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2010": 0.4048,
+          "dev_2011": -0.1988,
+          "dev_2012": -0.3654,
+          "dev_2013": -0.3807,
+          "dev_2014": -0.104,
+          "dev_2015": 0.0833,
+          "dev_2016": -0.0011,
+          "dev_2017": 0.1146,
+          "dev_2018": 0.0368,
+          "dev_2019": -0.0312,
+          "holdout_2024_2025": 0.108
+        },
+        "top_tier_hit_rate_90_ci": [
+          44.0,
+          60.87
+        ]
+      }
+    }
+  },
+  "low_vol": {
+    "model_id": "low_vol",
+    "admin_display_name": "Low Volatility",
+    "family": "Baseline",
+    "short_description": "Inverse trailing volatility heuristic.",
+    "servable": false,
+    "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
+    "horizons": {
+      "short": {
+        "dev_mean_ic": -0.0246,
+        "null_band": [
+          -0.0374,
+          0.0368
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.91,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -1.1002,
+        "top_tier_hit_rate": 50.54,
+        "top_5_precision": 0.4941,
+        "top_5_median_excess": -0.01,
+        "net_excess_under_actual_turnover": -1.05,
+        "average_share_of_names_replaced": 28.6,
+        "evidence_level": "RED",
+        "holdout_ic": -0.058,
+        "holdout_n_eff": 16,
+        "holdout_status": "indicative",
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.1937,
+          "dev_2009": 0.0117,
+          "dev_2010": -0.0915,
+          "dev_2011": -0.0775,
+          "dev_2012": 0.0618,
+          "dev_2013": 0.0477,
+          "dev_2014": -0.0135,
+          "dev_2015": -0.0738,
+          "dev_2016": 0.0695,
+          "dev_2017": -0.0258,
+          "dev_2018": -0.0604,
+          "dev_2019": 0.0467,
+          "holdout_2024_2025": -0.058,
+          "stress_2020": -0.1685
+        },
+        "top_tier_hit_rate_90_ci": [
+          47.55,
+          53.36
+        ]
+      },
+      "mid": {
+        "dev_mean_ic": -0.0371,
+        "null_band": [
+          -0.0532,
+          0.0558
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.926,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 5,
+        "folds_total_count": 12,
+        "folds_positive_ratio": "5/12",
+        "fold_t_stat": -1.4204,
+        "top_tier_hit_rate": 45.78,
+        "top_5_precision": 0.4917,
+        "top_5_median_excess": 0.01,
+        "net_excess_under_actual_turnover": -2.45,
+        "average_share_of_names_replaced": 52.0,
+        "evidence_level": "RED",
+        "holdout_ic": -0.1358,
+        "holdout_n_eff": 5,
+        "holdout_status": "indicative",
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.2277,
+          "dev_2009": -0.0498,
+          "dev_2010": -0.1186,
+          "dev_2011": -0.0893,
+          "dev_2012": 0.0584,
+          "dev_2013": 0.0119,
+          "dev_2014": -0.0096,
+          "dev_2015": -0.1341,
+          "dev_2016": 0.0772,
+          "dev_2017": 0.0133,
+          "dev_2018": -0.037,
+          "dev_2019": 0.0559,
+          "holdout_2024_2025": -0.1358,
+          "stress_2020": -0.196
+        },
+        "top_tier_hit_rate_90_ci": [
+          40.1,
+          50.86
+        ]
+      },
+      "long": {
+        "dev_mean_ic": -0.0786,
+        "null_band": [
+          -0.1252,
+          0.1231
+        ],
+        "outside_null_band": false,
+        "raw_p_value": 0.873,
+        "holm_adjusted_p_value": 1.0,
+        "folds_positive_count": 2,
+        "folds_total_count": 10,
+        "folds_positive_ratio": "2/10",
+        "fold_t_stat": -2.1978,
+        "top_tier_hit_rate": 45.92,
+        "top_5_precision": 0.4835,
+        "top_5_median_excess": -0.89,
+        "net_excess_under_actual_turnover": -13.86,
+        "average_share_of_names_replaced": 62.2,
+        "evidence_level": "RED",
+        "holdout_ic": -0.1304,
+        "holdout_n_eff": 1,
+        "holdout_status": "not evaluable (n_eff < 5)",
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2010": -0.0881,
+          "dev_2011": 0.0487,
+          "dev_2012": 0.0966,
+          "dev_2013": -0.2714,
+          "dev_2014": -0.1034,
+          "dev_2015": -0.2316,
+          "dev_2016": -0.0297,
+          "dev_2017": -0.0288,
+          "dev_2018": -0.0599,
+          "dev_2019": -0.1178,
+          "holdout_2024_2025": -0.1304
+        },
+        "top_tier_hit_rate_90_ci": [
+          34.78,
+          58.0
+        ]
       }
     }
   },
   "random": {
     "model_id": "random",
-    "admin_display_name": "Random Walk Scorer",
-    "family": "Baseline",
-    "short_description": "Zero-intelligence uniform random linear scorer null reference.",
+    "admin_display_name": "Random Scorer",
+    "family": "Null Baseline",
+    "short_description": "Monte Carlo simulated zero-intelligence baseline.",
     "servable": false,
     "servable_reason": "not part of the live score",
+    "reason": "not part of the live score",
     "horizons": {
       "short": {
         "dev_mean_ic": 0.0032,
@@ -1340,8 +2052,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "7/12",
         "fold_t_stat": 0.7726,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 47.76,
         "top_5_precision": 0.5035,
         "top_5_median_excess": 0.33,
         "net_excess_under_actual_turnover": -1.46,
@@ -1350,7 +2061,27 @@
         "holdout_ic": 0.0137,
         "holdout_n_eff": 16,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": 0.0153,
+          "dev_2009": 0.0,
+          "dev_2010": 0.0134,
+          "dev_2011": -0.013,
+          "dev_2012": -0.0139,
+          "dev_2013": -0.0105,
+          "dev_2014": 0.0043,
+          "dev_2015": 0.0058,
+          "dev_2016": 0.0245,
+          "dev_2017": -0.0005,
+          "dev_2018": 0.0272,
+          "dev_2019": -0.0135,
+          "holdout_2024_2025": 0.0137,
+          "stress_2020": 0.0101
+        },
+        "top_tier_hit_rate_90_ci": [
+          43.72,
+          51.78
+        ]
       },
       "mid": {
         "dev_mean_ic": 0.0024,
@@ -1365,8 +2096,7 @@
         "folds_total_count": 12,
         "folds_positive_ratio": "8/12",
         "fold_t_stat": 0.692,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 51.33,
         "top_5_precision": 0.5061,
         "top_5_median_excess": 0.91,
         "net_excess_under_actual_turnover": -1.89,
@@ -1375,7 +2105,27 @@
         "holdout_ic": 0.0072,
         "holdout_n_eff": 5,
         "holdout_status": "indicative",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2008": -0.0175,
+          "dev_2009": 0.0122,
+          "dev_2010": 0.0031,
+          "dev_2011": -0.0056,
+          "dev_2012": -0.0108,
+          "dev_2013": 0.0035,
+          "dev_2014": 0.0055,
+          "dev_2015": 0.0198,
+          "dev_2016": 0.0185,
+          "dev_2017": 0.0029,
+          "dev_2018": 0.0111,
+          "dev_2019": -0.0136,
+          "holdout_2024_2025": 0.0072,
+          "stress_2020": -0.0085
+        },
+        "top_tier_hit_rate_90_ci": [
+          47.69,
+          54.49
+        ]
       },
       "long": {
         "dev_mean_ic": -0.0014,
@@ -1390,8 +2140,7 @@
         "folds_total_count": 10,
         "folds_positive_ratio": "5/10",
         "fold_t_stat": -0.356,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
+        "top_tier_hit_rate": 55.1,
         "top_5_precision": 0.4994,
         "top_5_median_excess": 2.46,
         "net_excess_under_actual_turnover": -8.26,
@@ -1400,83 +2149,24 @@
         "holdout_ic": 0.0041,
         "holdout_n_eff": 1,
         "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
-      }
-    }
-  },
-  "equal_weight_universe": {
-    "model_id": "equal_weight_universe",
-    "admin_display_name": "Equal Weight Universe",
-    "family": "Baseline",
-    "short_description": "Passive equal-weighted ranking benchmark across all universe constituents.",
-    "servable": false,
-    "servable_reason": "not part of the live score",
-    "horizons": {
-      "short": {
-        "dev_mean_ic": null,
-        "null_band": null,
-        "outside_null_band": false,
-        "raw_p_value": null,
-        "holm_adjusted_p_value": null,
-        "folds_positive_count": 0,
-        "folds_total_count": 0,
-        "folds_positive_ratio": "0/0",
-        "fold_t_stat": null,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
-        "top_5_precision": null,
-        "top_5_median_excess": null,
-        "net_excess_under_actual_turnover": null,
-        "average_share_of_names_replaced": null,
-        "evidence_level": "RED",
-        "holdout_ic": null,
-        "holdout_n_eff": 16,
-        "holdout_status": "indicative",
-        "is_auto_default": false
-      },
-      "mid": {
-        "dev_mean_ic": null,
-        "null_band": null,
-        "outside_null_band": false,
-        "raw_p_value": null,
-        "holm_adjusted_p_value": null,
-        "folds_positive_count": 0,
-        "folds_total_count": 0,
-        "folds_positive_ratio": "0/0",
-        "fold_t_stat": null,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
-        "top_5_precision": null,
-        "top_5_median_excess": null,
-        "net_excess_under_actual_turnover": null,
-        "average_share_of_names_replaced": null,
-        "evidence_level": "RED",
-        "holdout_ic": null,
-        "holdout_n_eff": 5,
-        "holdout_status": "indicative",
-        "is_auto_default": false
-      },
-      "long": {
-        "dev_mean_ic": null,
-        "null_band": null,
-        "outside_null_band": false,
-        "raw_p_value": null,
-        "holm_adjusted_p_value": null,
-        "folds_positive_count": 0,
-        "folds_total_count": 0,
-        "folds_positive_ratio": "0/0",
-        "fold_t_stat": null,
-        "top_tier_hit_rate": null,
-        "top_tier_hit_rate_90_ci": null,
-        "top_5_precision": null,
-        "top_5_median_excess": null,
-        "net_excess_under_actual_turnover": null,
-        "average_share_of_names_replaced": null,
-        "evidence_level": "RED",
-        "holdout_ic": null,
-        "holdout_n_eff": 1,
-        "holdout_status": "not evaluable (n_eff < 5)",
-        "is_auto_default": false
+        "is_auto_default": false,
+        "per_fold_ic": {
+          "dev_2010": 0.0193,
+          "dev_2011": -0.0268,
+          "dev_2012": 0.0018,
+          "dev_2013": -0.0102,
+          "dev_2014": 0.0045,
+          "dev_2015": -0.0016,
+          "dev_2016": -0.007,
+          "dev_2017": -0.0026,
+          "dev_2018": 0.0065,
+          "dev_2019": 0.0025,
+          "holdout_2024_2025": 0.0041
+        },
+        "top_tier_hit_rate_90_ci": [
+          45.56,
+          64.29
+        ]
       }
     }
   }

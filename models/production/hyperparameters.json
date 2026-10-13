@@ -1,0 +1,65 @@
+{
+  "rule_description": "Mode of hyperparameter choices across dev folds (ties resolved by distance to median); median of fold iterations/trees for ensembles.",
+  "models": {
+    "ridge_core": {
+      "short": {
+        "alpha": 1.0
+      },
+      "mid": {
+        "alpha": 1000.0
+      },
+      "long": {
+        "alpha": 1.0
+      }
+    },
+    "rf_reg_core": {
+      "short": {
+        "max_depth": 3.0,
+        "max_features": 0.33,
+        "min_samples_leaf": 100.0,
+        "n_estimators": 400
+      },
+      "mid": {
+        "max_depth": 3.0,
+        "max_features": 0.6,
+        "min_samples_leaf": 100.0,
+        "n_estimators": 400
+      },
+      "long": {
+        "max_depth": 3.0,
+        "max_features": 0.33,
+        "min_samples_leaf": 300.0,
+        "n_estimators": 400
+      }
+    },
+    "lgbm_reg_core": {
+      "short": {
+        "num_leaves": 4,
+        "min_child_samples": 200,
+        "feature_fraction": 0.5,
+        "lambda_l2": 10,
+        "n_estimators": 5
+      },
+      "mid": {
+        "num_leaves": 4,
+        "min_child_samples": 200,
+        "feature_fraction": 0.5,
+        "lambda_l2": 10,
+        "n_estimators": 3
+      },
+      "long": {
+        "num_leaves": 4,
+        "min_child_samples": 200,
+        "feature_fraction": 0.5,
+        "lambda_l2": 10,
+        "n_estimators": 1
+      }
+    },
+    "momentum_126": {
+      "description": "Rule-based 126-trading-day momentum. No training or hyperparameters."
+    },
+    "ens_rank4": {
+      "description": "Equal-weight cross-sectional percentile average of [ridge_core, rf_reg_core, lgbm_reg_core, momentum_126]."
+    }
+  }
+}

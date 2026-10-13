@@ -1,0 +1,4127 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Stock Pulse API",
+    "description": "Colombo Stock Exchange Institutional Upside-Ranking & Intelligence Platform",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/v1/public/info": {
+      "get": {
+        "tags": [
+          "public"
+        ],
+        "summary": "Get Public Info",
+        "description": "Retrieve public application information and compliance disclaimer.",
+        "operationId": "get_public_info_api_v1_public_info_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/public/info": {
+      "get": {
+        "tags": [
+          "public"
+        ],
+        "summary": "Get Public Info",
+        "description": "Retrieve public application information and compliance disclaimer.",
+        "operationId": "get_public_info_public_info_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PublicInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/register": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Register",
+        "operationId": "register_api_v1_auth_register_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/login": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Login",
+        "operationId": "login_api_v1_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/logout": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Logout",
+        "operationId": "logout_api_v1_auth_logout_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/refresh": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Refresh Token",
+        "operationId": "refresh_token_api_v1_auth_refresh_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TokenResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/me": {
+      "get": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Get Me",
+        "operationId": "get_me_api_v1_auth_me_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/auth/change-password": {
+      "post": {
+        "tags": [
+          "auth"
+        ],
+        "summary": "Change Password",
+        "operationId": "change_password_api_v1_auth_change_password_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/market/summary": {
+      "get": {
+        "tags": [
+          "market"
+        ],
+        "summary": "Get Market Summary",
+        "operationId": "get_market_summary_api_v1_market_summary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarketSummaryResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/stocks": {
+      "get": {
+        "tags": [
+          "stocks"
+        ],
+        "summary": "List Stocks",
+        "operationId": "list_stocks_api_v1_stocks_get",
+        "parameters": [
+          {
+            "name": "search",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Search"
+            }
+          },
+          {
+            "name": "risk",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Risk"
+            }
+          },
+          {
+            "name": "tier_short",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Tier Short"
+            }
+          },
+          {
+            "name": "tier_mid",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Tier Mid"
+            }
+          },
+          {
+            "name": "tier_long",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Tier Long"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Status"
+            }
+          },
+          {
+            "name": "exclude_liquidity_warning",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Exclude Liquidity Warning"
+            }
+          },
+          {
+            "name": "sort_by",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "overall_upside_score",
+              "title": "Sort By"
+            }
+          },
+          {
+            "name": "ascending",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Ascending"
+            }
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 0,
+              "title": "Skip"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 50,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/StockListItem"
+                  },
+                  "title": "Response List Stocks Api V1 Stocks Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/stocks/{code}": {
+      "get": {
+        "tags": [
+          "stocks"
+        ],
+        "summary": "Get Stock Detail",
+        "operationId": "get_stock_detail_api_v1_stocks__code__get",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StockDetailResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/stocks/{code}/prices": {
+      "get": {
+        "tags": [
+          "stocks"
+        ],
+        "summary": "Get Stock Prices",
+        "operationId": "get_stock_prices_api_v1_stocks__code__prices_get",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code"
+            }
+          },
+          {
+            "name": "range",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(1m|3m|6m|1y|5y|max)$",
+              "default": "1y",
+              "title": "Range"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StockPricesResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/rankings": {
+      "get": {
+        "tags": [
+          "rankings"
+        ],
+        "summary": "Get Rankings",
+        "operationId": "get_rankings_api_v1_rankings_get",
+        "parameters": [
+          {
+            "name": "horizon",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(short|mid|long|overall)$",
+              "default": "overall",
+              "title": "Horizon"
+            }
+          },
+          {
+            "name": "weights",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Weights"
+            }
+          },
+          {
+            "name": "risk",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Risk"
+            }
+          },
+          {
+            "name": "exclude_liquidity_warning",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Exclude Liquidity Warning"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RankingsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/leaders": {
+      "get": {
+        "tags": [
+          "rankings"
+        ],
+        "summary": "Get Consistent Leaders",
+        "operationId": "get_consistent_leaders_api_v1_leaders_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LeadersResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/movers": {
+      "get": {
+        "tags": [
+          "rankings"
+        ],
+        "summary": "Get Movers",
+        "operationId": "get_movers_api_v1_movers_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MoversResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/rankings/export.csv": {
+      "get": {
+        "tags": [
+          "rankings"
+        ],
+        "summary": "Export Rankings Csv",
+        "description": "Export current rankings view to CSV with strictly user-visible columns.",
+        "operationId": "export_rankings_csv_api_v1_rankings_export_csv_get",
+        "parameters": [
+          {
+            "name": "horizon",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(short|mid|long|overall)$",
+              "default": "overall",
+              "title": "Horizon"
+            }
+          },
+          {
+            "name": "weights",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Weights"
+            }
+          },
+          {
+            "name": "risk",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Risk"
+            }
+          },
+          {
+            "name": "exclude_liquidity_warning",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Exclude Liquidity Warning"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/methodology": {
+      "get": {
+        "tags": [
+          "methodology"
+        ],
+        "summary": "Get User Methodology",
+        "operationId": "get_user_methodology_api_v1_methodology_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MethodologyResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/watchlist": {
+      "get": {
+        "tags": [
+          "watchlist"
+        ],
+        "summary": "Get Watchlist",
+        "operationId": "get_watchlist_api_v1_watchlist_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/EnrichedWatchlistItem"
+                  },
+                  "type": "array",
+                  "title": "Response Get Watchlist Api V1 Watchlist Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "watchlist"
+        ],
+        "summary": "Add Watchlist Item",
+        "operationId": "add_watchlist_item_api_v1_watchlist_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WatchlistItemCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WatchlistItemResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/watchlist/{item_id}": {
+      "delete": {
+        "tags": [
+          "watchlist"
+        ],
+        "summary": "Delete Watchlist Item",
+        "operationId": "delete_watchlist_item_api_v1_watchlist__item_id__delete",
+        "parameters": [
+          {
+            "name": "item_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Item Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/alerts": {
+      "get": {
+        "tags": [
+          "alerts"
+        ],
+        "summary": "Get Alerts",
+        "operationId": "get_alerts_api_v1_alerts_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/AlertResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Get Alerts Api V1 Alerts Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "alerts"
+        ],
+        "summary": "Create Alert",
+        "operationId": "create_alert_api_v1_alerts_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AlertResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/alerts/{alert_id}": {
+      "patch": {
+        "tags": [
+          "alerts"
+        ],
+        "summary": "Update Alert",
+        "operationId": "update_alert_api_v1_alerts__alert_id__patch",
+        "parameters": [
+          {
+            "name": "alert_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Alert Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AlertUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AlertResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "alerts"
+        ],
+        "summary": "Delete Alert",
+        "operationId": "delete_alert_api_v1_alerts__alert_id__delete",
+        "parameters": [
+          {
+            "name": "alert_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Alert Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/notifications": {
+      "get": {
+        "tags": [
+          "notifications"
+        ],
+        "summary": "Get Notifications",
+        "operationId": "get_notifications_api_v1_notifications_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/NotificationResponse"
+                  },
+                  "type": "array",
+                  "title": "Response Get Notifications Api V1 Notifications Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/notifications/{notification_id}/read": {
+      "post": {
+        "tags": [
+          "notifications"
+        ],
+        "summary": "Mark Notification Read",
+        "operationId": "mark_notification_read_api_v1_notifications__notification_id__read_post",
+        "parameters": [
+          {
+            "name": "notification_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Notification Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NotificationResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/notifications/read-all": {
+      "post": {
+        "tags": [
+          "notifications"
+        ],
+        "summary": "Mark All Notifications Read",
+        "operationId": "mark_all_notifications_read_api_v1_notifications_read_all_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/health": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Admin Health",
+        "operationId": "admin_health_api_v1_admin_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/models": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Admin Models",
+        "operationId": "get_admin_models_api_v1_admin_models_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminModelRegistryResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/models/{model_id}/preview": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Preview Model Scores",
+        "operationId": "preview_model_scores_api_v1_admin_models__model_id__preview_get",
+        "parameters": [
+          {
+            "name": "model_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Model Id"
+            }
+          },
+          {
+            "name": "horizon",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "pattern": "^(short|mid|long)$",
+              "default": "short",
+              "title": "Horizon"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelPreviewResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/model-settings": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Model Settings",
+        "operationId": "get_model_settings_api_v1_admin_model_settings_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelSettingsResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Update Model Settings",
+        "operationId": "update_model_settings_api_v1_admin_model_settings_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModelSettingUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelSettingsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/model-settings/reset-auto": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Reset Model Settings Auto",
+        "operationId": "reset_model_settings_auto_api_v1_admin_model_settings_reset_auto_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModelSettingsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "List Users",
+        "operationId": "list_users_api_v1_admin_users_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "items": {
+                    "$ref": "#/components/schemas/AdminUserResponse"
+                  },
+                  "type": "array",
+                  "title": "Response List Users Api V1 Admin Users Get"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Create User By Admin",
+        "operationId": "create_user_by_admin_api_v1_admin_users_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUserCreate"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users/{user_id}": {
+      "patch": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Update User By Admin",
+        "operationId": "update_user_by_admin_api_v1_admin_users__user_id__patch",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "User Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdminUserUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdminUserResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/users/{user_id}/reset-password": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Reset User Password",
+        "operationId": "reset_user_password_api_v1_admin_users__user_id__reset_password_post",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "User Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PasswordResetResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/data/status": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Data Status",
+        "operationId": "get_data_status_api_v1_admin_data_status_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStatusResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/data/upload": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Upload Data Refresh",
+        "operationId": "upload_data_refresh_api_v1_admin_data_upload_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_upload_data_refresh_api_v1_admin_data_upload_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataJobResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/jobs/{job_id}": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Data Job",
+        "operationId": "get_data_job_api_v1_admin_jobs__job_id__get",
+        "parameters": [
+          {
+            "name": "job_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Job Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataJobResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/data/rollback": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Rollback Data",
+        "operationId": "rollback_data_api_v1_admin_data_rollback_post",
+        "parameters": [
+          {
+            "name": "target_version",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Target Version"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/alerts/evaluate": {
+      "post": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Trigger Alert Evaluation",
+        "operationId": "trigger_alert_evaluation_api_v1_admin_alerts_evaluate_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MessageResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/audit-log": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Audit Log",
+        "operationId": "get_audit_log_api_v1_admin_audit_log_get",
+        "parameters": [
+          {
+            "name": "actor_email",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Actor Email"
+            }
+          },
+          {
+            "name": "action",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Action"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 100,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AuditLogItem"
+                  },
+                  "title": "Response Get Audit Log Api V1 Admin Audit Log Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/admin/methodology": {
+      "get": {
+        "tags": [
+          "admin"
+        ],
+        "summary": "Get Admin Methodology",
+        "operationId": "get_admin_methodology_api_v1_admin_methodology_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": [
+          "system"
+        ],
+        "summary": "Public Health",
+        "operationId": "public_health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AdminModelRegistryItem": {
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "title": "Model Id"
+          },
+          "admin_display_name": {
+            "type": "string",
+            "title": "Admin Display Name"
+          },
+          "family": {
+            "type": "string",
+            "title": "Family"
+          },
+          "short_description": {
+            "type": "string",
+            "title": "Short Description"
+          },
+          "servable": {
+            "type": "boolean",
+            "title": "Servable"
+          },
+          "servable_reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Servable Reason"
+          },
+          "horizons": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/HorizonMetric"
+            },
+            "type": "object",
+            "title": "Horizons"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model_id",
+          "admin_display_name",
+          "family",
+          "short_description",
+          "servable",
+          "horizons"
+        ],
+        "title": "AdminModelRegistryItem"
+      },
+      "AdminModelRegistryResponse": {
+        "properties": {
+          "active_models": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Active Models"
+          },
+          "models": {
+            "items": {
+              "$ref": "#/components/schemas/AdminModelRegistryItem"
+            },
+            "type": "array",
+            "title": "Models"
+          }
+        },
+        "type": "object",
+        "required": [
+          "active_models",
+          "models"
+        ],
+        "title": "AdminModelRegistryResponse"
+      },
+      "AdminUserCreate": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 10,
+            "title": "Password"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role",
+            "default": "user"
+          },
+          "is_active": {
+            "type": "boolean",
+            "title": "Is Active",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "AdminUserCreate"
+      },
+      "AdminUserResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "is_active": {
+            "type": "boolean",
+            "title": "Is Active"
+          },
+          "failed_login_attempts": {
+            "type": "integer",
+            "title": "Failed Login Attempts"
+          },
+          "locked_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locked Until"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "role",
+          "is_active",
+          "failed_login_attempts",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "AdminUserResponse"
+      },
+      "AdminUserUpdate": {
+        "properties": {
+          "role": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Role"
+          },
+          "is_active": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Active"
+          }
+        },
+        "type": "object",
+        "title": "AdminUserUpdate"
+      },
+      "AlertCreate": {
+        "properties": {
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Params"
+          },
+          "horizon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Horizon"
+          },
+          "cooldown": {
+            "type": "integer",
+            "title": "Cooldown",
+            "default": 1
+          }
+        },
+        "type": "object",
+        "required": [
+          "series_id",
+          "type"
+        ],
+        "title": "AlertCreate"
+      },
+      "AlertResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "user_id": {
+            "type": "integer",
+            "title": "User Id"
+          },
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Params"
+          },
+          "horizon": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Horizon"
+          },
+          "active": {
+            "type": "boolean",
+            "title": "Active"
+          },
+          "cooldown": {
+            "type": "integer",
+            "title": "Cooldown"
+          },
+          "last_triggered_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Triggered At"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "user_id",
+          "series_id",
+          "type",
+          "active",
+          "cooldown",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "AlertResponse"
+      },
+      "AlertUpdate": {
+        "properties": {
+          "active": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Active"
+          },
+          "params": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Params"
+          },
+          "cooldown": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cooldown"
+          }
+        },
+        "type": "object",
+        "title": "AlertUpdate"
+      },
+      "AuditLogItem": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "ts": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Ts"
+          },
+          "actor_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actor Id"
+          },
+          "actor_email": {
+            "type": "string",
+            "title": "Actor Email"
+          },
+          "action": {
+            "type": "string",
+            "title": "Action"
+          },
+          "target": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Target"
+          },
+          "details": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Details"
+          },
+          "ip": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ip"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "ts",
+          "actor_email",
+          "action"
+        ],
+        "title": "AuditLogItem"
+      },
+      "Body_upload_data_refresh_api_v1_admin_data_upload_post": {
+        "properties": {
+          "file": {
+            "type": "string",
+            "contentMediaType": "application/octet-stream",
+            "title": "File"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode",
+            "default": "append"
+          },
+          "dry_run": {
+            "type": "boolean",
+            "title": "Dry Run",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "file"
+        ],
+        "title": "Body_upload_data_refresh_api_v1_admin_data_upload_post"
+      },
+      "ChangePasswordRequest": {
+        "properties": {
+          "old_password": {
+            "type": "string",
+            "title": "Old Password"
+          },
+          "new_password": {
+            "type": "string",
+            "minLength": 10,
+            "title": "New Password"
+          }
+        },
+        "type": "object",
+        "required": [
+          "old_password",
+          "new_password"
+        ],
+        "title": "ChangePasswordRequest"
+      },
+      "ConsistentLeaderItem": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "overall_upside_score": {
+            "type": "number",
+            "title": "Overall Upside Score"
+          },
+          "tier_short": {
+            "type": "string",
+            "title": "Tier Short"
+          },
+          "tier_mid": {
+            "type": "string",
+            "title": "Tier Mid"
+          },
+          "tier_long": {
+            "type": "string",
+            "title": "Tier Long"
+          },
+          "last_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Price"
+          },
+          "daily_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daily Change Pct"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "company_name",
+          "overall_upside_score",
+          "tier_short",
+          "tier_mid",
+          "tier_long"
+        ],
+        "title": "ConsistentLeaderItem"
+      },
+      "DataJobResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "started": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Started"
+          },
+          "finished": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Finished"
+          },
+          "input_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Input Name"
+          },
+          "result": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result"
+          },
+          "created_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Created By"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "status"
+        ],
+        "title": "DataJobResponse"
+      },
+      "DataStatusResponse": {
+        "properties": {
+          "current_as_of": {
+            "type": "string",
+            "title": "Current As Of"
+          },
+          "data_version": {
+            "type": "string",
+            "title": "Data Version"
+          },
+          "available_versions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Available Versions"
+          },
+          "last_refresh_summary": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Refresh Summary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "current_as_of",
+          "data_version",
+          "available_versions"
+        ],
+        "title": "DataStatusResponse"
+      },
+      "EnrichedWatchlistItem": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "last_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Price"
+          },
+          "daily_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daily Change Pct"
+          },
+          "overall_upside_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overall Upside Score"
+          },
+          "tier_short": {
+            "type": "string",
+            "title": "Tier Short"
+          },
+          "tier_mid": {
+            "type": "string",
+            "title": "Tier Mid"
+          },
+          "tier_long": {
+            "type": "string",
+            "title": "Tier Long"
+          },
+          "risk_category": {
+            "type": "string",
+            "title": "Risk Category"
+          },
+          "liquidity_warning": {
+            "type": "boolean",
+            "title": "Liquidity Warning"
+          },
+          "consistent_leader": {
+            "type": "boolean",
+            "title": "Consistent Leader"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "series_id",
+          "company_name",
+          "tier_short",
+          "tier_mid",
+          "tier_long",
+          "risk_category",
+          "liquidity_warning",
+          "consistent_leader",
+          "created_at"
+        ],
+        "title": "EnrichedWatchlistItem"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HorizonMetric": {
+        "properties": {
+          "dev_mean_ic": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Dev Mean Ic"
+          },
+          "hit_rate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hit Rate"
+          },
+          "hit_rate_ci": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hit Rate Ci"
+          },
+          "folds_positive_ratio": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Folds Positive Ratio"
+          },
+          "folds_positive_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Folds Positive Count"
+          },
+          "folds_total_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Folds Total Count"
+          },
+          "fold_t_stat": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fold T Stat"
+          },
+          "raw_p_value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw P Value"
+          },
+          "holm_adjusted_p_value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Holm Adjusted P Value"
+          },
+          "evidence_level": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Level"
+          },
+          "net_excess": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Net Excess"
+          },
+          "holdout_ic": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Holdout Ic"
+          },
+          "holdout_n_eff": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Holdout N Eff"
+          },
+          "holdout_status": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Holdout Status"
+          },
+          "production_config_metrics": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Production Config Metrics"
+          },
+          "per_fold_ic": {
+            "anyOf": [
+              {
+                "additionalProperties": {
+                  "type": "number"
+                },
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Per Fold Ic"
+          },
+          "is_auto_default": {
+            "type": "boolean",
+            "title": "Is Auto Default",
+            "default": false
+          },
+          "is_currently_active": {
+            "type": "boolean",
+            "title": "Is Currently Active",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "HorizonMetric"
+      },
+      "LeadersResponse": {
+        "properties": {
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "count": {
+            "type": "integer",
+            "title": "Count"
+          },
+          "leaders": {
+            "items": {
+              "$ref": "#/components/schemas/ConsistentLeaderItem"
+            },
+            "type": "array",
+            "title": "Leaders"
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of",
+          "count",
+          "leaders"
+        ],
+        "title": "LeadersResponse"
+      },
+      "LoginRequest": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "LoginRequest"
+      },
+      "MarketSummaryResponse": {
+        "properties": {
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "data_version": {
+            "type": "string",
+            "title": "Data Version"
+          },
+          "tier_counts_short": {
+            "$ref": "#/components/schemas/TierCounts"
+          },
+          "tier_counts_mid": {
+            "$ref": "#/components/schemas/TierCounts"
+          },
+          "tier_counts_long": {
+            "$ref": "#/components/schemas/TierCounts"
+          },
+          "consistent_leaders_count": {
+            "type": "integer",
+            "title": "Consistent Leaders Count"
+          },
+          "market_volatility_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Market Volatility Note"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer",
+            "default": "Stock Pulse rankings are for informational research purposes only and do not constitute investment advice or recommendations to buy or sell securities."
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of",
+          "data_version",
+          "tier_counts_short",
+          "tier_counts_mid",
+          "tier_counts_long",
+          "consistent_leaders_count"
+        ],
+        "title": "MarketSummaryResponse"
+      },
+      "MessageResponse": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "success": {
+            "type": "boolean",
+            "title": "Success",
+            "default": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "title": "MessageResponse"
+      },
+      "MethodologyResponse": {
+        "properties": {
+          "markdown_content": {
+            "type": "string",
+            "title": "Markdown Content"
+          },
+          "thresholds": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Thresholds"
+          }
+        },
+        "type": "object",
+        "required": [
+          "markdown_content",
+          "thresholds"
+        ],
+        "title": "MethodologyResponse"
+      },
+      "ModelPreviewResponse": {
+        "properties": {
+          "model_id": {
+            "type": "string",
+            "title": "Model Id"
+          },
+          "horizon": {
+            "type": "string",
+            "title": "Horizon"
+          },
+          "active_model_id": {
+            "type": "string",
+            "title": "Active Model Id"
+          },
+          "top_5_model": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Top 5 Model"
+          },
+          "top_5_active": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Top 5 Active"
+          },
+          "changed_count": {
+            "type": "integer",
+            "title": "Changed Count"
+          }
+        },
+        "type": "object",
+        "required": [
+          "model_id",
+          "horizon",
+          "active_model_id",
+          "top_5_model",
+          "top_5_active",
+          "changed_count"
+        ],
+        "title": "ModelPreviewResponse"
+      },
+      "ModelSettingItem": {
+        "properties": {
+          "horizon": {
+            "type": "string",
+            "title": "Horizon"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "model_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Id"
+          },
+          "effective_model_id": {
+            "type": "string",
+            "title": "Effective Model Id"
+          },
+          "updated_by": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated By"
+          },
+          "updated_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "horizon",
+          "mode",
+          "effective_model_id"
+        ],
+        "title": "ModelSettingItem"
+      },
+      "ModelSettingUpdateRequest": {
+        "properties": {
+          "horizon": {
+            "type": "string",
+            "title": "Horizon"
+          },
+          "mode": {
+            "type": "string",
+            "title": "Mode"
+          },
+          "model_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Model Id"
+          },
+          "confirm": {
+            "type": "boolean",
+            "title": "Confirm",
+            "default": false
+          },
+          "reason": {
+            "type": "string",
+            "title": "Reason"
+          },
+          "acknowledge_warning": {
+            "type": "boolean",
+            "title": "Acknowledge Warning",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "horizon",
+          "mode",
+          "reason"
+        ],
+        "title": "ModelSettingUpdateRequest"
+      },
+      "ModelSettingsResponse": {
+        "properties": {
+          "settings": {
+            "items": {
+              "$ref": "#/components/schemas/ModelSettingItem"
+            },
+            "type": "array",
+            "title": "Settings"
+          }
+        },
+        "type": "object",
+        "required": [
+          "settings"
+        ],
+        "title": "ModelSettingsResponse"
+      },
+      "MoverItem": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "horizon": {
+            "type": "string",
+            "title": "Horizon"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "rank_change_21d": {
+            "type": "number",
+            "title": "Rank Change 21D"
+          },
+          "direction": {
+            "type": "string",
+            "title": "Direction"
+          },
+          "explanation": {
+            "type": "string",
+            "title": "Explanation",
+            "default": "indicative: computed with the current model, not an out-of-sample result"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "company_name",
+          "horizon",
+          "score",
+          "rank_change_21d",
+          "direction"
+        ],
+        "title": "MoverItem"
+      },
+      "MoversResponse": {
+        "properties": {
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "biggest_gainers": {
+            "items": {
+              "$ref": "#/components/schemas/MoverItem"
+            },
+            "type": "array",
+            "title": "Biggest Gainers"
+          },
+          "biggest_decliners": {
+            "items": {
+              "$ref": "#/components/schemas/MoverItem"
+            },
+            "type": "array",
+            "title": "Biggest Decliners"
+          }
+        },
+        "type": "object",
+        "required": [
+          "as_of",
+          "biggest_gainers",
+          "biggest_decliners"
+        ],
+        "title": "MoversResponse"
+      },
+      "NotificationResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "user_id": {
+            "type": "integer",
+            "title": "User Id"
+          },
+          "alert_id": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Alert Id"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "data_version": {
+            "type": "string",
+            "title": "Data Version"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "read_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Read At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "user_id",
+          "message",
+          "data_version",
+          "created_at"
+        ],
+        "title": "NotificationResponse"
+      },
+      "PasswordResetResponse": {
+        "properties": {
+          "user_id": {
+            "type": "integer",
+            "title": "User Id"
+          },
+          "temporary_password": {
+            "type": "string",
+            "title": "Temporary Password"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "type": "object",
+        "required": [
+          "user_id",
+          "temporary_password",
+          "message"
+        ],
+        "title": "PasswordResetResponse"
+      },
+      "PricePoint": {
+        "properties": {
+          "date": {
+            "type": "string",
+            "title": "Date"
+          },
+          "open": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Open"
+          },
+          "high": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "High"
+          },
+          "low": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Low"
+          },
+          "close": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Close"
+          },
+          "volume": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Volume"
+          },
+          "sma_20": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sma 20"
+          },
+          "sma_50": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sma 50"
+          },
+          "sma_200": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sma 200"
+          },
+          "rsi_14": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rsi 14"
+          },
+          "macd_line": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Macd Line"
+          },
+          "macd_signal": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Macd Signal"
+          },
+          "macd_hist": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Macd Hist"
+          },
+          "bollinger_upper": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bollinger Upper"
+          },
+          "bollinger_middle": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bollinger Middle"
+          },
+          "bollinger_lower": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bollinger Lower"
+          }
+        },
+        "type": "object",
+        "required": [
+          "date"
+        ],
+        "title": "PricePoint"
+      },
+      "PublicInfoResponse": {
+        "properties": {
+          "app_name": {
+            "type": "string",
+            "title": "App Name"
+          },
+          "data_as_of": {
+            "type": "string",
+            "title": "Data As Of"
+          },
+          "disclaimer_text": {
+            "type": "string",
+            "title": "Disclaimer Text"
+          }
+        },
+        "type": "object",
+        "required": [
+          "app_name",
+          "data_as_of",
+          "disclaimer_text"
+        ],
+        "title": "PublicInfoResponse"
+      },
+      "RankingStockItem": {
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "title": "Rank"
+          },
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "score": {
+            "type": "number",
+            "title": "Score"
+          },
+          "tier": {
+            "type": "string",
+            "title": "Tier"
+          },
+          "confidence": {
+            "type": "string",
+            "title": "Confidence"
+          },
+          "rank_change_21d": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rank Change 21D"
+          },
+          "risk_category": {
+            "type": "string",
+            "title": "Risk Category"
+          },
+          "liquidity_warning": {
+            "type": "boolean",
+            "title": "Liquidity Warning"
+          },
+          "consistent_leader": {
+            "type": "boolean",
+            "title": "Consistent Leader"
+          },
+          "last_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Price"
+          },
+          "daily_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daily Change Pct"
+          }
+        },
+        "type": "object",
+        "required": [
+          "rank",
+          "code",
+          "company_name",
+          "score",
+          "tier",
+          "confidence",
+          "risk_category",
+          "liquidity_warning",
+          "consistent_leader"
+        ],
+        "title": "RankingStockItem"
+      },
+      "RankingsResponse": {
+        "properties": {
+          "horizon": {
+            "type": "string",
+            "title": "Horizon"
+          },
+          "as_of": {
+            "type": "string",
+            "title": "As Of"
+          },
+          "weights_used": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Weights Used"
+          },
+          "stocks": {
+            "items": {
+              "$ref": "#/components/schemas/RankingStockItem"
+            },
+            "type": "array",
+            "title": "Stocks"
+          }
+        },
+        "type": "object",
+        "required": [
+          "horizon",
+          "as_of",
+          "stocks"
+        ],
+        "title": "RankingsResponse"
+      },
+      "RegisterRequest": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "minLength": 10,
+            "title": "Password"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "RegisterRequest"
+      },
+      "StockDetailResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "last_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Price"
+          },
+          "daily_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daily Change Pct"
+          },
+          "range_52w": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Range 52W"
+          },
+          "sub_type": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sub Type"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "last_traded_date": {
+            "type": "string",
+            "title": "Last Traded Date"
+          },
+          "overall_upside_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overall Upside Score"
+          },
+          "consistent_leader": {
+            "type": "boolean",
+            "title": "Consistent Leader"
+          },
+          "score_short": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score Short"
+          },
+          "tier_short": {
+            "type": "string",
+            "title": "Tier Short"
+          },
+          "confidence_short": {
+            "type": "string",
+            "title": "Confidence Short"
+          },
+          "confidence_explanation_short": {
+            "type": "string",
+            "title": "Confidence Explanation Short"
+          },
+          "rank_change_21d_short": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rank Change 21D Short"
+          },
+          "reasons_short": {
+            "$ref": "#/components/schemas/StockReasons"
+          },
+          "score_mid": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score Mid"
+          },
+          "tier_mid": {
+            "type": "string",
+            "title": "Tier Mid"
+          },
+          "confidence_mid": {
+            "type": "string",
+            "title": "Confidence Mid"
+          },
+          "confidence_explanation_mid": {
+            "type": "string",
+            "title": "Confidence Explanation Mid"
+          },
+          "rank_change_21d_mid": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rank Change 21D Mid"
+          },
+          "reasons_mid": {
+            "$ref": "#/components/schemas/StockReasons"
+          },
+          "score_long": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score Long"
+          },
+          "tier_long": {
+            "type": "string",
+            "title": "Tier Long"
+          },
+          "confidence_long": {
+            "type": "string",
+            "title": "Confidence Long"
+          },
+          "confidence_explanation_long": {
+            "type": "string",
+            "title": "Confidence Explanation Long"
+          },
+          "rank_change_21d_long": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rank Change 21D Long"
+          },
+          "reasons_long": {
+            "$ref": "#/components/schemas/StockReasons"
+          },
+          "risk_category": {
+            "type": "string",
+            "title": "Risk Category"
+          },
+          "trade_day_share_63m": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Trade Day Share 63M"
+          },
+          "liquidity_warning": {
+            "type": "boolean",
+            "title": "Liquidity Warning"
+          },
+          "thin_trading_flag": {
+            "type": "boolean",
+            "title": "Thin Trading Flag"
+          },
+          "thin_trading_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Thin Trading Note"
+          },
+          "rank_change_explanation": {
+            "type": "string",
+            "title": "Rank Change Explanation"
+          },
+          "market_volatility_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Market Volatility Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "company_name",
+          "status",
+          "last_traded_date",
+          "consistent_leader",
+          "tier_short",
+          "confidence_short",
+          "confidence_explanation_short",
+          "reasons_short",
+          "tier_mid",
+          "confidence_mid",
+          "confidence_explanation_mid",
+          "reasons_mid",
+          "tier_long",
+          "confidence_long",
+          "confidence_explanation_long",
+          "reasons_long",
+          "risk_category",
+          "liquidity_warning",
+          "thin_trading_flag",
+          "rank_change_explanation"
+        ],
+        "title": "StockDetailResponse"
+      },
+      "StockListItem": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name"
+          },
+          "last_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Last Price"
+          },
+          "daily_change_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daily Change Pct"
+          },
+          "overall_upside_score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Overall Upside Score"
+          },
+          "tier_short": {
+            "type": "string",
+            "title": "Tier Short"
+          },
+          "tier_mid": {
+            "type": "string",
+            "title": "Tier Mid"
+          },
+          "tier_long": {
+            "type": "string",
+            "title": "Tier Long"
+          },
+          "risk_category": {
+            "type": "string",
+            "title": "Risk Category"
+          },
+          "liquidity_warning": {
+            "type": "boolean",
+            "title": "Liquidity Warning"
+          },
+          "consistent_leader": {
+            "type": "boolean",
+            "title": "Consistent Leader"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "company_name",
+          "tier_short",
+          "tier_mid",
+          "tier_long",
+          "risk_category",
+          "liquidity_warning",
+          "consistent_leader",
+          "status"
+        ],
+        "title": "StockListItem"
+      },
+      "StockPricesResponse": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "range": {
+            "type": "string",
+            "title": "Range"
+          },
+          "prices": {
+            "items": {
+              "$ref": "#/components/schemas/PricePoint"
+            },
+            "type": "array",
+            "title": "Prices"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "range",
+          "prices"
+        ],
+        "title": "StockPricesResponse"
+      },
+      "StockReasons": {
+        "properties": {
+          "top_positive": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Top Positive"
+          },
+          "top_negative": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Top Negative"
+          }
+        },
+        "type": "object",
+        "required": [
+          "top_positive",
+          "top_negative"
+        ],
+        "title": "StockReasons"
+      },
+      "TierCounts": {
+        "properties": {
+          "High": {
+            "type": "integer",
+            "title": "High"
+          },
+          "Neutral": {
+            "type": "integer",
+            "title": "Neutral"
+          },
+          "Low": {
+            "type": "integer",
+            "title": "Low"
+          }
+        },
+        "type": "object",
+        "required": [
+          "High",
+          "Neutral",
+          "Low"
+        ],
+        "title": "TierCounts"
+      },
+      "TokenResponse": {
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "title": "Access Token"
+          },
+          "token_type": {
+            "type": "string",
+            "title": "Token Type",
+            "default": "bearer"
+          },
+          "csrf_token": {
+            "type": "string",
+            "title": "Csrf Token"
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserResponse"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access_token",
+          "csrf_token",
+          "user"
+        ],
+        "title": "TokenResponse"
+      },
+      "UserResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "role": {
+            "type": "string",
+            "title": "Role"
+          },
+          "is_active": {
+            "type": "boolean",
+            "title": "Is Active"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "role",
+          "is_active",
+          "created_at"
+        ],
+        "title": "UserResponse"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "WatchlistItemCreate": {
+        "properties": {
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "type": "object",
+        "required": [
+          "series_id"
+        ],
+        "title": "WatchlistItemCreate"
+      },
+      "WatchlistItemResponse": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "title": "Id"
+          },
+          "user_id": {
+            "type": "integer",
+            "title": "User Id"
+          },
+          "series_id": {
+            "type": "string",
+            "title": "Series Id"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "user_id",
+          "series_id",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "WatchlistItemResponse"
+      }
+    }
+  }
+}

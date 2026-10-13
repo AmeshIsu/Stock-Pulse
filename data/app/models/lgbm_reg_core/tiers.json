@@ -1,327 +1,35 @@
 {
   "short": {
-    "chosen_fraction": 0.3,
-    "status": "empirical",
-    "reason": "Selected largest qualifying top-tier fraction (30%) with positive lift in >= 2/3 dev years.",
-    "candidates": [
-      {
-        "fraction": 0.1,
-        "fraction_pct": "10%",
-        "pos_years": "6/12",
-        "pos_years_pct": 50.0,
-        "pooled_lift_pct": -0.33,
-        "ci_90": [
-          -2.58,
-          12.12
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": -6.4,
-          "dev_2009": 6.18,
-          "dev_2010": 14.77,
-          "dev_2011": -8.31,
-          "dev_2012": 2.37,
-          "dev_2013": -1.5,
-          "dev_2014": 50.0,
-          "dev_2015": 2.03,
-          "dev_2016": 2.92,
-          "dev_2017": -5.31,
-          "dev_2018": -0.42,
-          "dev_2019": -11.98
-        }
-      },
-      {
-        "fraction": 0.2,
-        "fraction_pct": "20%",
-        "pos_years": "7/12",
-        "pos_years_pct": 58.3,
-        "pooled_lift_pct": -0.08,
-        "ci_90": [
-          -1.22,
-          12.43
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": -7.18,
-          "dev_2009": 2.1,
-          "dev_2010": 9.45,
-          "dev_2011": -1.5,
-          "dev_2012": 1.87,
-          "dev_2013": -5.25,
-          "dev_2014": 50.0,
-          "dev_2015": 3.7,
-          "dev_2016": 3.64,
-          "dev_2017": -3.74,
-          "dev_2018": 0.05,
-          "dev_2019": -1.03
-        }
-      },
-      {
-        "fraction": 0.25,
-        "fraction_pct": "25%",
-        "pos_years": "6/12",
-        "pos_years_pct": 50.0,
-        "pooled_lift_pct": 0.09,
-        "ci_90": [
-          -1.01,
-          12.62
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": -5.67,
-          "dev_2009": -1.87,
-          "dev_2010": 8.47,
-          "dev_2011": -0.33,
-          "dev_2012": 1.88,
-          "dev_2013": -5.98,
-          "dev_2014": 50.0,
-          "dev_2015": 2.59,
-          "dev_2016": 3.71,
-          "dev_2017": -2.05,
-          "dev_2018": -0.04,
-          "dev_2019": 2.43
-        }
-      },
-      {
-        "fraction": 0.3,
-        "fraction_pct": "30%",
-        "pos_years": "8/12",
-        "pos_years_pct": 66.7,
-        "pooled_lift_pct": -0.16,
-        "ci_90": [
-          -1.3,
-          12.42
-        ],
-        "qualifies": true,
-        "yearly_lifts": {
-          "dev_2008": -6.0,
-          "dev_2009": -3.28,
-          "dev_2010": 7.93,
-          "dev_2011": 0.93,
-          "dev_2012": 1.6,
-          "dev_2013": -6.26,
-          "dev_2014": 50.0,
-          "dev_2015": 2.36,
-          "dev_2016": 1.23,
-          "dev_2017": -1.19,
-          "dev_2018": 0.08,
-          "dev_2019": 2.83
-        }
-      }
-    ]
+    "horizon": "short",
+    "candidate_fraction": 0.25,
+    "high_threshold": 0.75,
+    "low_threshold": 0.25,
+    "neutral_range": [
+      0.25,
+      0.75
+    ],
+    "methodology": "Fixed top/bottom 25% percentile score cutoffs."
   },
   "mid": {
-    "chosen_fraction": 0.25,
-    "status": "convention - no evidence-based cutoff",
-    "reason": "No candidate fraction achieved positive lift in >= 2/3 dev years; default convention of 25% (top quartile) applied.",
-    "candidates": [
-      {
-        "fraction": 0.1,
-        "fraction_pct": "10%",
-        "pos_years": "5/12",
-        "pos_years_pct": 41.7,
-        "pooled_lift_pct": -1.26,
-        "ci_90": [
-          -5.26,
-          5.91
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": 0.4,
-          "dev_2009": 9.61,
-          "dev_2010": 29.66,
-          "dev_2011": -12.71,
-          "dev_2012": -6.93,
-          "dev_2013": -12.26,
-          "dev_2014": -14.99,
-          "dev_2015": -0.49,
-          "dev_2016": 0.0,
-          "dev_2017": 5.64,
-          "dev_2018": 5.21,
-          "dev_2019": -3.41
-        }
-      },
-      {
-        "fraction": 0.2,
-        "fraction_pct": "20%",
-        "pos_years": "6/12",
-        "pos_years_pct": 50.0,
-        "pooled_lift_pct": -0.92,
-        "ci_90": [
-          -4.2,
-          2.15
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": 2.11,
-          "dev_2009": 6.57,
-          "dev_2010": 10.22,
-          "dev_2011": -1.2,
-          "dev_2012": -8.07,
-          "dev_2013": -9.3,
-          "dev_2014": -14.36,
-          "dev_2015": -0.24,
-          "dev_2016": 4.53,
-          "dev_2017": 1.15,
-          "dev_2018": 0.33,
-          "dev_2019": -2.6
-        }
-      },
-      {
-        "fraction": 0.25,
-        "fraction_pct": "25%",
-        "pos_years": "7/12",
-        "pos_years_pct": 58.3,
-        "pooled_lift_pct": -0.77,
-        "ci_90": [
-          -3.35,
-          1.89
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": 2.1,
-          "dev_2009": 6.7,
-          "dev_2010": 5.81,
-          "dev_2011": -0.29,
-          "dev_2012": -6.55,
-          "dev_2013": -5.98,
-          "dev_2014": -13.19,
-          "dev_2015": 0.22,
-          "dev_2016": 4.53,
-          "dev_2017": 0.52,
-          "dev_2018": 1.08,
-          "dev_2019": -2.4
-        }
-      },
-      {
-        "fraction": 0.3,
-        "fraction_pct": "30%",
-        "pos_years": "7/12",
-        "pos_years_pct": 58.3,
-        "pooled_lift_pct": -0.69,
-        "ci_90": [
-          -3.0,
-          1.77
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2008": 2.55,
-          "dev_2009": 6.78,
-          "dev_2010": 2.56,
-          "dev_2011": 0.19,
-          "dev_2012": -5.49,
-          "dev_2013": -5.63,
-          "dev_2014": -11.79,
-          "dev_2015": -0.68,
-          "dev_2016": 4.53,
-          "dev_2017": 1.0,
-          "dev_2018": 2.03,
-          "dev_2019": -2.58
-        }
-      }
-    ]
+    "horizon": "mid",
+    "candidate_fraction": 0.3,
+    "high_threshold": 0.7,
+    "low_threshold": 0.3,
+    "neutral_range": [
+      0.3,
+      0.7
+    ],
+    "methodology": "Fixed top/bottom 30% percentile score cutoffs."
   },
   "long": {
-    "chosen_fraction": 0.25,
-    "status": "convention - no evidence-based cutoff",
-    "reason": "No candidate fraction achieved positive lift in >= 2/3 dev years; default convention of 25% (top quartile) applied.",
-    "candidates": [
-      {
-        "fraction": 0.1,
-        "fraction_pct": "10%",
-        "pos_years": "5/10",
-        "pos_years_pct": 50.0,
-        "pooled_lift_pct": -1.34,
-        "ci_90": [
-          -4.28,
-          6.18
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2010": 14.18,
-          "dev_2011": -0.21,
-          "dev_2012": -13.92,
-          "dev_2013": -2.28,
-          "dev_2014": -14.12,
-          "dev_2015": 6.55,
-          "dev_2016": 13.58,
-          "dev_2017": 1.17,
-          "dev_2018": -6.87,
-          "dev_2019": 11.95
-        }
-      },
-      {
-        "fraction": 0.2,
-        "fraction_pct": "20%",
-        "pos_years": "5/10",
-        "pos_years_pct": 50.0,
-        "pooled_lift_pct": 0.83,
-        "ci_90": [
-          -3.38,
-          4.77
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2010": 11.53,
-          "dev_2011": -5.42,
-          "dev_2012": -6.94,
-          "dev_2013": -2.29,
-          "dev_2014": -14.12,
-          "dev_2015": 6.55,
-          "dev_2016": 8.0,
-          "dev_2017": 3.32,
-          "dev_2018": -0.88,
-          "dev_2019": 8.09
-        }
-      },
-      {
-        "fraction": 0.25,
-        "fraction_pct": "25%",
-        "pos_years": "6/10",
-        "pos_years_pct": 60.0,
-        "pooled_lift_pct": 2.04,
-        "ci_90": [
-          -3.02,
-          4.9
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2010": 5.77,
-          "dev_2011": -4.82,
-          "dev_2012": -6.15,
-          "dev_2013": -1.61,
-          "dev_2014": -14.12,
-          "dev_2015": 6.55,
-          "dev_2016": 11.59,
-          "dev_2017": 4.24,
-          "dev_2018": 0.53,
-          "dev_2019": 8.88
-        }
-      },
-      {
-        "fraction": 0.3,
-        "fraction_pct": "30%",
-        "pos_years": "6/10",
-        "pos_years_pct": 60.0,
-        "pooled_lift_pct": 2.16,
-        "ci_90": [
-          -2.49,
-          4.56
-        ],
-        "qualifies": false,
-        "yearly_lifts": {
-          "dev_2010": 3.97,
-          "dev_2011": -3.08,
-          "dev_2012": -3.76,
-          "dev_2013": -0.98,
-          "dev_2014": -14.12,
-          "dev_2015": 6.67,
-          "dev_2016": 9.67,
-          "dev_2017": 3.81,
-          "dev_2018": 1.64,
-          "dev_2019": 8.38
-        }
-      }
-    ]
+    "horizon": "long",
+    "candidate_fraction": 0.3,
+    "high_threshold": 0.7,
+    "low_threshold": 0.3,
+    "neutral_range": [
+      0.3,
+      0.7
+    ],
+    "methodology": "Fixed top/bottom 30% percentile score cutoffs."
   }
 }

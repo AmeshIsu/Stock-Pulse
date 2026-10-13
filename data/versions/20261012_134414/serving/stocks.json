@@ -1,0 +1,282 @@
+[
+  {
+    "code": "AEL.N",
+    "company_name": "ACCESS ENG SL",
+    "last_price": 73.3,
+    "daily_change_pct": 1.38,
+    "range_52w": [
+      30.2,
+      76.9
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "CFIN.N",
+    "company_name": "CENTRAL FINANCE",
+    "last_price": 268.0,
+    "daily_change_pct": -0.19,
+    "range_52w": [
+      139.5,
+      317.5
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "COMB.N",
+    "company_name": "COMMERCIAL BANK",
+    "last_price": 200.75,
+    "daily_change_pct": 0.0,
+    "range_52w": [
+      120.0,
+      216.75
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "DFCC.N",
+    "company_name": "DFCC BANK PLC",
+    "last_price": 148.0,
+    "daily_change_pct": 0.17,
+    "range_52w": [
+      87.8,
+      170.5
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "DIAL.N",
+    "company_name": "DIALOG",
+    "last_price": 29.8,
+    "daily_change_pct": 1.02,
+    "range_52w": [
+      10.8,
+      32.2
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "HAYL.N",
+    "company_name": "HAYLEYS",
+    "last_price": 195.75,
+    "daily_change_pct": 0.9,
+    "range_52w": [
+      117.0,
+      198.5
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "HHL.N",
+    "company_name": "HEMAS HOLDINGS",
+    "last_price": 34.7,
+    "daily_change_pct": 0.29,
+    "range_52w": [
+      17.4,
+      36.5
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "HNB.N",
+    "company_name": "HNB",
+    "last_price": 385.25,
+    "daily_change_pct": -1.09,
+    "range_52w": [
+      155.0,
+      416.75
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "JKH.N",
+    "company_name": "JKH",
+    "last_price": 21.7,
+    "daily_change_pct": 2.84,
+    "range_52w": [
+      18.7,
+      26.0
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "LFIN.N",
+    "company_name": "LB FINANCE",
+    "last_price": 155.25,
+    "daily_change_pct": 1.47,
+    "range_52w": [
+      81.0,
+      172.25
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "LIOC.N",
+    "company_name": "LANKA IOC",
+    "last_price": 129.0,
+    "daily_change_pct": 0.19,
+    "range_52w": [
+      116.25,
+      142.25
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "LOLC.N",
+    "company_name": "L O L C HOLDINGS",
+    "last_price": 560.0,
+    "daily_change_pct": -0.31,
+    "range_52w": [
+      521.25,
+      739.0
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "MELS.N",
+    "company_name": "MELSTACORP",
+    "last_price": 174.0,
+    "daily_change_pct": 0.0,
+    "range_52w": [
+      108.0,
+      194.0
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "NDB.N",
+    "company_name": "NAT. DEV. BANK",
+    "last_price": 141.25,
+    "daily_change_pct": 0.89,
+    "range_52w": [
+      84.4,
+      156.5
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "NTB.N",
+    "company_name": "NATIONS TRUST",
+    "last_price": 313.0,
+    "daily_change_pct": 0.32,
+    "range_52w": [
+      158.5,
+      315.0
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "PLC.N",
+    "company_name": "PEOPLES LEASING",
+    "last_price": 25.0,
+    "daily_change_pct": 2.88,
+    "range_52w": [
+      14.7,
+      31.8
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "SAMP.N",
+    "company_name": "SAMPATH",
+    "last_price": 146.5,
+    "daily_change_pct": 1.03,
+    "range_52w": [
+      102.75,
+      155.75
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "SEYB.X",
+    "company_name": "SEYLAN BANK",
+    "last_price": 75.6,
+    "daily_change_pct": 1.48,
+    "range_52w": [
+      37.5,
+      83.5
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "SINS.N",
+    "company_name": "SINGER SRI LANKA",
+    "last_price": 87.7,
+    "daily_change_pct": 0.11,
+    "range_52w": [
+      24.1,
+      96.9
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  },
+  {
+    "code": "SUN.N",
+    "company_name": "SUNSHINE HOLDING",
+    "last_price": 35.1,
+    "daily_change_pct": -0.57,
+    "range_52w": [
+      18.65,
+      39.2
+    ],
+    "sub_type": 0.0,
+    "as_of": "2025-12-31",
+    "data_version": "v_20251231_6760d4ce",
+    "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066"
+  }
+]

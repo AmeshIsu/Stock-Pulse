@@ -126,6 +126,16 @@
     "derivation_date": "2026-10-11",
     "status": "empirical"
   },
+  "market_volatility_note_rule": {
+    "id": "market_volatility_note_rule",
+    "threshold_key": "risk_category_high_cutoff",
+    "cutoff_annualized_percent": 32.98,
+    "condition": "median(vol_63d_ann) > 32.98",
+    "user_note": "Market-wide volatility is elevated.",
+    "method": "Conditional user notice displayed only when cross-sectional median annualized 63-day volatility of ranked stocks exceeds the 66.7th percentile cut point (32.98%). If median <= 32.98%, the note is omitted.",
+    "derivation_date": "2026-10-12",
+    "status": "empirical"
+  },
   "liquidity_warning_cutoff": {
     "id": "liquidity_warning_cutoff",
     "value": 0.8889,
@@ -171,5 +181,30 @@
     "description": "Series whose median calendar days spanned by 21 consecutive trading rows exceeds 1.5x the market median. All 'N trading day' windows count the stock's own trading observations, which span longer calendar time for thinly traded stocks.",
     "derivation_date": "2026-10-11",
     "status": "empirical"
+  },
+  "consistent_leaders_count": {
+    "value": 2486,
+    "unique_stocks": [
+      "AEL.N",
+      "CFIN.N",
+      "COMB.N",
+      "DFCC.N",
+      "DIAL.N",
+      "HAYL.N",
+      "HHL.N",
+      "JKH.N",
+      "LFIN.N",
+      "LIOC.N",
+      "LOLC.N",
+      "MELS.N",
+      "NDB.N",
+      "NTB.N",
+      "PLC.N",
+      "SAMP.N",
+      "SEYB.X",
+      "SINS.N",
+      "SUN.N"
+    ],
+    "description": "Total stock-days identified as Consistent Leaders (High in >= 2 horizons, Low in none, no liquidity warning)."
   }
 }

@@ -1,0 +1,12 @@
+{
+  "version_id": "20261013_060839",
+  "timestamp": "2026-10-13T06:09:25.822273",
+  "as_of_date": "2025-10-31",
+  "mode": "replace",
+  "input_file": "C:\\Users\\USER\\AppData\\Local\\Temp\\pytest-of-USER\\pytest-16\\test_round_trip_reproducibilit0\\initial_data.parquet",
+  "rows_added": 85870,
+  "total_rows": 85870,
+  "duration_seconds": 46.24,
+  "retrained": false,
+  "validation_warnings": []
+}

@@ -226,7 +226,7 @@ Does model skill survive when controlling for market volatility, liquidity, and 
    - Raw tree models use 29 active features (excluding zero-variance `zero_trade_share_63d`).
 5. **Universe Benchmark Name Clarification**:
    - Within the 20-company universe, the first 5 alphabetical stocks picked by the old tie-breaker were `['AEL.N', 'CFIN.N', 'COMB.N', 'DFCC.N', 'DIAL.N']`.
-   - Names like `ACL.N`, `AHUN.N`, `BRWN.N`, `CARG.N` came from the broader raw dataset before universe filtering.
+   - Non-universe tickers (`ACL`, `AHUN`, `BRWN`, `CARG`) were mentioned in an earlier draft in error; verification against the raw source confirms they do not exist anywhere in the raw data, which contains strictly the 20 S&P SL20 companies.
 6. **2001 Coverage Clarification**:
    - While the raw Excel filename is titled `2001_2025`, trading records for the 20 S&P SL20 companies only begin in January 2002. There are 0 rows in 2001.
 

@@ -146,7 +146,7 @@ def write_baseline_results_report(df_results: pd.DataFrame, df_folds: pd.DataFra
   - `reversal_21`: Shows modest mean Rank IC on short horizon (~ -0.01 to +0.02) with fold win rate of ~50%. It does not show a statistically robust positive edge across annual folds.
   - `momentum_63` & `momentum_126`: Exhibit mixed performance across horizons. Long-horizon momentum has positive Rank IC on dev folds, but this is heavily subject to survivorship bias.
   - `low_vol`: Produces consistently negative Rank IC across horizons. **Low_vol having negative IC means higher-volatility stocks did better, which may be a market-beta effect we will test later.**
-- **Transaction Costs are a Dominant Hurdle**: Under the **ASSUMPTION** of 200 bps round-trip friction (100 bps per side), monthly rebalancing strategies suffer substantial drag. Only models generating large gross spreads can remain net-profitable.
+- **Transaction Costs are a Dominant Hurdle**: Under the **ASSUMPTION** of 200 bps round-trip friction (100 bps per side), monthly rebalancing strategies suffer significant drag. Only models generating large gross spreads can remain net-profitable.
 
 ---
 

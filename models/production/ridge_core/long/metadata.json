@@ -1,0 +1,44 @@
+{
+  "model_id": "ridge_core",
+  "horizon": "long",
+  "feature_set": "core",
+  "active_features": [
+    "log_ret_5",
+    "log_ret_10",
+    "log_ret_21",
+    "log_ret_63",
+    "log_ret_126",
+    "vol_21d",
+    "vol_63d",
+    "downside_vol_63d",
+    "parkinson_vol_21d",
+    "atr14_norm",
+    "max_drawdown_63d",
+    "dist_high_126d",
+    "dist_low_126d",
+    "close_to_sma20",
+    "close_to_sma50",
+    "rsi_14",
+    "macd_hist_norm",
+    "bollinger_pct_b_20",
+    "log_trade_vol_21d",
+    "vol_ratio_21_126",
+    "log_turnover_21d",
+    "amihud_illiq_63d",
+    "zero_trade_share_63d",
+    "rel_ret_21d",
+    "rel_ret_63d"
+  ],
+  "training_window": {
+    "start": "2003-01-21",
+    "end": "2024-12-10"
+  },
+  "row_count": 59878,
+  "hyperparameters": {
+    "alpha": 1.0
+  },
+  "random_seed": 42,
+  "git_commit": "49bfaa4e098025d3fda4c41b2d6b50b07e7196a1",
+  "data_hash": "6760d4ce81873bcbc792974a4508638b731c54e08a626b83b1c2d3894e1c6066",
+  "created_at": "2026-10-12T13:12:25.577617"
+}

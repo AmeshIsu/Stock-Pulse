@@ -1,0 +1,272 @@
+{
+  "short": {
+    "dev": {
+      "High": {
+        "hit_rate_pct": 50.75,
+        "median_excess_pct": 0.02,
+        "n_periods": 138,
+        "hit_rate_90_ci": [
+          44.0,
+          58.2
+        ],
+        "median_excess_90_ci": [
+          -0.36,
+          0.66
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=138)"
+      },
+      "Neutral": {
+        "hit_rate_pct": 48.79,
+        "median_excess_pct": 0.0,
+        "n_periods": 138,
+        "hit_rate_90_ci": [
+          47.1,
+          50.6
+        ],
+        "median_excess_90_ci": [
+          0.0,
+          0.04
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=138)"
+      },
+      "Low": {
+        "hit_rate_pct": 42.42,
+        "median_excess_pct": -0.57,
+        "n_periods": 138,
+        "hit_rate_90_ci": [
+          34.8,
+          50.0
+        ],
+        "median_excess_90_ci": [
+          -1.57,
+          0.0
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=138)"
+      }
+    },
+    "holdout": {
+      "High": {
+        "hit_rate_pct": 64.71,
+        "median_excess_pct": 1.54,
+        "n_periods": 16,
+        "hit_rate_90_ci": [
+          47.1,
+          82.4
+        ],
+        "median_excess_90_ci": [
+          -1.9,
+          5.28
+        ],
+        "evaluation_flag": "Holdout (n=16)"
+      },
+      "Neutral": {
+        "hit_rate_pct": 48.89,
+        "median_excess_pct": 0.0,
+        "n_periods": 16,
+        "hit_rate_90_ci": [
+          44.4,
+          54.1
+        ],
+        "median_excess_90_ci": [
+          -0.51,
+          0.69
+        ],
+        "evaluation_flag": "Holdout (n=16)"
+      },
+      "Low": {
+        "hit_rate_pct": 29.41,
+        "median_excess_pct": -3.02,
+        "n_periods": 16,
+        "hit_rate_90_ci": [
+          11.8,
+          47.1
+        ],
+        "median_excess_90_ci": [
+          -4.94,
+          -0.84
+        ],
+        "evaluation_flag": "Holdout (n=16)"
+      }
+    }
+  },
+  "mid": {
+    "dev": {
+      "High": {
+        "hit_rate_pct": 47.3,
+        "median_excess_pct": -0.33,
+        "n_periods": 46,
+        "hit_rate_90_ci": [
+          37.8,
+          56.8
+        ],
+        "median_excess_90_ci": [
+          -1.4,
+          1.55
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=46)"
+      },
+      "Neutral": {
+        "hit_rate_pct": 49.58,
+        "median_excess_pct": 0.0,
+        "n_periods": 46,
+        "hit_rate_90_ci": [
+          46.6,
+          52.8
+        ],
+        "median_excess_90_ci": [
+          -0.03,
+          0.4
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=46)"
+      },
+      "Low": {
+        "hit_rate_pct": 44.0,
+        "median_excess_pct": -0.37,
+        "n_periods": 46,
+        "hit_rate_90_ci": [
+          33.3,
+          53.3
+        ],
+        "median_excess_90_ci": [
+          -2.81,
+          1.39
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=46)"
+      }
+    },
+    "holdout": {
+      "High": {
+        "hit_rate_pct": 50.0,
+        "median_excess_pct": 0.87,
+        "n_periods": 5,
+        "hit_rate_90_ci": [
+          20.0,
+          70.0
+        ],
+        "median_excess_90_ci": [
+          -2.23,
+          17.94
+        ],
+        "evaluation_flag": "Holdout (n=5)"
+      },
+      "Neutral": {
+        "hit_rate_pct": 46.48,
+        "median_excess_pct": -0.85,
+        "n_periods": 5,
+        "hit_rate_90_ci": [
+          35.2,
+          56.3
+        ],
+        "median_excess_90_ci": [
+          -3.38,
+          0.53
+        ],
+        "evaluation_flag": "Holdout (n=5)"
+      },
+      "Low": {
+        "hit_rate_pct": 50.0,
+        "median_excess_pct": 0.09,
+        "n_periods": 5,
+        "hit_rate_90_ci": [
+          20.0,
+          80.0
+        ],
+        "median_excess_90_ci": [
+          -5.97,
+          5.59
+        ],
+        "evaluation_flag": "Holdout (n=5)"
+      }
+    }
+  },
+  "long": {
+    "dev": {
+      "High": {
+        "hit_rate_pct": 55.88,
+        "median_excess_pct": 3.25,
+        "n_periods": 10,
+        "hit_rate_90_ci": [
+          41.2,
+          67.8
+        ],
+        "median_excess_90_ci": [
+          -3.33,
+          9.75
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=10)"
+      },
+      "Neutral": {
+        "hit_rate_pct": 49.48,
+        "median_excess_pct": 0.0,
+        "n_periods": 10,
+        "hit_rate_90_ci": [
+          42.3,
+          57.7
+        ],
+        "median_excess_90_ci": [
+          -2.6,
+          3.44
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=10)"
+      },
+      "Low": {
+        "hit_rate_pct": 38.24,
+        "median_excess_pct": -1.32,
+        "n_periods": 10,
+        "hit_rate_90_ci": [
+          26.5,
+          50.0
+        ],
+        "median_excess_90_ci": [
+          -4.98,
+          0.97
+        ],
+        "evaluation_flag": "Selected on Dev (optimism warning, n=10)"
+      }
+    },
+    "holdout": {
+      "High": {
+        "hit_rate_pct": 50.0,
+        "median_excess_pct": -33.94,
+        "n_periods": 1,
+        "hit_rate_90_ci": [
+          50.0,
+          50.0
+        ],
+        "median_excess_90_ci": [
+          -33.94,
+          -33.94
+        ],
+        "evaluation_flag": "Holdout (n=1)"
+      },
+      "Neutral": {
+        "hit_rate_pct": 54.55,
+        "median_excess_pct": 2.84,
+        "n_periods": 1,
+        "hit_rate_90_ci": [
+          27.3,
+          72.7
+        ],
+        "median_excess_90_ci": [
+          -2.78,
+          18.11
+        ],
+        "evaluation_flag": "Holdout (n=1)"
+      },
+      "Low": {
+        "hit_rate_pct": 0.0,
+        "median_excess_pct": -9.01,
+        "n_periods": 1,
+        "hit_rate_90_ci": [
+          0.0,
+          0.0
+        ],
+        "median_excess_90_ci": [
+          -9.01,
+          -9.01
+        ],
+        "evaluation_flag": "Holdout (n=1)"
+      }
+    }
+  }
+}

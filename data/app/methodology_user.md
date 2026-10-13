@@ -2,7 +2,7 @@
 
 > **Data As-Of Date**: 2024-12-10 | **Universe**: Colombo Stock Exchange (S&P SL20)
 
-> **Important Disclaimer**: Stock Pulse is an automated quantitative research and ranking platform built strictly for informational purposes. It does not constitute personalized investment advice, a portfolio recommendation, or an endorsement to buy or sell securities. Past out-of-sample performance does not guarantee future results. Frontier equity investing carries substantial risk of principal loss.
+> **Important Disclaimer**: Stock Pulse is an automated quantitative research and ranking platform built strictly for informational purposes. It does not constitute personalized investment advice, a portfolio recommendation, or an endorsement to buy or sell securities. Past out-of-sample performance does not guarantee future results. Frontier equity investing carries significant risk of principal loss.
 
 ---
 
@@ -35,50 +35,57 @@
 
 The system evaluates each company each day using several price-based signals (including trend momentum, trailing volatility, and trading activity). The resulting upside score is expressed as a percentile rank from 0 to 100:
 - **100**: Highest upside potential in the index relative to peers.
-- **50**: Median stock.
+- **50**: Average upside potential.
 - **0**: Lowest upside potential relative to peers.
 
-### Overall Upside Score
-The overall score is a weighted combination of the tactical, quarterly, and annual horizons:
-- **Short Horizon**: `25.0%` weight
-- **Mid Horizon**: `50.0%` weight
-- **Long Horizon**: `25.0%` weight
+### Overall Weighted Composite Score
+The system combines scores across all three timeframes using evidence-derived weighting:
+- **Short Horizon**: `25.0%` weight.
+- **Mid Horizon**: `50.0%` weight.
+- **Long Horizon**: `25.0%` weight.
 
 ---
 
-## 4. Confidence Labels
+## 4. Ranking Tiers (High, Neutral, Low)
 
-Each horizon carries a formal statistical confidence rating:
-- **Short Horizon**: **Very low confidence** (RED) - Signals at the 1-month horizon do not demonstrate statistically confirmed edge over random noise after transaction frictions.
-- **Mid Horizon**: **Low confidence** (AMBER) - Medium-term 3-month momentum demonstrates suggestive historical outperformance, though subject to frontier regime shifts.
-- **Long Horizon**: **Very low confidence** (RED) - 1-year annual horizons have limited non-overlapping historical evaluation cycles.
+Percentile score thresholds define three action tiers:
 
----
-
-## 5. Tiers and How They Were Derived
-
-Companies are sorted into three tiers based on pre-specified cutoff percentiles:
-- **Short Horizon Cutoff**: Top `25%` are High tier, bottom `25%` are Low tier (convention - no evidence-based cutoff).
-- **Mid Horizon Cutoff**: Top `30%` are High tier, bottom `30%` are Low tier (empirical).
-- **Long Horizon Cutoff**: Top `30%` are High tier, bottom `30%` are Low tier (empirical).
+| Horizon | Candidate Fraction | High Upside Cutoff | Neutral Range | Low Upside Cutoff |
+| :--- | :---: | :---: | :---: | :---: |
+| **Short (21d)** | Top/Bottom 25% | Score $\ge 75$ | 25 to 75 | Score $\le 25$ |
+| **Mid (63d)** | Top/Bottom 30% | Score $\ge 70$ | 30 to 70 | Score $\le 30$ |
+| **Long (252d)** | Top/Bottom 30% | Score $\ge 70$ | 30 to 70 | Score $\le 30$ |
 
 ---
 
-## 6. Historical Performance of Tiers
+## 5. Consistent Leaders
 
+A company earns the **Consistent Leader** badge only when it satisfies three strict simultaneous rules:
+1. **High Upside** in at least two of the three time horizons.
+2. **Zero Low Upside** rankings across all three horizons.
+3. **No Liquidity Warning** on that trading day.
+
+---
+
+## 6. Model Confidence Levels & Historical Performance
+
+### Confidence Levels by Horizon
+- **Short Horizon (21d)**: `Very low confidence` (Evidence Level: `RED`).
+- **Mid Horizon (63d)**: `Low confidence` (Evidence Level: `AMBER`).
+- **Long Horizon (252d)**: `Very low confidence` (Evidence Level: `RED`).
+
+### Historical Top-Tier Out-of-Sample Hit Rates
 > [!WARNING]
-> **Optimism Warning**: The cutoffs and the score were chosen using the same historical years shown here, so these hit rates are optimistic. Realized future performance is likely to be lower.
+> **Optimism Warning**: Historical hit rates reflect simulation over development periods and were selected retrospectively. Real-world performance is typically lower.
 
-Performance is reported as **hit rate** (the percentage of selections that beat the median stock in the index):
-
-| Horizon | Partition | High Tier Hit Rate (90% CI) | Neutral Tier Hit Rate | Low Tier Hit Rate | High Tier Median Excess | Evaluation Note |
-| :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Short (21d)** | **Historical Dev** | **51.5%** ([48.7%, 53.8%]) | 50.9% | 47.0% | +0.00% | Selected on Dev (n=138) |
-| **Short (21d)** | **Holdout** | **57.7%** (small sample) | 52.3% | 37.5% | +1.59% | Holdout (n=16) |
-| **Mid (63d)** | **Historical Dev** | **50.7%** ([45.2%, 55.6%]) | 52.0% | 46.7% | +0.00% | Selected on Dev (n=46) |
-| **Mid (63d)** | **Holdout** | **37.0%** (small sample) | 59.5% | 50.0% | -5.13% | Holdout (n=5) |
-| **Long (252d)** | **Historical Dev** | **54.9%** ([46.1%, 64.1%]) | 54.6% | 38.8% | +0.58% | Selected on Dev (n=10) |
-| **Long (252d)** | **Holdout** | **60.0%** (small sample) | 50.0% | 40.0% | +0.51% | Holdout (n=1) |
+| Horizon | Evaluation Period | High Tier Hit Rate (90% CI) | Neutral Hit Rate | Low Hit Rate | High Tier Median Excess | Evaluation Flag |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **Short (21d)** | **Historical Dev** | **49.4%** ([47.0%, 51.8%]) | 51.7% | 47.4% | +0.00% | Selected on Dev (n=138) |
+| **Short (21d)** | **Holdout** | **61.0%** (small sample) | 53.0% | 33.1% | +1.65% | Holdout (n=16) |
+| **Mid (63d)** | **Historical Dev** | **50.7%** ([44.6%, 56.8%]) | 52.7% | 45.3% | +0.00% | Selected on Dev (n=46) |
+| **Mid (63d)** | **Holdout** | **63.0%** (small sample) | 43.2% | 46.3% | +1.19% | Holdout (n=5) |
+| **Long (252d)** | **Historical Dev** | **60.2%** ([50.9%, 71.1%]) | 49.2% | 40.8% | +3.23% | Selected on Dev (n=10) |
+| **Long (252d)** | **Holdout** | **80.0%** (small sample) | 33.3% | 40.0% | +9.38% | Holdout (n=1) |
 
 ---
 
@@ -92,6 +99,7 @@ Calculated from trailing 63-day annualized return volatility:
 
 ### Liquidity Warning
 - A stock receives a **Liquidity Warning** when its trailing 63 market-calendar trading day participation is at or below `88.9%` (the 20th percentile of market participation). This warns investors that the stock has experienced frequent non-trading sessions.
+- The liquidity warning is an informational flag indicating lower historical trading frequency, not a recommendation to avoid a stock.
 
 ### Thin Trading Warning (Stretched Horizon)
 - Stocks flagged for thin trading: **HNB.N**.

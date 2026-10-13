@@ -60,8 +60,15 @@ def clean_data(config: dict | None = None) -> tuple[pd.DataFrame, pd.DataFrame, 
     
     clean_out_path.parent.mkdir(parents=True, exist_ok=True)
     
-    print(f"Loading raw dataset from {raw_path}...")
-    df_raw = pd.read_excel(raw_path, sheet_name=raw_sheet)
+    if str(raw_path).endswith((".parquet", ".pq")):
+        df_raw = pd.read_parquet(raw_path)
+    elif str(raw_path).endswith(".csv"):
+        df_raw = pd.read_csv(raw_path)
+    else:
+        try:
+            df_raw = pd.read_excel(raw_path, sheet_name=raw_sheet)
+        except Exception:
+            df_raw = pd.read_excel(raw_path, sheet_name=0)
     
     # 1. Drop contaminated pre-computed columns
     contaminated_cols = [

@@ -1,0 +1,90 @@
+log_ret_5:
+  high_phrase: "strong 1-week price return"
+  low_phrase: "weak 1-week price return"
+log_ret_10:
+  high_phrase: "strong 2-week price return"
+  low_phrase: "weak 2-week price return"
+log_ret_21:
+  high_phrase: "strong 1-month price trend"
+  low_phrase: "weak 1-month price trend"
+log_ret_63:
+  high_phrase: "strong 3-month price trend"
+  low_phrase: "weak 3-month price trend"
+log_ret_126:
+  high_phrase: "strong 6-month price trend"
+  low_phrase: "weak 6-month price trend"
+vol_21d:
+  high_phrase: "elevated 1-month price swings"
+  low_phrase: "subdued 1-month price swings"
+vol_63d:
+  high_phrase: "elevated recent price swings"
+  low_phrase: "subdued recent price swings"
+downside_vol_63d:
+  high_phrase: "higher downward price fluctuation"
+  low_phrase: "lower downward price fluctuation"
+parkinson_vol_21d:
+  high_phrase: "wider intraday price range"
+  low_phrase: "narrower intraday price range"
+atr14_norm:
+  high_phrase: "wider average trading range"
+  low_phrase: "narrower average trading range"
+max_drawdown_63d:
+  high_phrase: "smaller quarterly pullback"
+  low_phrase: "deeper quarterly pullback"
+dist_high_126d:
+  high_phrase: "trading near 6-month high"
+  low_phrase: "trading far below 6-month high"
+dist_low_126d:
+  high_phrase: "comfortable cushion above 6-month low"
+  low_phrase: "narrow cushion above 6-month low"
+close_to_sma20:
+  high_phrase: "price above 20-day average"
+  low_phrase: "price below 20-day average"
+close_to_sma50:
+  high_phrase: "price above 50-day average"
+  low_phrase: "price below 50-day average"
+rsi_14:
+  high_phrase: "higher short-term relative strength"
+  low_phrase: "lower short-term relative strength"
+macd_hist_norm:
+  high_phrase: "positive price acceleration trend"
+  low_phrase: "negative price acceleration trend"
+bollinger_pct_b_20:
+  high_phrase: "position near upper price band"
+  low_phrase: "position near lower price band"
+log_trade_vol_21d:
+  high_phrase: "active monthly trading volume"
+  low_phrase: "light monthly trading volume"
+vol_ratio_21_126:
+  high_phrase: "rising short-term trading activity"
+  low_phrase: "cooling short-term trading activity"
+log_turnover_21d:
+  high_phrase: "heavy trading turnover value"
+  low_phrase: "light trading turnover value"
+amihud_illiq_63d:
+  high_phrase: "thin trading (higher price impact)"
+  low_phrase: "heavy trading (lower price impact)"
+zero_trade_share_63d:
+  high_phrase: "frequent zero-trade days"
+  low_phrase: "consistent daily trading"
+rel_ret_21d:
+  high_phrase: "outperforming peer average over 1 month"
+  low_phrase: "lagging peer average over 1 month"
+rel_ret_63d:
+  high_phrase: "outperforming peer average over 3 months"
+  low_phrase: "lagging peer average over 3 months"
+index_ret_63d:
+  high_phrase: "supportive broader market trend"
+  low_phrase: "unfavorable broader market trend"
+index_vol_63d:
+  high_phrase: "elevated broader market volatility"
+  low_phrase: "calm broader market volatility"
+cs_rank_mom_63d:
+  high_phrase: "leading quarterly relative momentum"
+  low_phrase: "lagging quarterly relative momentum"
+cs_rank_vol_63d:
+  high_phrase: "higher relative volatility ranking"
+  low_phrase: "lower relative volatility ranking"
+cs_rank_vol_21d:
+  high_phrase: "higher short-term relative volatility"
+  low_phrase: "lower short-term relative volatility"
